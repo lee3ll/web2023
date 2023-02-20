@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #warp {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #B2DFDB;
+        }
+        #nav {
+            width: 100%;
+            height: 300px;
+            background-color: #4DB6AC;
+        }
+        #aside {
+            width: 100%;
+            height: 580px;
+            background-color: #009688;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #00796B;
+        }
+        .container{
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .aside1{
+            width: 600px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.2);
+            float: left;
+        }
+        .aside2{
+            width: 600px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.4);
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="nav">
+            <div class="container"></div>
+        </div>
+        <div id="aside">
+            <div class="container">
+                <div class="aside1"></div>
+                <div class="aside2"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- #warp>#header+#nav+#aside+#footer -->

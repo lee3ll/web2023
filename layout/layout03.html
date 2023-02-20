@@ -4,69 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃</title>
+    <title>레이아웃3 - float 방식</title>
     <style>
         *{
             margin: 0;
             padding: 0;
         }
         body{
-            background-color: #a03939;
+            background-color: #E1F5FE;
         }
-        #warp{
+        #wrap {
             width: 1200px;
-            height: 1080px;
             margin: 0 auto;
         }
-        #header{
+        #header {
             width: 1200px;
             height: 100px;
-            background-color: #d5eb5d;
+            background-color: #B3E5FC;
         }
-        #nav{
+        #nav {
             width: 1200px;
             height: 100px;
-            background-color: #76cf22;
+            background-color: #81D4FA;
         }
-        #box{
-            width: 300px;
-            height: 780px;
-            float: left;
+        #main {
+            width: 1200px;
+            overflow: hidden; 
+            /* 부모박스에 히튼효과주기 클리어보스를 쓰면 복잡한 내용일땐 어디가 깨졌는지 알기 어려움 */
         }
         #aside{
             width: 300px;
-            height: 600px;
-            background-color: #66a5d8;
-        }
-        #aside2{
-            width: 300px;
-            height: 180px;
-            background-color: #8f2c62;
-        }
-        #section{
-            width: 900px;
             height: 780px;
-            background-color: #6215b9;
+            background-color: #4FC3F7;
             float: left;
         }
-        #footer{
+        #article1{
+            width: 900px;
+            height: 260px;
+            background-color: #29B6F6;
+            float: left;
+        }
+        #article2{
+            width: 900px;
+            height: 260px;
+            background-color: #03A9F4;
+            float: left;
+        }
+        #article3{
+            width: 900px;
+            height: 260px;
+            background-color: #039BE5;
+            float: left;
+        }
+
+        #footer {
             width: 1200px;
             height: 100px;
-            background-color: #290b46;
-            clear: both;
+            background-color: #0288D1;
         }
+
     </style>
 </head>
 <body>
-    <div id="warp">
+    <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="box">
+        <div id="main">
             <div id="aside"></div>
-            <div id="aside2"></div>
+            <div id="article1"></div>
+            <div id="article2"></div>
+            <div id="article3"></div>
         </div>
-        <div id="section"></div>
         <div id="footer"></div>
     </div>
+ <!--  -->
+
 </body>
 </html>
