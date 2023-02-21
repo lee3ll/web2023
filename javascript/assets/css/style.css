@@ -110,6 +110,22 @@ body {
     padding: 1em;
     border-radius: 5px;
 }
+
+.main_sample .notice {
+    border-left: #0243F1;
+    padding: 10px 0px 0px 0px;   
+    /* padding은 시계방향 위 오른 아래 왼 */
+    background-color: #f6f6f6;
+}
+
+.main_sample .notice h4 {
+    margin-bottom: 5px;
+}
+
+.main_sample .notice p {
+    margin-bottom: 0;
+}
+
 /* 푸터영역 */
 #footer{
     padding: 40px;
