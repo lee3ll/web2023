@@ -95,7 +95,7 @@ body {
     margin-top: 100px;
 }
 .main_sample .sample:first-child{
-    margin-top: 0px;
+    margin-top: 0;
 }
 .main_sample .sample h3{
     font-size: 20px;
@@ -112,8 +112,8 @@ body {
 }
 
 .main_sample .notice {
-    border-left: #0243F1;
-    padding: 10px 0px 0px 0px;   
+    border-left: 3px solid #0243F1;
+    padding: 13px 10px 10px 15px;   
     /* padding은 시계방향 위 오른 아래 왼 */
     background-color: #f6f6f6;
 }
