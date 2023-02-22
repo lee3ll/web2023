@@ -53,30 +53,123 @@
             </div>
                 <div class="main_sample">
                     <div id="sample01" class="sample">
-                        <h3>01. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
-                        <p>for문을 1부터 100까지 출력하는 예제입니다</p>
+                        <h3>01. 1부터 100까지 출력하기</h3>
+                        <p>for문을 1부터 100까지 출력하는 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">{
-    for(let i=1; i&lt;=100; i++){ //반복문 주석표시 설정
-        //console.log(i)
+    for(let i=1; i&lt;=100; i++){ 
+    
+    console.log(i)
     }
-    //1,2,3,4,5,6,~~~100
+    
 }
 </code></pre>
                     </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                1<br>
+                                2<br>
+                                3<br>
+                                ~~<br>
+                                100
+                            </div>
+                        </details>
+                    </div>
+                </div>    
         <!-- //samle01 -->
-                    <div id="sample02" class="sample">
-                        <h3>02. 데이터 이펙트 : 0부터 50까지 출력하기</h3>
-                        <p>for문을 1부터 100까지 출력하는 예제입니다</p>
+
+               <div class="main_sample">
+                    <div id="sample01" class="sample">
+                        <h3>02. 0부터 50까지 출력하기</h3>
+                        <p>for문을 0부터 50까지 출력하는 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">{
-    for(let i=1; i&lt;=100; i++){ //반복문 주석표시 설정
-        //console.log(i)
+    for(let i=1; i&lt;=100; i++){ 
+    
+    console.log(i)
     }
-    //1,2,3,4,5,6,~~~100
 }
 </code></pre>
                     </div>
-                </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                1<br>
+                                2<br>
+                                3<br>
+                                ~~<br>
+                                100
+                            </div>
+                        </details>
+                    </div>
+                </div>                
+        <!-- //samle02 -->        
+        
+               <div class="main_sample">
+                    <div id="sample01" class="sample">
+                        <h3>03. 1부터 100까지 짝수만 출력하기</h3>
+                        <p>for문을 짝수만 출력하는 형식입니다. (i+=2)는 i = i + 2 의 약식입니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=0; i<=100; i+=2){
+    
+    console.log(i)
+    }
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                2<br>
+                                4<br>
+                                6<br>
+                                ~~<br>
+                                98<br>
+                                100
+                            </div>
+                        </details>
+                    </div>
+                </div>  
+        <!-- //samle03 -->         
+                
+                <div class="main_sample">
+                    <div id="sample01" class="sample">
+                        <h3>04. 1부터 100까지 5배수만 출력하기</h3>
+                        <p>for문을 1부터 100까지 5배수만 출력하는 예제로 i+=5값을 넣어줍니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=0; i<=100; i+=5){
+    
+    console.log(i)
+    }
+   
+    for(let i=1; i<=100; i++){
+        if( i % 2 == 0 ){
+            console.log(i)
+        }
+    console.log(i)
+    }
+
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                5<br>
+                                10<br>
+                                15<br>
+                                ~~<br>
+                                95<br>
+                                100
+                            </div>
+                        </details>
+                    </div>
+                </div>  
+        <!-- //samle04 -->   
+
         </div>
+
     </main>
    <!-- //main -->
     <footer id="footer">

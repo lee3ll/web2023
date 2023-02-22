@@ -21,28 +21,11 @@ pre[class*=language-] {
     hyphens: none
 }
 
-code[class*=language-] ::-moz-selection,
-code[class*=language-]::-moz-selection,
-pre[class*=language-] ::-moz-selection,
-pre[class*=language-]::-moz-selection {
-    text-shadow: none;
-    background: #b3d4fc
-}
 
-code[class*=language-] ::selection,
-code[class*=language-]::selection,
-pre[class*=language-] ::selection,
-pre[class*=language-]::selection {
-    text-shadow: none;
-    background: #b3d4fc
-}
-
-@media print {
-
-    code[class*=language-],
-    pre[class*=language-] {
-        text-shadow: none
-    }
+pre[class*=language-] {
+    padding: 1m;
+    margin: .5em, 0;
+    overflow: auto;
 }
 
 pre[class*=language-] {
@@ -53,7 +36,7 @@ pre[class*=language-] {
 
 :not(pre)>code[class*=language-],
 pre[class*=language-] {
-    background: #f5f2f0
+    background: #dbecfc
 }
 
 :not(pre)>code[class*=language-] {
@@ -62,63 +45,62 @@ pre[class*=language-] {
     white-space: normal
 }
 
+.token.block-comment,
 .token.cdata,
 .token.comment,
 .token.doctype,
 .token.prolog {
-    color: #708090
+    color: #6d6d6d
 }
 
 .token.punctuation {
-    color: #999
-}
-
-.token.namespace {
-    opacity: .7
-}
-
-.token.boolean,
-.token.constant,
-.token.deleted,
-.token.number,
-.token.property,
-.token.symbol,
-.token.tag {
-    color: #905
+    color: #161616
 }
 
 .token.attr-name,
-.token.builtin,
-.token.char,
-.token.inserted,
-.token.selector,
-.token.string {
-    color: #690
+.token.deleted,
+.token.namespace,
+.token.tag {
+    color: #d33e43
 }
 
-.language-css .token.string,
-.style .token.string,
-.token.entity,
-.token.operator,
-.token.url {
-    color: #9a6e3a;
+.token.function-name {
+    color: #3f78b1
 }
 
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-    color: #07a
+.token.boolean,
+.token.function,
+.token.number {
+    color: #eb6f1c
 }
 
 .token.class-name,
-.token.function {
-    color: #dd4a68
+.token.constant,
+.token.property,
+.token.symbol {
+    color: #f8c555
 }
 
+.token.atrule,
+.token.builtin,
 .token.important,
+.token.keyword,
+.token.selector {
+    color: #c06bc2
+}
+
+.token.attr-value,
+.token.char,
 .token.regex,
+.token.string,
 .token.variable {
-    color: #e90
+    color: #259650
+}
+
+.token.entity,
+.token.operator,
+.token.url {
+    color: #1cb4b2
 }
 
 .token.bold,
@@ -132,6 +114,10 @@ pre[class*=language-] {
 
 .token.entity {
     cursor: help
+}
+
+.token.inserted {
+    color: green
 }
 
 pre[data-line] {
