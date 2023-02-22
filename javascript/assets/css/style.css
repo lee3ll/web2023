@@ -116,6 +116,7 @@ body {
     padding: 13px 10px 10px 15px;   
     /* padding은 시계방향 위 오른 아래 왼 */
     background-color: #f6f6f6;
+    margin-bottom: 5px;
 }
 
 .main_sample .notice h4 {
