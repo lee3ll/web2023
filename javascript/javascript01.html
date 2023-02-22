@@ -425,19 +425,14 @@
                     <p>배열 안에 키값을 입력하여 객체를 포함시킬 수 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const obj = {
-        a: 100,
-        b: [200, 300],
-        c: {x: 400, y: 500},
-        d: "javascript"                 //객체 마지막 쉼표는 생략
-    }
+    const obj = [
+                {a:100, b:200},
+                {c:"javascript"}
+    ];
 
-    console.log(obj.a);
-    console.log(obj.b[0]);             //배열안의 첫번째칸은 [0] 
-    console.log(obj.b[1]);
-    console.log(obj.c.x);
-    console.log(obj.c.y);
-    console.log(obj.d);
+    console.log(obj[0].a);
+    console.log(obj[0].b);
+    console.log(obj[1].c);
 }
 </pre></code>
                     </div>
@@ -464,7 +459,7 @@
         b: [200, 300],
         c: {x: 400, y: 500},
         d: "javascript"                 
-    }
+    };
 
     console.log(obj.a);
     console.log(obj.b[0]);              
@@ -537,7 +532,7 @@
         f: function(){
             console.log(this.c + "가 실행되었습니다.")
         }
-        }
+    }
         console.log(obj.a);
             console.log(obj.b[0]);
             console.log(obj.b[1]); 
