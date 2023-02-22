@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #E1F5FE;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "section aside"
+                "section articl"
+                "section articl2"
+                "footer footer"  
+            ;
+            grid-template-columns: 300px 900px;
+            grid-template-rows: 100px 100px 260px 260px 260px;
+        }
+        #header {
+            background-color: #6d94a7;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #81D4FA;
+            grid-area: nav;
+        }
+        #section {
+            background-color: #4FC3F7;
+            grid-area: section;
+        }
+        #aside {
+            background-color: #29B6F6;
+            grid-area: aside;
+        }
+        #articl {
+            background-color: #03A9F4;
+            grid-area: articl;
+        }
+        #articl2 {
+            background-color: #039BE5;
+            grid-area: articl2;
+        }
+        #footer {
+            background-color: #0288D1;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="section"></section>
+        <aside id="aside"></aside>
+        <article id="articl"></article>
+        <article id="articl2"></article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
