@@ -210,7 +210,7 @@
     console.log(arr[0]);
     console.log(arr[1]);
     console.log(arr[2]);
-    }
+}
 </pre></code>
                     </div>
                     <div class="result">
@@ -236,7 +236,7 @@
     console.log(arr[0]);
     console.log(arr[1]);
     console.log(arr[2]);
-    }
+}
 </pre></code>
                     </div>
                     <div class="result">
@@ -265,7 +265,7 @@
          console.log(arr[0]);
          console.log(arr[1]);
          console.log(arr[2]);
-     }
+}
 </pre></code>
                     </div>
                     <div class="result">
@@ -291,7 +291,7 @@
     console.log(arr[0]);
     console.log(arr[1]);
     console.log(arr[2]);
-    }
+}
 </pre></code>
                     </div>
                     <div class="result">
@@ -532,7 +532,11 @@
         c: "javascript",
         d: function(){
             console.log("javascript가 실행되었습니다.");
-
+        e: function(){
+            console.log(obj.c + "가 실행되었습니다.");
+        f: function(){
+            console.log(this.c + "가 실행되었습니다.")
+        }
         }
         console.log(obj.a);
             console.log(obj.b[0]);
@@ -540,6 +544,8 @@
             console.log(obj.b[2]);  
             console.log(obj.c);
             obj.d();
+            obj.e();
+            obj.f();
 }
 </pre></code>
                     </div>
@@ -718,12 +724,18 @@
                 b: [200, 300],
                 c: "javascript",
                 d: function(){
-                    console.log("javascript가 실행되었습니다.");
-
+                    console.log("javascript가 실행되었습니다.")
+                },
+            
+                e: function(){
+                    console.log(obj.c + "가 실행되었습니다.")
+                },
+                f: function(){
+            console.log(this.c + "가 실행되었습니다.")
                 }
-
-                //객체 안에는 실행문이 들어갈 수 있다.
             }
+                //객체 안에는 실행문이 들어갈 수 있다.
+            
 
             console.log(obj.a);
             console.log(obj.b[0]);
@@ -732,6 +744,7 @@
             console.log(obj.c);
             console.log(obj.d); //(x)
             obj.d();
+            obj.e();
         }
 
         // 변수 : 저장문
