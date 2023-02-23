@@ -49,12 +49,15 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
-                    <li><a href="#">02. 0부터 50까지 출력하기</a></li>
-                    <li><a href="#">03. 1부터 100까지 짝수만 출력하기</a></li>
-                    <li><a href="#">04. 1부터 100까지 5배수만 출력하기</a></li>
+                    <li><a href="#">02. 데이터 이펙트 : 0부터 50까지 출력하기</a></li>
+                    <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</a></li>
+                    <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</a></li>
+                    <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
+                    <li><a href="#">06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
+                    <li><a href="#">07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
                 </ul>
             </div>
-                <div class="main_sample">
+                <div class="main__sample">
                     <div id="sample01" class="sample">
                         <h3>01. 1부터 100까지 출력하기</h3>
                         <p>for문을 1부터 100까지 출력하는 예제입니다.</p>
@@ -65,24 +68,22 @@
  }
     
 </code></pre>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                1<br>
-                                2<br>
-                                3<br>
-                                ~~<br>
-                                100
-                            </div>
-                        </details>
-                    </div>
-                </div>    
-        <!-- //samle01 -->
-
-               <div class="main_sample">
-                    <div id="sample01" class="sample">
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    1<br>
+                                    2<br>
+                                    3<br>
+                                    ~~<br>
+                                    100
+                                </div>
+                            </details>
+                        </div>
+                    </div>  
+                    <!-- //sample01 -->
+                    
+                    <div id="sample02" class="sample">
                         <h3>02. 0부터 50까지 출력하기</h3>
                         <p>for문을 0부터 50까지 출력하는 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">
@@ -91,25 +92,23 @@
  console.log(i)
  }
 
-</code></pre>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                1<br>
-                                2<br>
-                                3<br>
-                                ~~<br>
-                                100
-                            </div>
-                        </details>
-                    </div>
-                </div>                
-        <!-- //samle02 -->        
-        
-               <div class="main_sample">
-                    <div id="sample01" class="sample">
+</code></pre>       
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    1<br>
+                                    2<br>
+                                    3<br>
+                                    ~~<br>
+                                    100
+                                </div>
+                            </details>
+                        </div>
+                    </div> 
+                    <!-- //sample02 -->
+
+                    <div id="sample03" class="sample">
                         <h3>03. 1부터 100까지 짝수만 출력하기</h3>
                         <p>for문을 짝수만 출력하는 형식입니다. (i+=2)는 i = i + 2 의 약식입니다.</p>
 <pre class="line-numbers"><code class="language-js">
@@ -118,25 +117,23 @@
  console.log(i)
  }    
 </code></pre>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    2<br>
+                                    4<br>
+                                    6<br>
+                                    ~~<br>
+                                    98<br>
+                                    100
+                                </div>
+                            </details>
+                        </div>
                     </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                2<br>
-                                4<br>
-                                6<br>
-                                ~~<br>
-                                98<br>
-                                100
-                            </div>
-                        </details>
-                    </div>
-                </div>  
-        <!-- //samle03 -->         
-                
-                <div class="main_sample">
-                    <div id="sample01" class="sample">
+                    <!-- //sample03 -->
+
+                    <div id="sample04" class="sample">
                         <h3>04. 1부터 100까지 5배수만 출력하기</h3>
                         <p>for문을 1부터 100까지 5배수만 출력하는 예제로 i+=5값을 넣어줍니다.</p>
 <pre class="line-numbers"><code class="language-js">
@@ -150,6 +147,102 @@
  console.log(i)
     }
 console.log(i)
+}       
+
+</code></pre>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    5<br>
+                                    10<br>
+                                    15<br>
+                                    ~~<br>
+                                    95<br>
+                                    100
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample04 -->
+
+                    <div id="sample05" class="sample">
+                        <h3>05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
+                        <p>for문과 if문을 이용한 짝수 홀수 출력하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+ for(let i=1; i &lt=100; i++){
+    if(1 % 2 == 0){
+      document.write("&lt;span style='color:blue'&lt;"+i+"&lt";/span&lt;");
+    }
+    if(1 % 2 == 1){
+      document.write("&lt;span style='color:blue'&lt;"+i+"&lt";/span&lt;");
+    }
+}
+</code></pre>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    5<br>
+                                    10<br>
+                                    15<br>
+                                    ~~<br>
+                                    95<br>
+                                    100
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample05 -->
+
+                    <div id="sample06" class="sample">
+                        <h3>06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</h3>
+                        <p>중첩 for()문을 이용한 테이블만들기 예제입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+let table = "&lt;table border='1'&gt;";
+
+for(let i=1; i&lt=10;i++){
+    table +="&lt;tr&gt;"
+
+    for(let i=1; i&lt=10; j++){
+        table +="&lt;td&gt;"+j+"&lt;/td&gt;";
+    }
+
+    table +="&lt;/tr&gt;";
+}
+
+table +="&lt;/table&gt;",
+
+document.write(table);
+</code></pre>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    5<br>
+                                    10<br>
+                                    15<br>
+                                    ~~<br>
+                                    95<br>
+                                    100
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                <!-- //sample06 -->
+
+                    <div id="sample07" class="sample">
+                        <h3>07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
+                        <p>for문과 if문을 이용한 구구단을 출력하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+for(let i=2; i&lt=9; i++){
+    document.write(i +"단","<br>");
+
+    for(let j=1; j&lt=9; j++){
+        document.write(i +"*"+ j + "=" + i*j);
+        document.write("<br>");
+    }
+    document.write("<br><br>");
 }
 </code></pre>
                     </div>
@@ -167,7 +260,131 @@ console.log(i)
                         </details>
                     </div>
                 </div>  
-        <!-- //samle04 -->   
+                <!-- //samle07 -->
+
+                </div>  
+                <!-- //main__sample -->
+
+         
+
+                
+    <!-- //samle07 -->
+        
+        
+        <!-- <table border="1">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr> <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr> <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr> <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr> <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr> <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr> <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr> <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr> <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </table> -->
 
         </div>
 
@@ -178,39 +395,68 @@ console.log(i)
         <a href="mailto:lee3ll@naver.com">lee3ll@naver.com</a>
     </footer>
    <!-- //footer -->
-    <script src="assets/js/prism.js">
-        // 01. 1부터 100까지 출력하기
-        for(let i=1; i<=100; i++){
-            //console.log(i)
-        }
+    <script src="assets/js/prism.js"></script>
+    <script>
+        // // 01. 1부터 100까지 출력하기
+        // for(let i=1; i<=100; i++){
+        //     //console.log(i)
+        // }
         
-        // 02. 0부터 50까지 출력하기
-        for(let i=0; i<51; i++){
-            //console.log(i)
-        }
-            // = for(let i=0; i<=50; i++)
+        // // 02. 0부터 50까지 출력하기
+        // for(let i=0; i<51; i++){
+        //     //console.log(i)
+        // }
+        //     // = for(let i=0; i<=50; i++)
         
-        // 03. 1부터 100까지 짝수만 출력하기   
-        for(let i=0; i<=100; i+=2){
-            //console.log(i)
-        }
-            //(i+=2)는 i = i + 2 의 약식
+        // // 03. 1부터 100까지 짝수만 출력하기   
+        // for(let i=0; i<=100; i+=2){
+        //     //console.log(i)
+        // }
+        //     //(i+=2)는 i = i + 2 의 약식
         
-        // 04. 1부터 100까지 5배수만 출력하기   
-        for(let i=0; i<=100; i+=5){
-            //console.log(i)
-        }
+        // // 04. 1부터 100까지 5배수만 출력하기   
+        // for(let i=0; i<=100; i+=5){
+        //     //console.log(i)
+        // }
 
-        //    
-        for(let i=1; i<=100; i++){
-            if( i % 2 == 0 ){
-                console.log(i)
+        // //    
+        // for(let i=1; i<=100; i++){
+        //     if( i % 2 == 0 ){
+        //        // console.log(i)
+        //     }
+        //    // console.log(i)
+        // }
+
+        // // 05. 데이터 이펙트 for문을 이용해서 테이블 만들기
+
+
+        // // for문을 이용해서 1부터 99까지 출력
+        // for(let i=0; i<100, i++;){
+
+            //console.log(i)
+       // }
+
+        // for문을 이용해서 1부터 99까지 짝수(파란색) 출력
+        for(let i=1; i<100; i+=2){
+            if(i % 2 == 0){
+                document.write("<span style='color:blue'>"+i+"</span>")
             }
-            console.log(i)
+            if(i % 2 == 0){
+                document.write("<span style='color:blue'>"+i+"</span>")
+            }
         }
+           
+            
+        // 05. 데이터 이펙트 for문을 이용해서 테이블 만들기
+        {
+            let table = "<table>";
+            table += "</table>";
+
+            document.write(table);
+        }
+    
 
     </script>
-
 
 </body>
 </html>
