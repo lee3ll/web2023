@@ -62,10 +62,10 @@
                         <h3>01. 1부터 100까지 출력하기</h3>
                         <p>for문을 1부터 100까지 출력하는 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">
- for(let i=1; i&lt;=100; i++){ 
-    
- console.log(i)
- }
+    for(let i=1; i&lt;=100; i++){ 
+
+    console.log(i)
+    }
     
 </code></pre>
                         <div class="result">
@@ -87,10 +87,10 @@
                         <h3>02. 0부터 50까지 출력하기</h3>
                         <p>for문을 0부터 50까지 출력하는 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">
- for(let i=1; i&lt;=100; i++){ 
+    for(let i=0; i&lt;=50; i++){ 
     
- console.log(i)
- }
+    console.log(i)
+    }
 
 </code></pre>       
                         <div class="result">
@@ -112,10 +112,10 @@
                         <h3>03. 1부터 100까지 짝수만 출력하기</h3>
                         <p>for문을 짝수만 출력하는 형식입니다. (i+=2)는 i = i + 2 의 약식입니다.</p>
 <pre class="line-numbers"><code class="language-js">
- for(let i=0; i &lt=100; i+=2){
-    
- console.log(i)
- }    
+    for(let i=0; i &lt=100; i+=2){
+
+    console.log(i)
+    }    
 </code></pre>
                         <div class="result">
                             <details>
@@ -137,17 +137,16 @@
                         <h3>04. 1부터 100까지 5배수만 출력하기</h3>
                         <p>for문을 1부터 100까지 5배수만 출력하는 예제로 i+=5값을 넣어줍니다.</p>
 <pre class="line-numbers"><code class="language-js">
- for(let i=0; i &lt=100; i+=5){
-    
- console.log(i)
-}
-   
- for(let i=1; i &lt=100; i++){
-    if( i % 2 == 0 ){
- console.log(i)
+    for(let i=0; i &lt=100; i+=5){
+
+     console.log(i)
     }
-console.log(i)
-}       
+    
+     for(let i=1; i &lt=100; i++){
+        if( i % 5 == 0 ){
+     console.log(i)
+        }
+    }       
 
 </code></pre>
                         <div class="result">
@@ -170,24 +169,24 @@ console.log(i)
                         <h3>05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
                         <p>for문과 if문을 이용한 짝수 홀수 출력하는 방법입니다.</p>
 <pre class="line-numbers"><code class="language-js">
- for(let i=1; i &lt=100; i++){
-    if(i % 5 == 0){
-      document.write("&lt;span style='color:blue'&lt;"+i+"&lt";/span&lt;");
+    for(let i=1; i &lt=100; i++){
+        if(i % 2 == 0){
+          document.write("&lt;span style='color:blue'>"+i+"&lt/span>");
+        }
+        if(i % 2 == 1){
+          document.write("&lt;span style='color:red'>"+i+"&lt/span>");
+        }
     }
-    if(i % 7 == 0){
-      document.write("&lt;span style='color:red'&lt;"+i+"&lt";/span&lt;");
-    }
-}
 </code></pre>
                         <div class="result">
                             <details>
                                 <summary>결과 확인하기</summary>
                                 <script>
                                     for(let i=1; i<=100; i++){
-                                        if(i % 5 == 0){
+                                        if(i % 2 == 0){
                                             document.write("<span style='color:blue'>"+i+"</span>")
                                         }
-                                        if(i % 7 == 0){
+                                        if(i % 2 == 1){
                                             document.write("<span style='color:red'>"+i+"</span>")
                                         }
                                     }
@@ -201,21 +200,20 @@ console.log(i)
                         <h3>06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</h3>
                         <p>중첩 for()문을 이용한 테이블만들기 예제입니다.</p>
 <pre class="line-numbers"><code class="language-js">
-let table = "&lt;table border='1'&gt;";
+    let table = "&lt;table border=1>";
 
-for(let i=1; i&lt=10;i++){
-    table +="&lt;tr&gt;"
+    for(let i=1; i&lt=10;i++){
+        table +="&lt;tr&gt;"
 
-    for(let i=1; i&lt=10; j++){
-        table +="&lt;td&gt;"+j+"&lt;/td&gt;";
+        for(let j=1; j&lt=10; j++){
+            table +="&lt;td&gt;"+j+"&lt;/td&gt;";
+        }
+    table +="&lt;/tr>";
     }
 
-    table +="&lt;/tr&gt;";
-}
+    table +="&lt;/table&gt;",
 
-table +="&lt;/table&gt;",
-
-document.write(table);
+    document.write(table);
 </code></pre>
                         <div class="result">
                             <details>
@@ -232,15 +230,15 @@ document.write(table);
                         <h3>07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
                         <p>for문과 if문을 이용한 구구단을 출력하는 방법입니다.</p>
 <pre class="line-numbers"><code class="language-js">
-for(let i=2; i&lt=9; i++){
-    document.write(i +"단","<br>");
+    for(let i=2; i&lt=9; i++){
+        document.write(i +"단","&ltbr>");
 
-    for(let j=1; j&lt=9; j++){
-        document.write(i +"*"+ j + "=" + i*j);
-        document.write("<br>");
+        for(let j=1; j&lt=9; j++){
+            document.write(i +"*"+ j + "=" + i*j);
+            document.write("&ltbr>");
+        }
+        document.write("&ltbr>&ltbr>");
     }
-    document.write("<br><br>");
-}
 </code></pre>
                     <div class="result">
                         <details>
