@@ -171,25 +171,27 @@ console.log(i)
                         <p>for문과 if문을 이용한 짝수 홀수 출력하는 방법입니다.</p>
 <pre class="line-numbers"><code class="language-js">
  for(let i=1; i &lt=100; i++){
-    if(i % 2 == 0){
+    if(i % 5 == 0){
       document.write("&lt;span style='color:blue'&lt;"+i+"&lt";/span&lt;");
     }
-    if(i % 2 == 1){
-      document.write("&lt;span style='color:blue'&lt;"+i+"&lt";/span&lt;");
+    if(i % 7 == 0){
+      document.write("&lt;span style='color:red'&lt;"+i+"&lt";/span&lt;");
     }
 }
 </code></pre>
                         <div class="result">
                             <details>
                                 <summary>결과 확인하기</summary>
-                                <div>
-                                    5<br>
-                                    10<br>
-                                    15<br>
-                                    ~~<br>
-                                    95<br>
-                                    100
-                                </div>
+                                <script>
+                                    for(let i=1; i<=100; i++){
+                                        if(i % 5 == 0){
+                                            document.write("<span style='color:blue'>"+i+"</span>")
+                                        }
+                                        if(i % 7 == 0){
+                                            document.write("<span style='color:red'>"+i+"</span>")
+                                        }
+                                    }
+                                </script>
                             </details>
                         </div>
                     </div>
@@ -219,12 +221,7 @@ document.write(table);
                             <details>
                                 <summary>결과 확인하기</summary>
                                 <div>
-                                    5<br>
-                                    10<br>
-                                    15<br>
-                                    ~~<br>
-                                    95<br>
-                                    100
+                                    1~10까지 10*10 테이블이 생긴다.
                                 </div>
                             </details>
                         </div>
@@ -245,22 +242,25 @@ for(let i=2; i&lt=9; i++){
     document.write("<br><br>");
 }
 </code></pre>
-                    </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
-                            <div>
-                                5<br>
-                                10<br>
-                                15<br>
-                                ~~<br>
-                                95<br>
-                                100
-                            </div>
+                            <script>
+                                for(let i=2; i<=9; i++){
+                                    document.write(i +"단","<br>");
+                                    
+                                    for(let j=1; j<=9; j++){
+                                        document.write(i +"*"+ j + "=" + i*j);
+                                        document.write("<br>");
+                                      }
+
+                                    document.write("<br><br>");
+                                }
+                            </script>
                         </details>
                     </div>
                 </div>  
-                <!-- //samle07 -->
+        <!-- //samle07 -->
 
                 </div>  
                 <!-- //main__sample -->
@@ -437,14 +437,14 @@ for(let i=2; i&lt=9; i++){
        // }
 
         // for문을 이용해서 1부터 99까지 짝수(파란색) 출력
-        for(let i=1; i<100; i+=2){
-            if(i % 2 == 0){
-                document.write("<span style='color:blue'>"+i+"</span>")
-            }
-            if(i % 2 == 0){
-                document.write("<span style='color:blue'>"+i+"</span>")
-            }
-        }
+        // for(let i=1; i<100; i+=2){
+        //     if(i % 2 == 0){
+        //         document.write("<span style='color:blue'>"+i+"</span>")
+        //     }
+        //     if(i % 2 == 0){
+        //         document.write("<span style='color:blue'>"+i+"</span>")
+        //     }
+        // }
            
             
         // 05. 데이터 이펙트 for문을 이용해서 테이블 만들기

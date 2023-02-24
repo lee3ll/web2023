@@ -84,14 +84,12 @@
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100<br>
-                            200<br>
-                            javascript
+                            실행되었습니다(false)
                         </div>
                     </details>
                 </div>
             </div>
-     <!-- //sample 01 -->
+            <!-- //sample 01 -->
 
             <div id="sample02" class="sample">
                 <h3>02. if문 생략</h3>
@@ -114,14 +112,13 @@
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100<br>
-                            200<br>
-                            javascript
+                            실행되었습니다(true)
+                            실행되었습니다(true)
                         </div>
                     </details>
                 </div>
             </div>
-        <!-- //sample 02 -->
+            <!-- //sample 02 -->
 
             <div id="sample03" class="sample">
                 <h3>03. 삼항 연산자</h3>
@@ -143,14 +140,12 @@
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100<br>
-                            200<br>
-                            javascript
+                            실행되었습니다(false)
                         </div>
                     </details>
                 </div>
             </div>
-        <!-- //sample 03 --> 
+            <!-- //sample 03 --> 
             <div id="sample04" class="sample">
                 <h3>04. 다중 if</h3>
                 <p></p>
@@ -175,14 +170,12 @@ const num = 100;
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100<br>
-                            200<br>
-                            javascript
+                            실행되었습니다(false)
                         </div>
                     </details>
                 </div>
             </div>            
-        <!-- //sample 04 --> 
+            <!-- //sample 04 --> 
         <div id="sample05" class="sample">
             <h3>05. 중첩 if문</h3>
             <p></p>
@@ -207,66 +200,46 @@ const num = 100;
                 <details>
                     <summary>결과 확인하기</summary>
                     <div>
-                        100<br>
-                        200<br>
-                        javascript
+                        실행되었습니다(false)
                     </div>
                 </details>
             </div>
         </div>                        
-        <!-- //sample 05 -->
+            <!-- //sample 05 -->
         <div id="sample09" class="sample">
-            <h3>05. 중첩 if문</h3>
+            <h3>09. 중첩 if문</h3>
             <p></p>
             <div class="script">  
 <pre><code class="language-js">{
-//1부터 100까지
-    for(let i=0; i&lt=100; i++){
-        document.write(i);
-    }
     const arr = [1,2,3,4,5,6,7,8,9];
-        document.write(arr[i])
-    for(let i=1; i&lt=arr.length; i++){
-        document.write(arr[i]);
-    }
 
-    for(let i=0; i&lt=arr.length; i+=2){
-        if(i % 2 == 0){
-            document.write(arr[i]); 
-        }
-    }
-        document.write("i&lt;br>");
-    for(let i=0; i&lt;arr.length; i+=2){
-        if(i % 2 == 1){
-            document.write(arr[i]);
-        }
-    }
-    document.write("&lt;br>");
-    for(let i=1; i&lt;arr.length; i+=2){
-        document.write(arr[i]);
-    }
-    document.write("&lt;br>");
     for(let i=1; i&lt;arr.length; i++){
         if(i % 2 == 0){
             document.write("&lt;span style='color:red'>"+i+"</span>");
         }else {
             document.write(`&lt;span style='color:blue'>${i}</span>`);
         }
-    }
+}
 </pre></code>
             </div>
             <div class="result">
                 <details>
                     <summary>결과 확인하기</summary>
-                    <div>
-                        100<br>
-                        200<br>
-                        javascript
-                    </div>
+                    <script>
+                    const arr = [1,2,3,4,5,6,7,8,9];
+
+                    for(let i=1; i<arr.length; i++){
+                        if(i % 2 == 0){
+                        document.write("<span style='color:red'>"+i+"</span>");
+                     }else {
+                        document.write(`<span style='color:blue'>${i}</span>`);
+                        }
+                    }
+                    </script>
                 </details>
             </div>
         </div> 
-        <!-- //sample 09 -->    
+            <!-- //sample 09 -->    
 
     </main>
    <!-- //main -->
@@ -334,7 +307,7 @@ const num = 100;
 //             document.write(i);
 //         }
 
-//         const arr = [1,2,3,4,5,6,7,8,9];
+        // const arr = [1,2,3,4,5,6,7,8,9];
 
 //         document.write(arr[i])
 //         for(let i=1; i<=arr.length; i++){
@@ -360,13 +333,13 @@ const num = 100;
 //         }
 //         document.write("<br>");
 
-//         for(let i=1; i<arr.length; i++){
-//             if(i % 2 == 0){
-//                 document.write("<span style='color:red'>"+i+"</span>");
-//             }else {
-//                 document.write(`<span style='color:blue'>${i}</span>`);
-//             }
-//         }
+        // for(let i=1; i<arr.length; i++){
+        //     if(i % 2 == 0){
+        //         document.write("<span style='color:red'>"+i+"</span>");
+        //     }else {
+        //         document.write(`<span style='color:blue'>${i}</span>`);
+        //     }
+        // }
         
 
 //         //table 작성
