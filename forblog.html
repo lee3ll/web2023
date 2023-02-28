@@ -7,17 +7,112 @@
     <title>Document</title>
 </head>
 <script>
-    let num = prompt("1보다 큰 숫자를 입력하세요.");
-    let sum = 0;
-    
-    if(num !== null && num > 1){
-      for(let i=1; i<=num; i++){
-        if(i % 2 !== 0){
-          continue;
-        }
-        sum += i;
-        document.write(i + " : " + sum + "<br>");
-      }
+    //01. 1-50까지 for문 출력
+for(let i=1; i<=50; i++){
+  document.write(i);
 }
+
+//02. 1-100까지 홀수 빨강 짝수 파랑
+for(let i=1; i<=100; i++){
+  if(i % 2 ==1){
+    document.write("<span style=color:red>"+i+"</span>");
+  } else {
+    document.write("<span style=color:blue>"+i+"</span>");
+  };
+}
+document.write("<br>");
+
+//03. table 가로 10칸 세로 5칸
+let table = "<table border=1>";
+for(let i=1; i<=5; i++){
+  table+="<tr>";
+    for(let j=1; j<=10; j++){
+     table+="<td>"+j+"</td>";
+    }
+    table+="</tr>";
+}
+table+="</table>";
+document.write(table);
+   
+  
+//04. 16단
+ for(let i=16; i<=16; i++){
+   document.write(i+"단","<br>");
+   for(let j=1; j<=9; j++){
+     document.write(i+"*"+j+"="+i*j,"<br>")
+   };
+ };
+
+//05. 1-10까지 합 (for문)
+let sum=0;
+for(let i=1; i<=10; i++){
+  sum+=i;
+};
+document.write(sum);
+
+//06. 함수 8가지
+//선언
+{
+  function func(){
+    document.write("실행되었습니다.");
+  }
+  func();
+}
+
+//익명
+{
+  const func = function(){
+    document.write("실행되었습니다.");
+  }
+  func();
+}
+//매개
+{
+  function func(str){
+    document.write(str);
+  }
+  func("실행되었습니다.");
+}
+//리턴
+{
+  function func(){
+    const str = "실행되었습니다.";
+    return str;
+  }
+  document.write(func());
+}
+
+//화살표 선언
+{
+  func = () => document.write("실행되었습니다.");
+  func();
+}
+
+//화살표 익명
+{
+  const func = () => {
+    document.write("실행되었습니다.");
+  }
+  func();
+}
+//화살표 매개
+{
+  func = (str) => {
+     document.write(str);
+  }
+   func("실행되었습니다.");
+}
+
+//화살표 리턴
+{
+  func=()=>{
+    const str = "실행되었습니다.";
+    return str;
+  }
+  document.write(func());
+}
+
+
+
 </script>
 </html>
