@@ -7,6 +7,7 @@
     <title>javascript : 데이터 실행하기</title>
     
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -87,7 +88,7 @@
         <div class="main__sample">
             <div id="sample01" class="sample">
                 <h3>01. 선언적 함수</h3>
-                <p>조건문은 프로그래밍에서 가장 기본적인 구문 중 하나입니다. 조건문을 사용하면 프로그램이 특정 조건에 따라서 다른 동작을 하도록 할 수 있습니다.</p>
+                <p></p>
                 <div class="script">   
 <pre class="line-numbers"><code class="language-js">{
     {
@@ -109,8 +110,8 @@
             </div>
             <!-- //sample01 -->
 
-            <div id="sample01" class="sample">
-                <h3>02.</h3>
+            <div id="sample02" class="sample">
+                <h3>02. 익명 함수</h3>
                 <p>조건문은 프로그래밍에서 가장 기본적인 구문 중 하나입니다. 조건문을 사용하면 프로그램이 특정 조건에 따라서 다른 동작을 하도록 할 수 있습니다.</p>
                 <div class="script">   
 <pre><code class="language-js">{
@@ -131,9 +132,101 @@
                     </details>
                 </div>
             </div>
-            <!-- //sample01 -->
+            <!-- //sample02 -->
 
+            <div id="sample03" class="sample">
+                <h3>03.매개변수 함수</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    {
+         const func = function(){
+             document.write("실행되었습니다.<br>");
+         }
+         func();
+    }
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
 
+            <div id="sample04" class="sample">
+                <h3>04. 리턴값 함수</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+
+    function func(){
+        const str = "함수가 실행되었습니다.";
+        return str;
+    }
+    document.write(func());
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample05 -->
+            <div id="sample05" class="sample">
+                <h3>06. 화살표 함수 : 익명 함수</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    function func(){
+        const str = "함수가 실행되었습니다.";
+        return str;
+    }
+    document.write(func());
+ }
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample06 -->
+            <div id="sample07" class="sample">
+                <h3>07. 화살표 함수 : 매개변수 함수</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    const func = () => {
+        document.write("실행되었습니다.");
+    }
+    fucn();
+ }
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample05 -->
 
     </main>
     <!-- //main -->
@@ -348,6 +441,60 @@
 
         document.write(func("실행되었습니다."));
     }
+
+
+    //10 중첩 for
+    {
+        for(let i =1; i<=10; i++){
+            document.write(i,"<br>")
+            for(let j=1; j<=10; j++){
+                document.write(j);
+
+            }
+        }
+
+        let table = "<table boerder = 1>";
+        let count = 0;
+        
+        for(let i=0; i<5; i++){            
+            table += "<tr>";
+            for(let j=0; j<5; j++){
+                count++;;
+                if(count % 2 == 0){
+                    table += "<td style='color:red'>" + count + "</td>"
+                } else {
+                    table += "<td style='color:blue'>" + count + "</td>"
+                }
+            }
+            table += "</tr>";
+    }
+        table += "</table>";
+
+        document.write
+
+    }
+
+
+
+    //연습
+    {
+        for(let i=1; i<100; i++){
+            document.write(i)
+        }
+        document.write("<br>")
+
+        let num = [1,2,3,4,5,6,7,8,9];
+        let sum = 0;
+
+        for(let i=0; i<=num.length; i++);
+            document.write(num[i]);
+            sum += num[i];
+    }
+        document.write("<br>")
+        document.write(sum)
+
+
+
 
     </script>
 
