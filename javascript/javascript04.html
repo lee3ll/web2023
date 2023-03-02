@@ -206,6 +206,43 @@ const num = 100;
             </div>
         </div>                        
             <!-- //sample 05 -->
+        <div id="sample06" class="sample">
+            <h3>06. switch문</h3>
+            <p></p>
+            <div class="script">  
+<pre><code class="language-js">{
+
+    const num = 100;
+    switch(num){
+        case 90:
+            document.write("실행 90");              //break문을 안쓰면 무한에 빠진다, 안쓰면 모든 케이스가 실행
+            break;
+        case 80:
+            document.write("실행80");
+            break;                                  
+        case 70:
+            document.write("실행70"); 
+            break;   
+        case 60:
+            document.write("실행60"); 
+            break;   
+        default:
+            document.write("0")    
+    }
+
+}
+</pre></code>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <script>
+                    
+                    </script>
+                </details>
+            </div>
+        </div> 
+            
         <div id="sample09" class="sample">
             <h3>09. for문</h3>
             <p>for문과 if문을 사용하여 배열값 1~9중에 짝수는 빨강 홀수는 파랑이 나오도록 가능합니다.</p>
@@ -238,7 +275,9 @@ const num = 100;
                     </script>
                 </details>
             </div>
-        </div> 
+        </div>
+
+        
             <!-- //sample 09 -->    
 
     </main>

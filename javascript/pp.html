@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+</head>
+<script>
+//선언적
+{
+    function func(){
+        document.write("01.함수가 실행되었습니다.");
+    }
+    func();
+}
+document.write("<br>")
+
+//익명
+{
+    const func = function(){
+        document.write("실행")
+    }
+    func();
+}
+
+document.write("<br>")
+//매개
+{
+    function func(str){
+        document.write(str)
+    }
+    func("실행");
+}
+//리턴
+{
+    function func(){
+        const str = "실행"
+        return str;
+    }
+    document.write(func())
+}
+
+{
+    func = () => {
+        document.write("실행")
+    }
+    func();
+}
+document.write("<br>")
+{
+    const func = () => {
+        document.write("실행");
+    }
+    func();
+}
+
+{
+    func = () =>{
+        const str = "실행"
+        return str;
+    }
+    document.write(func());
+}
+
+{
+    function func(){
+        for(let i=1; i<=10; i++)
+        document.write(i)
+    }
+    func();
+}
+
+{
+    function func(){
+        let table="<table border='1'>"
+            for(let i=1; i<=10; i++){
+                table+="<tr>"
+                    for(let j=1; j<=10; j++)
+                    table+="<td>"+j+"</td>"
+                table+="</tr>"    
+                }
+        table+="</table>"
+        document.write(table)        
+    }
+    func();
+}
+
+
+//for
+
+
+// 03.함수가 실행되었습니다 10번
+
+// 7 함수안에 10칸 테이블
+
+
+
+</script>;
+</html>
