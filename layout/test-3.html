@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
         }
+
         body {
             background-color: #E1F5FE;
         }
@@ -18,14 +19,14 @@
             width: 1200px;
             display: grid;
             grid-template-areas: 
-                "header header"
-                "nav nav"
-                "section aside"
-                "section articl"
-                "section articl2"
-                "footer footer"  
+                "header header header"
+                "nav nav nav"
+                "aside section section2"
+                "aside  articl articl"
+                "aside  articl2 articl2"
+                "footer footer footer"  
             ;
-            grid-template-columns: 300px 900px;
+            grid-template-columns: 300px 450px 450px;
             grid-template-rows: 100px 100px 260px 260px 260px 100px;
         }
         #header {
@@ -40,20 +41,24 @@
             background-color: #4FC3F7;
             grid-area: section;
         }
+        #section2 {
+            background-color: #69ade4;
+            grid-area: section2;
+        }
         #aside {
             background-color: #29B6F6;
             grid-area: aside;
         }
         #articl {
-            background-color: #03A9F4;
+            background-color: #4d8aa6;
             grid-area: articl;
         }
         #articl2 {
-            background-color: #039BE5;
+            background-color: #2176a1;
             grid-area: articl2;
         }
         #footer {
-            background-color: #0288D1;
+            background-color: #1080bd;
             grid-area: footer;
         }
     </style>
@@ -62,11 +67,13 @@
     <div id="wrap">
         <header id="header"></header>
         <nav id="nav"></nav>
-        <section id="section"></section>
         <aside id="aside"></aside>
+        <section id="section"></section>
+        <section id="section2"></section>
         <article id="articl"></article>
         <article id="articl2"></article>
         <footer id="footer"></footer>
     </div>
 </body>
 </html>
+   
