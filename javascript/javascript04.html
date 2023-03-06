@@ -191,9 +191,10 @@ const num = 100;
                 document.write("실행되었습니다(3)"); 
             } 
         }
-    } else {
-        document.write("실행되었습니다(4)");
+        } else {
+            document.write("실행되었습니다(4)");
         }
+    }
 </pre></code>
             </div>
             <div class="result">
@@ -236,25 +237,9 @@ const num = 100;
             <div class="result">
                 <details>
                     <summary>결과 확인하기</summary>
-                    <script>
-                        const num = 100;
-                            switch(num){
-                                case 90:
-                                    document.write("실행 90");              
-                                    break;
-                                case 80:
-                                    document.write("실행80");
-                                    break;                                  
-                                case 70:
-                                    document.write("실행70"); 
-                                    break;   
-                                case 60:
-                                    document.write("실행60"); 
-                                    break;   
-                                default:
-                                    document.write("0")    
-                            }
-                    </script>
+                    <div>
+                        실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)
+                    </div>
                 </details>
             </div>
         </div> 
@@ -301,7 +286,8 @@ const num = 100;
     do {
         document.write(num);
         num++;
-} while (num &lt 5);
+    } while (num &lt 5);
+}
 </pre></code>
                 </div>
                 <div class="result">
@@ -359,15 +345,15 @@ const num = 100;
             table += "<tr>"
             for(let j=1; j&lt=5; j++){
                 if(count % 2 == 0){
-                    table += "&lttd style='color:red'>" + count + "</td>"
+                    table += "&lttd style='color:red'>" + count + "&lt/td>"
                 } else {
-                    table += "&lttd style='color:blue'>" + count + "</td>"
+                    table += "&lttd style='color:blue'>" + count + "&lt/td>"
                 }
                 count++
             }
-            table += "</tr>"
+            table += "&lt/tr>"
             }
-        table += "</table>";
+        table += "&lt/table>";
         document.write(table);            
     }
 }
@@ -377,7 +363,25 @@ const num = 100;
                     <details>
                         <summary>결과 확인하기</summary>
                         <script>
-                        
+                            {
+                                let table = "<table border=1>";
+                                let count = 1;
+                                for(let i=1; i<=5; i++){
+                                    table += "<tr>"
+                                    for(let j=1; j<=5; j++){
+                                        if(count % 2 == 0){
+                                            table += "<td style='color:red'>" + count + "</td>"
+                                        } else {
+                                            table += "<td style='color:blue'>" + count + "</td>"
+                                        }
+                                        count++
+                                    }
+                                    table += "</tr>"
+                                    }
+                                table += "</table>";
+                                document.write(table);            
+                            }
+
                         </script>
                     </details>
                 </div>
@@ -401,9 +405,7 @@ const num = 100;
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <script>
-                        
-                        </script>
+                       <div>123456789</div>
                     </details>
                 </div>
             </div>        
@@ -425,9 +427,9 @@ const num = 100;
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <script>
-                        
-                        </script>
+                        <div>
+                            123456789111213141516171819
+                        </div>
                     </details>
                 </div>
             </div>        
