@@ -234,9 +234,12 @@
                     <p>배열안에 저장된 데이터를 불러오는 방법입니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">{
-    const arr = [100, 200, "javascript"];
-
-    console.log(arr[0], arr[1], arr[2]);
+    for(let i=1; i&lt=10; i++) {
+        console.log("i : " + i);
+        for(let j=1; j&lt=10; j++) {
+            console.log("j : " + j);
+        }
+    }
 }
 </pre></code>
                     </div>
@@ -244,9 +247,9 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                100<br>
-                                200<br>
-                                javascript
+                                i:1에 j: 1~10<br>
+                                i:2에 j: 1~10<br>
+                                i : 10까지 반복
                             </div>
                         </details>
                     </div>

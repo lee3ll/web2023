@@ -292,6 +292,27 @@ const num = 100;
             </div>            
             <!-- //sample 07 -->
 
+            <div id="sample08" class="sample">
+                <h3>08. do while문</h3>
+                <p>while문은 do while문으로 바꾸어 사용 가능합니다.</p>
+                <div class="script">  
+<pre><code class="language-js">{
+    let num = 0;
+    do {
+        document.write(num);
+        num++;
+} while (num &lt 5);
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                            01234
+                    </details>
+                </div>
+            </div>        
+            <!-- //sample 08 -->
+
         <div id="sample09" class="sample">
             <h3>09. for문</h3>
             <p>for문과 if문을 사용하여 배열값 1~9중에 짝수는 빨강 홀수는 파랑이 나오도록 가능합니다.</p>
@@ -325,7 +346,43 @@ const num = 100;
                 </details>
             </div>
         </div>        
-            <!-- //sample 09 -->    
+            <!-- //sample 09 -->
+            
+            <div id="sample10" class="sample">
+                <h3>10. 데이터 제어하기 : 중첩 for문</h3>
+                <p>for문 안에 for문을 넣어 반복에 대한 반복을 실행시킬 수 있다.</p>
+                <div class="script">  
+<pre><code class="language-js">{
+    let table = "&lttable border=1>";
+        let count = 1;
+        for(let i=1; i&lt=5; i++){
+            table += "<tr>"
+            for(let j=1; j&lt=5; j++){
+                if(count % 2 == 0){
+                    table += "&lttd style='color:red'>" + count + "</td>"
+                } else {
+                    table += "&lttd style='color:blue'>" + count + "</td>"
+                }
+                count++
+            }
+            table += "</tr>"
+            }
+        table += "</table>";
+        document.write(table);            
+    }
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                        
+                        </script>
+                    </details>
+                </div>
+            </div>        
+            <!-- //sample 10 --> 
 
             <div id="sample11" class="sample">
                 <h3>11. break문</h3>
@@ -350,7 +407,33 @@ const num = 100;
                     </details>
                 </div>
             </div>        
-                <!-- //sample 11 --> 
+            <!-- //sample 11 -->
+            
+            <div id="sample12" class="sample">
+                <h3>12. continue 문</h3>
+                <p>for문과 if문을 사용하여 배열값 1~9중에 짝수는 빨강 홀수는 파랑이 나오도록 가능합니다.</p>
+                <div class="script">  
+<pre><code class="language-js">{
+    for(let i =1; i &lt 20; i++){
+        if(i == 10){
+            continue;
+        }
+        document.write(i);
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                        
+                        </script>
+                    </details>
+                </div>
+            </div>        
+            <!-- //sample 12 --> 
+
+                
 
     </main>
    <!-- //main -->
