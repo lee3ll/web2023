@@ -91,12 +91,12 @@
                 <p></p>
                 <div class="script">   
 <pre class="line-numbers"><code class="language-js">{
-    {
-         function func(){
-             document.write("실행되었습니다.");
-        }
-         func();
+
+     function func(){
+         document.write("실행되었습니다.");
     }
+     func();
+}
 </pre></code>
                 </div>
                 <div class="result">
@@ -115,12 +115,12 @@
                 <p>조건문은 프로그래밍에서 가장 기본적인 구문 중 하나입니다. 조건문을 사용하면 프로그램이 특정 조건에 따라서 다른 동작을 하도록 할 수 있습니다.</p>
                 <div class="script">   
 <pre><code class="language-js">{
-    {
-         const func = function(){
-             document.write("실행되었습니다.<br>");
-         }
-         func();
-    }
+
+     const func = function(){
+         document.write("실행되었습니다.<br>");
+     }
+     func();
+}
 </pre></code>
                 </div>
                 <div class="result">
@@ -139,12 +139,12 @@
                 <p></p>
                 <div class="script">   
 <pre><code class="language-js">{
-    {
-        function func(str){
-            document.write(str);
-        }
-        func("실행되었습니다.<br>");
+
+    function func(str){
+        document.write(str);
     }
+    func("실행되었습니다.<br>");
+}
 </pre></code>
                 </div>
                 <div class="result">
@@ -226,7 +226,120 @@
                     </details>
                 </div>
             </div>
-            <!-- //sample05 -->
+            <!-- //sample07 -->
+            <div id="sample08" class="sample">
+                <h3>08. 화살표 함수 : 리턴값 함수</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    func=() => {
+        const str =  "실행되었습니다.";
+        return str;
+    }
+    document.write(func())
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample08 -->
+
+            <div id="sample09" class="sample">
+                <h3>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    const func = (str) => {
+        return str;                         //모든함수 기본값으로 return들어가지만 생략하는 것
+    }
+    document.write(func("실행되었습니다."));
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample09 -->
+
+            <div id="sample10" class="sample">
+                <h3>10.화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    const func = str => {                       //str괄호 생략가능
+        return str;
+    }
+    document.write(func("실행되었습니다."));
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample10 -->
+
+            <div id="sample10" class="sample">
+                <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    const func = str => str;                    
+            
+        document.write(func("실행되었습니다."));            //리액트에서 가장많이 사용
+    }
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample11 -->
+
+            <div id="sample12" class="sample">
+                <h3>12. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    func = str => str;
+
+        document.write(func("실행되었습니다."));
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample12 -->
 
     </main>
     <!-- //main -->

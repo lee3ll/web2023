@@ -258,7 +258,40 @@ const num = 100;
                 </details>
             </div>
         </div> 
-            
+            <!-- //sample 06 -->
+            <div id="sample07" class="sample">
+                <h3>07. while문</h3>
+                <p>else if문을 사용한 여러 조건식 중 해당하는 값만 실행됩니다. </p>
+                <div class="script">  
+<pre><code class="language-js">{
+
+    for(let i=0; i &lt 5; i++){
+        document.write(i);
+    }
+    let num = 0;                //초기값
+    while(num &lt 5){               //조건식
+        document.write(num);
+        num++;                  //증감식
+    }
+    let num2 = 0;
+    do {
+        document.write(num2);
+        num2++;
+    } while (num2 &lt 5);               
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다(num==100)
+                        </div>
+                    </details>
+                </div>
+            </div>            
+            <!-- //sample 07 -->
+
         <div id="sample09" class="sample">
             <h3>09. for문</h3>
             <p>for문과 if문을 사용하여 배열값 1~9중에 짝수는 빨강 홀수는 파랑이 나오도록 가능합니다.</p>
@@ -291,10 +324,33 @@ const num = 100;
                     </script>
                 </details>
             </div>
-        </div>
-
-        
+        </div>        
             <!-- //sample 09 -->    
+
+            <div id="sample11" class="sample">
+                <h3>11. break문</h3>
+                <p>for문과 if문을 사용하여 배열값 1~9중에 짝수는 빨강 홀수는 파랑이 나오도록 가능합니다.</p>
+                <div class="script">  
+<pre><code class="language-js">{
+    for(let i =1; i &lt 20; i++){
+        if(i == 10){
+            break;
+        }
+        document.write(i);
+    }
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                        
+                        </script>
+                    </details>
+                </div>
+            </div>        
+                <!-- //sample 11 --> 
 
     </main>
    <!-- //main -->
