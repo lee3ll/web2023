@@ -113,13 +113,24 @@
 // }
 
 {
-    const arr = [100, 200, 300, 400, 500];   
+    let x = 100;    
+    let y = 200;    
 
-    for(let i in arr){
-        document.write(arr[i]);
+    function func (){
+        let x = 100;    
+        let y = 200;    
+        z = "javascript";   
+    
+        console.log("함수안" + x); 
+        console.log("함수안" + y); 
+        console.log("함수안" + z); 
     }
-}
+    func();
 
+    console.log("함수밖" + x);
+    console.log("함수밖" + y);
+    console.log("함수밖" + z);
+}
 
 </script>
 </html>

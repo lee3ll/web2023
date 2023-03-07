@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+    
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            color: #000;   
+        }
+        .mt0 {margin-top: 0px !important;}
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+       
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+        
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+
+        .section.center {
+            text-align: center;
+        }
+        .section__small {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: #ff7c7c;
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            line-height: 25px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* text__wrap */
+        .text__inner {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        }
+        .text__inner .text {
+            width: 32.3333%;
+            border: 1px solid #f5f5f5;
+            padding: 90px 20px 20px 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text__inner .text:hover {
+            background-color: #f5f5f5;
+        }
+        .text__inner .text::before{
+            content: '';
+            width: 60px;   
+            height: 60px;         
+            background-color: #ce3939;
+            background-image: url(../asset/img/textType01_01.svg);
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;            
+        }
+        .text__inner .text.t1::before {
+            background-color: #F8B8E2;
+            background-image: url(../asset/img/textType01_01.svg);
+        }
+        .text__inner .text.t2::before {
+            background-color: #D0B6F1;
+            background-image: url(../asset/img/textType01_02.svg);
+        
+        }
+        .text__inner .text.t3::before {
+            background-color: #F48989;
+            background-image: url(../asset/img/textType01_03.svg);
+        }
+        .text__inner .text.t4::before {
+            background-color: #F3E19F;
+            background-image: url(../asset/img/textType01_04.svg);
+        }
+        .text__inner .text.t5::before {
+            background-color: #BBF4BE;
+            background-image: url(../asset/img/textType01_05.svg);
+        }
+        .text__inner .text.t6::before {
+            background-color: #9FDAF5;
+            background-image: url(../asset/img/textType01_06.svg);
+        }
+        .text__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .text__desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text__btn::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background-image: url(../asset/img/icon_plus.svg);
+            transition: all 0.3s;
+        }
+        .text__btn:hover::before {
+            transform: rotate(360deg);
+        }
+       
+   
+    </style>
+</head>
+<body>
+    <section class="text__wrap section center nexon">
+        <div class="container">
+            <span class="section__small">notice</span>
+            <h2 class="section__h2 mb70">오사카 먹거리</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__titile">오꼬노미야끼</h3>
+                    <p class="text__desc">오사카를 대표하는 음식 중 하나로, 얇은 밀가루 반죽에 돼지고기, 새우, 오징어, 양배추, 파 등을 넣고 구워 만든 팬케이크 형태의 음식입니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__titile">타코야끼</h3>
+                    <p class="text__desc">오코노미야키와 함께 오사카의 대표적인 음식으로, 반구 모양의 고기빵에 새우, 오징어, 양배추 등을 넣고 소스와 마요네즈 등을 뿌려 먹습니다. 내용물은 기호에따라 선택할 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__titile">교자</h3>
+                    <p class="text__desc">중국의 만두에서 영향을 받아 만들어진 것으로 일본 전역에서 사랑받고 있지만 교자 중에서도, 오사카 교자는 육즙이 풍부하고 껍질은 바삭한 맛이 특징입니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__titile">라멘</h3>
+                    <p class="text__desc">오사카에서는 '톤코츠 라멘(Tonkotsu Ramen)'이 유명합니다. 돼지 뼈와 고기 등을 오랫동안 끓여 깊은 맛을 낸 스프에, 탄탄면을 넣어 먹습니다.</p>
+                        
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__titile">가츠동</h3>
+                    <p class="text__desc">돈까스를 작게 잘라 밥 위에 올린 후, 계란이나 양파, 녹색 양파 등과 함께 볶아 달걀말이를 만들어 김치나 당근 등으로 양념한 것을 곁들여 먹습니다. 고소하면서도 담백한 맛이 특징입니다.</p>
+                        
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__titile">츠네오</h3>
+                    <p class="text__desc">'츠네오'는 1675년부터 이어져 온 오사카에서 가장 오래된 찻집 중 하나입니다. 경치가 아름다운 가든에서 일본 전통차와 전통간식을 함께 즐길 수 있습니다.</p>
+                       
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
