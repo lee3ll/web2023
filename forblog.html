@@ -112,25 +112,15 @@
 //   document.write(func());
 // }
 
-{
-    let x = 100;    
-    let y = 200;    
+let a =1, b=2, c=3, result;
+    a=20, b=30, c=30;
 
-    function func (){
-        let x = 100;    
-        let y = 200;    
-        z = "javascript";   
-    
-        console.log("함수안" + x); 
-        console.log("함수안" + y); 
-        console.log("함수안" + z); 
-    }
-    func();
+    result = a < b ? b++ : --c; //--c는 실행x
 
-    console.log("함수밖" + x);
-    console.log("함수밖" + y);
-    console.log("함수밖" + z);
-}
+    console.log(result);  //30
+    console.log(a);     //20
+    console.log(b+c);   //
+    console.log(c);
 
 </script>
 </html>
