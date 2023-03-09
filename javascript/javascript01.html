@@ -175,13 +175,13 @@
             <p>변수는 데이터를 저장하고, 변경하고, 추가할 수 있습니다.</p>
             <div class="script">
 <pre><code class="language-js"> {
-    let x = 100;    
-    let y = 200;    
+    let x = 100;            //전역변수
+    let y = 200;            //전역변수 //함수안에 있지 않아도 식이 먹힘
 
     function func (){
-        let x = 100;    
-        let y = 200;    
-        z = "javascript";   
+        let x = 100;        //중복이어도 함수 안에 있으면 다른 변수로 계산 //지역 변수
+        let y = 200;        //let이 없으면 전역변수로 계산(ex y=100)
+        z = "javascript";   //전역변수
     
         console.log("함수안" + x); 
         console.log("함수안" + y); 
@@ -327,7 +327,7 @@
                     <p>new Array를 생략한 후 한 줄로 간략화한 형식입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const arr = [100, 200, "javascript"]
+    const arr = [100, 200, "javascript"];
             
     console.log(arr[0]);
     console.log(arr[1]);
@@ -534,7 +534,7 @@
 <pre><code class="language-js">{
     const a = 100;
     const b = 200;
-    const c = "javascript"
+    const c = "javascript";
 
     const obj = {a, b, c};
 
@@ -664,6 +664,14 @@
     console.log(a);     //20
     console.log(b+c);   //60
     console.log(c);     //30
+
+6.
+    let num1 = 16, num2 = 40;
+    let a = num1++;
+    let b = --num2;
+
+    console.log(a+b);   //55
+
 </pre></code>
             </div>            
         </div>
@@ -673,13 +681,6 @@
                     <p></p>
                     <div class="script">
 <pre><code class="language-js">{
-    {
-        let num1 = 16, num2 = 40;
-        let a = num1++;
-        let b = --num2;
-
-        console.log(a+b);
-    };
     {
         let a = 9;
         let b = 11;
@@ -702,11 +703,17 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                100<br>
-                                200<br>
-                                javascript
+                                2<br>
+                                64
                             </div>
-                        </details>           
+                        </details>
+                        <div class="notice">
+                            <h4>비트 연산자 종류</h4>
+                            <p>&(AND연산자) : 두 비트가 모두 1일 경우에만 결과가 1이된다.<br>
+                            |(OR연산자) : 두 비트 중 하나 이상이 1일 경우 1, 둘 다 0인 경우 0이된다.<br>
+                            ^(XOR연산자) : 두 비트가 서로 다른 경우 1, 같은경우 0이 된다.
+                            </p>
+                        </div>           
                     </div>                    
                 </div>
         <!-- //sample19 -->    
