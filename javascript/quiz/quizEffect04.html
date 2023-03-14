@@ -89,79 +89,136 @@
     </footer>
     <!-- //footer -->
     <script>
-        //선택자
+        // //선택자
+        // const quizWrap = document.querySelector(".quiz__wrap");
+        // const quizTitle = quizWrap.querySelector(".quiz__title");
+        // const quizQuestion = quizWrap.querySelector(".quiz__question");
+        // const quizChoice = quizWrap.querySelectorAll(".quiz__choice span");
+        // const quizSelect = quizWrap.querySelectorAll(".quiz__choice input");
+        // const quizDesc = quizWrap.querySelectorAll(".quiz__desc"); 
+        // const quizAnswer = quizWrap.querySelector(".quiz__answer"); 
+        // const quizConfirm = quizWrap.querySelector(".quiz__answer .confirm");
+        // const dogWrap = quizWrap.querySelectorAll(".dog__Wrap");
+        // //문제 정보
+        // const quiazInfo = [
+        //     {
+        //         infoType: "웹디자인 기능사",
+        //         infoTime: "2016 4회",
+        //         infoNumber: "1",
+        //         infoQuestion: "다음 중 디자인의 기본 요소들로 옳은 것은?",
+        //         infoChoice: ["선, 색체, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"],
+        //         infoAnswer: "2",
+        //         infoDesc: "디자인의 기본 요소에는 점, 선, 면, 질감이 있습니다.."
+    
+        //     }
+        // ]
+        // //문제 출력
+        // // quizTitle.innerHTML = quiazInfo[0].infoType + " " + quiazInfo[0].infoTime;
+        // function updateQuiz(){
+        //     quizTitle.innerHTML = quiazInfo[0].infoType + " " + quiazInfo[0].infoTime
+        //     quizQuestion.innerHTML = "<em>"+quiazInfo[0].infoNumber+"</em>."+ " " + quiazInfo[0].infoQuestion
+        //     quizDesc.innerHTML = quiazInfo[0].infoDesc;
+            
+        //     // for(let i=0; i<4; i++){
+        //     //     quizChoice[i].textContent = quiazInfo[0].infoChoice[i];
+        //     // }
+        // }
+
+        // quizChoice.forEach(function(el,i){                     //el은 span 4개를 의미
+        //     quizChoice[i].textContent = quiazInfo[0].infoChoice[i]
+            
+        // });
+        //     // updateQuiz();
+            
+        //     //해설 숨기기
+        //     quizDesc.style.display = "none";
+        //     //해설 보이기
+        //     quizDesc.style.display = "block";
+            
+        //     //정답 숨기기
+        //     quizAnswer.style.display = "none";
+            
+        //     //문제 출력
+        //     function updateQuiz(){}
+       
+        // //정답 확인
+        // function answerQuiz(){
+        //     //사용자가 선택한 인풋박스(checked) == 문제 정답(quiazInfo[0].infoAnswer)
+        //     for(let i=0; i<quizChoice.length; i++){
+        //         if(quizSelect[i].checked == true){      //사용자가 보기를 체크한 상태
+        //             if(quizSelect[i].value == quiazInfo[0].infoAnswer){
+        //               // alert("정답입니다.")   
+        //                dogWrap.classlist.add("like")
+        //             } else {
+        //                 //alert("오답입니다.") 
+        //                 dogWrap.classlist.add("dislike");
+        //             }
+        //         }
+        //     }
+        // }
+        // quizConfirm.addEventListener("click", answerQuiz);
+        
+        // updataQuiz()
+      
+        // updateQuiz();    //문제 출력
+        // AnswerQuiz();    //정답 확인
+         // 문제 출력
+         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizTitle = quizWrap.querySelector(".quiz__title");
-        const quizQuestion = quizWrap.querySelector(".quiz__question");
+        const quizQuestion= quizWrap.querySelector(".quiz__question");
         const quizChoice = quizWrap.querySelectorAll(".quiz__choice span");
         const quizSelect = quizWrap.querySelectorAll(".quiz__choice input");
-        const quizDesc = quizWrap.querySelectorAll(".quiz__desc"); 
-        const quizAnswer = quizWrap.querySelector(".quiz__answer"); 
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizConfirm = quizWrap.querySelector(".quiz__answer .confirm");
-        const dogWrap = quizWrap.querySelectorAll(".dogWrap");
-        //문제 정보
-        const quiazInfo = [
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
+        // 문제 정보
+        const quizInfo = [
             {
                 infoType: "웹디자인 기능사",
-                infoTime: "2016 4회",
+                infoTime: "2016년 4회",
                 infoNumber: "1",
                 infoQuestion: "다음 중 디자인의 기본 요소들로 옳은 것은?",
-                infoChoice: ["선, 색체, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"],
+                infoChoice: ["선, 색채, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"],
                 infoAnswer: "2",
-                infoDesc: "디자인의 기본 요소에는 점, 선, 면, 질감이 있습니다.."
-    
+                infoDesc: "디자인의 기본 요소에는 점, 선, 면, 질감이 있습니다."
             }
-        ]
-        //문제 출력
-        // quizTitle.innerHTML = quiazInfo[0].infoType + " " + quiazInfo[0].infoTime;
+        ];
+        // 문제 출력
         function updateQuiz(){
-            quizTitle.innerHTML = quiazInfo[0].infoType + " " + quiazInfo[0].infoTime
-            quizQuestion.innerHTML = "<em>"+quiazInfo[0].infoNumber+"</em>."+ " " + quiazInfo[0].infoQuestion
-            quizDesc.innerHTML = quiazInfo[0].infoDesc;
-            
-            // for(let i=0; i<4; i++){
-            //     quizChoice[i].textContent = quiazInfo[0].infoChoice[i];
-            // }
+            quizTitle.innerHTML = quizInfo[0].infoType +" "+ quizInfo[0].infoTime;
+            quizQuestion.innerHTML = "<em>"+quizInfo[0].infoNumber+"</em>."+ quizInfo[0].infoQuestion;
+            quizDesc.innerHTML = quizInfo[0].infoDesc;
+            for(let i=0; i<4; i++){
+                quizChoice[i].textContent = quizInfo[0].infoChoice[i];
+            }
+            // 해설 숨기기
+            quizDesc.style.display = "none";
         }
-
-        quizChoice.forEach(function(el,i){                     //el은 span 4개를 의미
-            quizChoice[i].textContent = quiazInfo[0].infoChoice[i]
-        });
-
-        // updateQuiz();
-
-        //해설 숨기기
-        quizDesc.style.display = "none";
-        //해설 보이기
-        quizDesc.style.display = "block";
-
-        //정답 숨기기
-        quizAnswer.style.display = "none";
-        
-        //문제 출력
-        function updateQuiz(){}
-       
-        //정답 확인
+        // 정답 확인
         function answerQuiz(){
-            //사용자가 선택한 인풋박스(checked) == 문제 정답(quiazInfo[0].infoAnswer)
+            // 사용자가 선택한 인풋박스(checked) == 문제 정답(quizInfo[0].infoAnswer)
             for(let i=0; i<quizChoice.length; i++){
-                if(quizSelect[i].checked == true){      //사용자가 보기를 체크한 상태
-                    if(quizSelect[i].value == quiazInfo[0].infoAnswer){
-                      // alert("정답입니다.")   
-                       dogWrap.classlist.add("like")
+                if(quizSelect[i].checked == true){  //사용자가 보기를 체크한 상태
+                    if(quizSelect[i].value == quizInfo[0].infoAnswer){
+                        // alert("정답입니다.");
+                        dogWrap.classList.add("like");
                     } else {
-                        //alert("오답입니다.") 
-                        dogWrap.classlist.add("dislike");
+                        // alert("오답입니다.")
+                        dogWrap.classList.add("dislike");
                     }
                 }
             }
+            //해설 보이기
+            quizDesc.style.display = "block";
+            //정답 숨기기
+            quizAnswer.style.display = "none";
         }
+        // 정답 클릭
         quizConfirm.addEventListener("click", answerQuiz);
-        
-        updataQuiz()
-      
-        updateQuiz();    //문제 출력
-        AnswerQuiz();    //정답 확인
+        //문제 출력
+        updateQuiz();
        
         
     </script>

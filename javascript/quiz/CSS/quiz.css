@@ -650,6 +650,7 @@
 }
 .dislike .tail {
     transform: rotate(0);
+    animation: movetail 0.5s linear infinite alternate forwards;
 }
 
 
