@@ -19,7 +19,7 @@
         }
         img {
             vertical-align: top;
-            color: #000;   
+            width: 100%;   
         }
         .mt0 {margin-top: 0px !important;}
         .mt10 {margin-top: 10px !important;}
@@ -74,10 +74,50 @@
         .section__desc {
             font-size: 22px;
             line-height: 25px;
-            color: #666;
+            color: #666666;
             margin-bottom: 70px;
             font-weight: 300;
             line-height: 1.5;
+        }
+        /* imgtext__type */
+        .imgtext__inner {
+            display: flex;
+        }
+        .imgtext__inner .imgtext {
+            width: 373px;
+            height: 500px;
+            margin-left: 20px;
+            text-align: left;
+        }
+        .imgtext__small {
+            font-size: 14px;
+            border-radius: 50px;
+            padding: 1px 23px;
+            background-color: #D78D8D;
+            color: #fff;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        .imgtext__h2 {
+            font-size: 50px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .imgtext__text {
+            margin-bottom: 15px;
+            line-height: 150%;
+            color: #666666;
+            text-align: left;
+        }
+        .imgtext ul li {
+            margin-left: 15px;
+            line-height: 150%;
+            color: #666666;
+            text-align: left;
+        }
+        .image__img {
+            padding: 10px;
         }
     </style>
 </head>
@@ -86,8 +126,8 @@
         <div class="container">
             <div class="imgtext__inner">
                 <article class="imgtext text">
-                    <span class="section__small">notice</span>
-                    <h2 class="section__h2">먹거리 종류별 사진</h2>
+                    <span class="imgtext__small">notice</span>
+                    <h2 class="imgtext__h2">오사카 먹거리의 종류</h2>
                     <p class="imgtext__text">오사카에는 타코야키, 가츠동, 오꼬노미야키, 교자, 라멘 등등 여러가지 먹거리가 있습니다.</p>
                     <ul>
                         <li>타코야키(Takoyaki)</li>
@@ -99,14 +139,16 @@
                         <li>꼬치야키(Kushikatsu)</li>
                     </ul>
                 </article>
-                <article class="image">
-                    <figure class="image__header">
-                        <img src="../asset/img/imgtext Type01_01.jpg">
+                <article class="imagetext image">
+                    <figure class="image__img">
+                        <img src="../asset/img/imgtext Type01_01.jpg" alt="타코야키 이미지">
                     </figure>
+                </article>
                 <article class="image">
-                    <figure class="image__header">
-                        <img src="../asset/img/imgtext Type01_02.jpg">
-                    </figure>    
+                    <figure class="image__img">
+                        <img src="../asset/img/imgtext Type01_02.jpg" alt="가츠동이미지">
+                    </figure>  
+                </article>      
             </div>
         
 </body>
