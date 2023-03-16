@@ -8,11 +8,87 @@
 </head>
 <script>
 
-        for(let i=0; i<10; i++){
-        sum+=i
+        // {
+        //     function func(num, str1, str2){
+        //         document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
+        //     }
+        //     func("1","함수","실행");
+        //     func("2","자바스크립트","실행");
+        //     func("3","리액트","실행");
+        // }
+        // {
+        //     function func(num, str1, str2){
+        //         document.write
+        //     }
+        //     func("1","함수","실행");
+        //     func("2","자바스크립트","실행");
+        //     func("3","리액트","실행");
+        // }
+        //함수 유형 : 함수와 배열, 객체를 이용한 형태
+        // {
+        //     const info = [
+        //         {
+        //             num: "1",
+        //             name: "함수",
+        //             com: "실행"
+        //         },{
+        //             num: "2",
+        //             name:"자바스크립트",
+        //             com:"실행"
+        //         },{
+        //             num: "3",
+        //             name:"리액트",
+        //             com:"실행"
+        //         }                
+        //     ];
+        //     function func(num, str1, str2){
+        //         document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`)
+        //     }
+        //     func(info[0].num,info[0].name,info[0].com);
+        //     func(info[1].num,info[1].name,info[1].com);
+        //     func(info[2].num,info[2].name,info[2].com);
+        // }
 
-        document.write(i)
-    }
-    
+        // {
+        //     const info = {
+        //         num1: "1",
+        //         name1: "함수",
+        //         com1: "실행",
+        //         num2: "2",
+        //         name2: "자바스크립트",
+        //         com2: "실행",
+        //         result1: () => {
+        //             document.write(`${info.num1}.${info.name1}가 ${info.com1}되었습니다.`)
+        //         },
+        //         result2: () => {
+        //             document.write(`${info.num2}.${info.name2}가 ${info.com2}되었습니다.`)
+        //         }
+        //     }
+            // info.result1();
+            // info.result2();
+        // }
+
+        //객체 생성자 함수
+        {
+            function func(num, name, com){
+                this.num = num;
+                this.name = name;
+                this.com = com;
+
+                this.result1 = function(){
+                    document.write(`${this.num}.${this.name}가 ${this.com}되었습니다.`);
+                }
+            }
+        }
+        //인스턴스
+        const info1 = new func("100","함수","실행");
+        const info2 = new func("200","자바스크립트","실행");
+        const info3 = new func("300","리액트","실행");
+
+        //실행문
+        info1.result();
+        info2.result();
+        info3.result();
+
 </script>
 </html>
