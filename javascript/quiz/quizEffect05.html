@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트05</title>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/quiz.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인하기(여러문제) 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li class="active"><a href="quizEffect05.html">5</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="quiz__wrap"> 
+            <!-- <div class="quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title"></h2>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                        <em></em>. <span></span>
+                    </div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                            <div class="true">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__choice">
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" class="select" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" class="select" value="2">
+                            <span></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" class="select" value="3">
+                            <span></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" class="select" value="4">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="quiz__answer">
+
+                        <button class="confirm">정답 확인하기</button>
+                    </div>
+                    <div class="quiz__desc"></div>
+                </div>
+            </div>  -->
+            
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:lee3ll@naver.com">lee3ll@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        //선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        let quizScore = 0;
+
+        //문제 정보
+        const quizInfo = [                          
+            {
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "입/출력장치와 주기억장치 사이에 위치하여 데이터 처리속도의 차이를 줄이는데 도움이 되는 장치는?",
+                infoChoice: {
+                    1: "입/출력 채널",
+                    2: "명령해독기",
+                    3: "연산장치", 
+                    4: "인덱스레지스터",
+                },
+                infoAnswer: "1",
+                infoDesc: "채중입 : 채널은 중앙처리장치와 입출력 장치 사이에서 데이터 처리 속도 차이를 보완해 줍니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음과 같은 계산에 의해 주소를 지정하는 방식은?",
+                infoChoice: {
+                    1: "색인주소지정",
+                    2: "상대주소지정",
+                    3: "베이스주소지정", 
+                    4: "절대주소지정",
+                },
+                infoAnswer: "2",
+                infoDesc: "주소부분 + 프로그램카운터(PC) : 상대주소(Relative)주소부분 + 인덱스 레지스터(Index) : 인덱스 주소방식주소부분 + 베이스 레지스터(Base) : 베이스 주소방식PC값을 더하는 경우만 특별히 상대주소라고 합니다.나머지는 더해지는 레지스터 이름을 그대로 사용합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "(11111)₂+ (01011)₂의 결과로 옳은 것은?",
+                infoChoice: {
+                    1: " (101010)₂",
+                    2: "(110101)₂",
+                    3: "(101001)₂", 
+                    4:" (010101)₂",
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>11111<br>  +01011<br>______<br>101010"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "동시에 여러 개의 입/출력 장치를 제어할 수 있는 채널(Channel)은?",
+                infoChoice: {
+                    1: " Multiplexer",
+                    2: "Duplex",
+                    3: "Register", 
+                    4:" Selector",
+                },
+                infoAnswer: "1",
+                infoDesc: "<br>11111<br>  +01011<br>______<br>101010"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음과 같은 설명에 해당되는 용어는?<br>컴퓨터가 정상적인 업무를 수행하는 도중에 발생하는 예기치 않은 일들에 대하여 컴퓨터의 작동이 중단 없이 계속적으로 업무를 수행할 수 있도록 하는 기능",
+                infoChoice: {
+                    1: "Spooling",
+                    2: "Buffering",
+                    3: "Interrup", 
+                    4: "Virtual Memory",
+                },
+                infoAnswer: "3",
+                infoDesc: "인터럽트 : 정상적일 일을 처리 하는 도중 예기치 못한 상황이 발생하여 예기치 못한 일부터 먼저 처리한후 다시 원래 일을 다시 하는것"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "기억장치에서 읽어낸 명령을 받고 이것을 실행하기 위하여 일시 기억하는 레지스터는?",
+                infoChoice: {
+                    1: "명령(instruction)",
+                    2: "누산기(accumulator)",
+                    3: "저장(storage)", 
+                    4: "인덱스(index)",
+                },
+                infoAnswer: "1",
+                infoDesc: "명령어를 읽어서 저장한다고 하였으므로 명령어 레지스터(IR) 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "2진수 (110010101011)2을 8진수와 16진수로 올바르게 변환한 것은?",
+                infoChoice: {
+                    1: "(5253)8, (BAB)16",
+                    2: "(5253)8, (CAB)16",
+                    3: "(6253)8, (BAB)16", 
+                    4: "(6253)8, (CAB)16",
+                },
+                infoAnswer: "4",
+                infoDesc: "8진수 변환시에는 3자리씩 110 010 101 011 으로 끊고 각각 계산하여 6,2,5,3으로 만듭니다.16진수 변환시에는 4자리씩 1100 1010 1011 으로 끊고 각각 계산하여 12,10,11으로만듭니다.16진수를 계산하면 1,2,3,4,5,6,7,8,9,A,B,C,D,E,F 중에 맞는 숫자를 찾아서 계산하여 CAB를 만듭니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "이항(binary) 연산에 해당하는 것은?",
+                infoChoice: {
+                    1: "COMPLEMENT",
+                    2: "AND",
+                    3: "ROTATE", 
+                    4: "SHIFT",
+                },
+                infoAnswer: "2",
+                infoDesc: "단항연산자 : Rotate, Shift, Move, Not, Complement그외는 모두 이항 연산자로 보시면 됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 블록화 레코드에서 블록화 인수는?<br><img style='width:450px' src='img/09.PNG'>", 
+                infoChoice: {
+                    1: "1",
+                    2: "2",
+                    3: "3", 
+                    4: "4",
+                },
+                infoAnswer: "3",
+                infoDesc: "블록화 인수(BF, 블로킹팩터) : IBG와 IBG 사이에 있는 논리 레코드 갯수위 그림에서는 3개의 논리레코드가 들어 있습니다.총 합 6개의 논리 레코드라고 생각하시면 안됩니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "불(Boolean) 대수의 정리 중 틀린 것은?",
+                infoChoice: {
+                    1: "1 + A = A",
+                    2: "1 · A = A",
+                    3: "0 + A = A", 
+                    4: "0 · A = 0",
+                },
+                infoAnswer: "1",
+                infoDesc: "불대수에서1 : 제일 큰값0 : 제일 작은값A, X, Y등 알파벳 : 1보다 작고 0보다 큰값연산자 + : 큰값 출력연산자 * : 작은값 출력<br>[예] 1+A=A 1과 A중에서 1이크고, A가 작은데. +연산자로 연결되어 큰값 1이 답<br>[예] 1*A=A 1과 A중에서 1이크고, A가 작은데. *연산자로 연결되어 작은값 A가 답<br>[예] 0+A=A 0과 A중에서 A이크고, 0이 작은데. +연산자로 연결되어 큰값 A가 답<br>[예] 0*A=0 0과 A중에서 A이크고, 0가 작은데. *연산자로 연결되어 작은값 0이 답"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "원격지에 설치된 입/출력 장치는?",
+                infoChoice: {
+                    1: "변/복조장치",
+                    2: "스캐너",
+                    3: "단말장치", 
+                    4: "X-Y 플로터",
+                },
+                infoAnswer: "3",
+                infoDesc: "변복조기 : 모뎀<br>스캐너 : 그림등을 읽어 들이는 장치<br>단말장치 : 원격지에 설치된 입출력 장치<br>X-Y플로터 : 건설도면등 아주 큰 출력물을 출력할때 사용합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 주소지정 방법 중 처리속도가 가장 빠른 것은?",
+                infoChoice: {
+                    1: "직접주소지정(Direct Addressing)",
+                    2: "간접주소지정(Indirect Addressing)",
+                    3: "즉시주소지정(Immediate Addressing)", 
+                    4: "인덱스주소지정(Index Addressing)",
+                },
+                infoAnswer: "3",
+                infoDesc: "접근 방식에 의한 주소지정묵-즉-직-간<br>묵시적(Implied) :메모리 참조 회수0<br>즉시주소(immediate) : 0<br>직접주소(direct) : 1<br>간접주소(indirect) : 2<br>메모리 참조 횟수가 많을수록 속도가 느리다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "정보검색 엔진에서 AND, OR, NOT과 같은 연산자가 사용된다. 이 연산자를 무슨 연산자라 하는가?", 
+                infoChoice: {
+                    1: "불 연산자",
+                    2: "드모르간 연산자",
+                    3: "우선 연산자", 
+                    4: "키워드 연산자",
+                },
+                infoAnswer: "1",
+                infoDesc: "AND, OR, NOT은 논리 연산자 입니다.불 연산자 라고도 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 진리표와 같이 연산이 행해지는 게이트는? <br><img style='width:400px' src='img/14.PNG'>",
+                infoChoice: {
+                    1: "OR",
+                    2: "AND",
+                    3: "NAND", 
+                    4: "XOR",
+                },
+                infoAnswer: "2",
+                infoDesc: "AND연산 : 직렬회로 - X1(입력1), X2(입력2)모두 1일때만 결과(Y)도 1(참)<br>OR연산 : 병렬회로 - X1(입력1), X2(입력2) 둘 중 하나만 1이어도 결과(Y)는 1(참)<br>XOR연산 : 배타적(서로다름) - X1(입력1), X2(입력2)가 서로 다를때 1,0 또는 0,1 일때만 1(참)"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 논리회로의 논리식은? <br><img style='width:400px' src='img/15.PNG'>", 
+                infoChoice: {
+                    1: "불 연산자",
+                    2: "드모르간 연산자",
+                    3: "우선 연산자", 
+                    4: "키워드 연산자",
+                },
+                infoAnswer: "1",
+                infoDesc: "(A' +B')' 입니다..바로 답을 찾을수는 없습니다.드모르간 정리를 이용하면 됩니다.f = (A' +B')' = 해설다시확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 회로(Circuit)에서 결과가 “1”(불이 켜진 상태)이 되기 위해서는 A와 B는 각각 어떠한 값을 갖는가? <br><img style='width:400px' src='img/16.PNG'>", 
+                infoChoice: {
+                    1: "A = 0, B = 1",
+                    2: "A = 0, B = 0",
+                    3: "A = 1, B = 1", 
+                    4: "A = 1, B = 0",
+                },
+                infoAnswer: "3",
+                infoDesc: "두 A, B 선이 모두 연결(1)되어야 꼬마전구에 불이 들어 옵니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "명령어의 구성이 연산자부가 3bit, 주소부는 5bit로 되어있을 때, 이 명령어를 사용하는 컴퓨터는 최대 몇 가지의 동작이 가능한가?", 
+                infoChoice: {
+                    1: "256",
+                    2: "16",
+                    3: "8", 
+                    4: "32",
+                },
+                infoAnswer: "3",
+                infoDesc: "명령어의 갯수는 연산자부 비트에 의해서 결정됩니다.현재 3비트 사용하므로 2의 3승개의 명령어 사용이 가능합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "입/출력 장치의 동작속도와 전자계산기 내부의 동작속도를 맞추는데 사용되는 레지스터는?", 
+                infoChoice: {
+                    1: "버퍼 레지스터",
+                    2: "시프트 레지스터",
+                    3: "어드레스 레지스터", 
+                    4: "상태 레지스터",
+                },
+                infoAnswer: "1",
+                infoDesc: "버퍼레지스터 : 서로 다른 장치간의 속도 차이를 보완하기 위해서 사용하는 레지스터"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "연산 후 입력 자료가 변하지 않고 보존되는 특징의 장점을 갖는 명령어 형식은?", 
+                infoChoice: {
+                    1: "0-주소 명령어 형식",
+                    2: "1-주소 명령어 형식",
+                    3: "2-주소 명령어 형식", 
+                    4: "3-주소 명령어 형식",
+                },
+                infoAnswer: "4",
+                infoDesc: "명령어 형식<br>0주소 : 스택(Stack)<br>1주소 : 누산기(ACC)<br>2주소 : 일반적,범용, 기억불능,자료보존 불능<br>3주소 : 특수, 기억가능, 자료보존 가능"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "RS Flip-Flop 회로의 동작에서 R=1, S=1을 입력하였을 때 출력으로 옳은 것은?", 
+                infoChoice: {
+                    1: "1",
+                    2: "부정(not allowed)",
+                    3: "0", 
+                    4: "변화 없음(no change)",
+                },
+                infoAnswer: "2",
+                infoDesc: "S부분에 1이 들어가면 셋팅(Set)을 하란말R부분에 1이 들어가면 리셋(Reset)을 하란말입니다.R=1,S=1이란 셋팅도 하고 리셋도 하라는 말이 됩니다..이경우 컴퓨터는 어쩌해야 할지를 모르게 됩니다..그래서 부정입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "프레젠테이션의 기능과 역할에 대한 설명으로 틀린 것은?", 
+                infoChoice: {
+                    1: "정보 전달 및 의사 결정 도구",
+                    2: "컴퓨터를 이용하여 계산과 관련된 작업을 쉽게 처리 분석하여 활용할 수 있도록 개발된 응용프로그램",
+                    3: "전달하고자 하는 정보를 빠르고, 쉽고, 효과적으로 전달가능", 
+                    4: "정확한 데이터와 설득력 있는 논리를 통하여 정보 전달",
+                },
+                infoAnswer: "2",
+                infoDesc: "스프레드시트 : 컴퓨터를 이용하여 계산과 관련된 작업을 쉽게 처리 분석하여 활용할 수 있도록 개발된 응용프로그램으로 대표적으로 엑셀 프로그램이 있습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "도메인에 대한 설명으로 가장 적합한 것은?", 
+                infoChoice: {
+                    1: "하나의 속성에 취할 수 있는 값의 범위",
+                    2: "튜플을 구분할 수 있는 범위",
+                    3: "튜플들의 관계를 표현하는 범위", 
+                    4: "릴레이션을 표현하는 기본 단위",
+                },
+                infoAnswer: "1",
+                infoDesc: "도메인(Domain) : 하나의 속성이 취할수 있는 속성 값들의 집합"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "SQL 명령을 사용 용도에 따라 구분할 경우, 다음 중 성격이 나머지 셋과 다른 것은?", 
+                infoChoice: {
+                    1: "CREATE",
+                    2: "ALTER",
+                    3: "DROP", 
+                    4: "INSERT",
+                },
+                infoAnswer: "4",
+                infoDesc: "DDL(데이터 베이스 정의 언어)<br>CREATE : DB 테이블, 뷰 생성<br>ALTER : 테이블 변경<br>DROP : 데이터베이스, 테이블, 제거<br>INSERT는 DML종류로써 삽입 명령어 입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "SQL에서 검색결과에 대한 레코드의 중복을 제거하기 위해 사용하는 명령은?", 
+                infoChoice: {
+                    1: "DESC",
+                    2: "DELETE",
+                    3: "GRANT", 
+                    4: "DISTINCT",
+                },
+                infoAnswer: "4",
+                infoDesc: "DESC : 내림차순<br>DELETE : 레코드삭제 명령<br>GRANT : 권한부여 명령<br>DISTINCT : 검색결과에 대한 레코드의 중복을 제거"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "SQL의 SELECT 문에서 특정 열의 값을 기준으로 정렬할 때 사용하는 절은?", 
+                infoChoice: {
+                    1: "SORT BY 절",
+                    2: "ORDER BY 절",
+                    3: "ORDER TO 절", 
+                    4: "SORT 절",
+                },
+                infoAnswer: "2",
+                infoDesc: "정렬은 오도바이(ORDER BY) 타고 다니면서 합니다..^_____^"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "스프레드시트에서 반복되고 규칙적인 작업을 일괄 자동처리 하는 기능은?", 
+                infoChoice: {
+                    1: "차트 기능",
+                    2: "분석 기능",
+                    3: "매크로 기능", 
+                    4: "데이터베이스 기능",
+                },
+                infoAnswer: "2",
+                infoDesc: "매크로 : 반복되고 규칙적인 작업을 일괄 자동처리"
+            }
+        ]
+       
+       // 문제 출력
+       const updateQuiz = () => {
+            const exam = [];
+            quizInfo.forEach((question, number) => {
+                exam.push(`
+                    <div class="quiz">
+                        <div class="quiz__header">
+                            <h2 class="quiz__title">${question.infoType} ${question.infoTime}</h2>
+                        </div>
+                        <div class="quiz__main">
+                            <div class="quiz__question"><em>${number+1}</em>. ${question.infoQuestion}</div>
+                            <div class="quiz__view">
+                                <div class="dog__wrap">
+                                    <div class="true">정답입니다!</div>
+                                    <div class="false">틀렸습니다!</div>
+                                    <div class="card-container">
+                                        <div class="dog">
+                                            <div class="head">
+                                                <div class="ears"></div>
+                                                <div class="face"></div>
+                                                <div class="eyes">
+                                                    <div class="teardrop"></div>
+                                                </div>
+                                                <div class="nose"></div>
+                                                <div class="mouth">
+                                                    <div class="tongue"></div>
+                                                </div>
+                                                <div class="chin"></div>
+                                            </div>
+                                            <div class="body">
+                                                <div class="tail"></div>
+                                                <div class="legs"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__choice">
+                                <label for="choice1${number}">
+                                    <input type="radio" id="choice1${number}" name="choice${number}" value="1">
+                                    <span>${question.infoChoice[1]}</span>
+                                </label>
+                                <label for="choice2${number}">
+                                    <input type="radio" id="choice2${number}" name="choice${number}" value="2">
+                                    <span>${question.infoChoice[2]}</span>
+                                </label>
+                                <label for="choice3${number}">
+                                    <input type="radio" id="choice3${number}" name="choice${number}" value="3">
+                                    <span>${question.infoChoice[3]}</span>
+                                </label>
+                                <label for="choice4${number}">
+                                    <input type="radio" id="choice4${number}" name="choice${number}" value="4">
+                                    <span>${question.infoChoice[4]}</span>
+                                </label>
+                            </div>
+                            <div class="quiz__desc">정답은<em>${question.infoAnswer}</em>입니다.<br>${question.infoDesc}</div>
+                        </div>
+                    </div>
+                `);
+            });
+            exam.push(`
+                <div class="quiz__info">??점</div>
+                <div class="quiz__check">정답 확인!</div>
+            `);
+            quizWrap.innerHTML = exam. join("");
+            //설명 숨기기
+            // document.querySelector(".quiz__desc").style.diplay = "none";
+
+            
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
+        }
+        updateQuiz();
+        // 정답 확인
+        const answerQuiz = () => {
+            const quizChoices = document.querySelectorAll(".quiz__choice");
+            //사용자가 체크한 정답 == 문제 정답
+            quizInfo.forEach((question, number) => {
+                const userSelector = `input[name=choice${number}]:checked`;
+                const quizSelectorWrap = quizChoices[number];
+                const userAnswer = (quizSelectorWrap.querySelector(userSelector) || {}).value;
+                const dogWrap = quizWrap.querySelectorAll(".dog__wrap");
+                
+                if(userAnswer == question.infoAnswer){
+                    console.log("정답");
+                    dogWrap[number].classList.add("like");
+                    quizScore++;
+                } else {
+                    console.log("오답");
+                    dogWrap[number].classList.add("dislike");
+                    //
+                }
+            });
+            //설명 보이기
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
+
+            //점수보이기
+            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+        }
+        // 정답 클릭
+        document.querySelector(".quiz__check").addEventListener("click", answerQuiz);            
+            
+
+        // quizTitle.innerHTML = quizInfo[0].infoType + " " + quizInfo[0].infoTime
+        // quizQuestion.innerHTML = "<em>" + quizInfo[0].infoNumber+"." +"</em>"+ " " + quizInfo[0].infoQuestion
+        // console.log(quizInfo[2].infoType.infoQuestion)
+       
+    </script>
+</body>
+</html>
