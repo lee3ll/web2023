@@ -186,8 +186,8 @@
                     </details>
                 </div>
             </div>
-            <!-- //sample05 -->
-            <div id="sample05" class="sample">
+            <!-- //sample04 -->
+            <div id="sample06" class="sample">
                 <h3>06. 화살표 함수 : 익명 함수</h3>
                 <p> '=>' 왼쪽에는 매개변수가 위치하고, 오른쪽에는 함수 본문이 위치합니다.</p>
                 <div class="script">   
@@ -302,7 +302,7 @@
             </div>
             <!-- //sample10 -->
 
-            <div id="sample10" class="sample">
+            <div id="sample11" class="sample">
                 <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</h3>
                 <p></p>
                 <div class="script">   
@@ -739,7 +739,84 @@
                     </details>
                 </div>
             </div>
-            <!-- //sample19 -->
+            <!-- //sample20 -->
+           
+            <div id="sample21" class="sample">
+                <h3>21. 함수 유형 : 객체리터럴 함수</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    function func(num, name, com){
+        this.num = num;
+        this.name = name;
+        this.com = com;
+    }
+    func.prototype = {
+        result1: function(){
+            document.write(`${this.num}. ${this.name}가 ${this.com}되었습니다.`);
+        },
+        result2: function(){
+            document.write(`${this.num}. ${this.name}가 ${this.com}되었습니다.`);
+        },
+        result3: function(){
+            document.write(`${this.num}. ${this.name}가 ${this.com}되었습니다.`);
+        }
+    }
+    //인스턴스
+    const info1 = new func("101","함수","실행");
+    const info2 = new func("201","자바스크립트","실행");
+    const info3 = new func("301","리액트","실행");
+
+    //실행문
+    info1.result1();
+    info2.result2();
+    info3.result3();
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample21 -->
+
+            <div id="sample22" class="sample">
+                <h3>22. 함수 유형 : 즉시 실행 함수</h3>
+                <p></p>
+                <div class="script">   
+<pre><code class="language-js">{
+    {
+        // function func(){
+        //     document.write("함수가 실행되었습니다.")
+        // }
+        // func();
+
+        (function (){
+            document.write("500.함수가 실행되었습니다.")
+        })();
+
+        (() => {
+            document.write("501.함수가 실행되었습니다.")
+        })();
+    }
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample21 -->
 
 
 

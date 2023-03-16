@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 타입01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 16px;
+            font-weight: normal;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto ;
+        }
+        #header {
+            height: 100px;
+            background-color: #FFE0B2;
+            display: flex;
+        }
+        #header h1{
+            width: 20%;
+            background-color: #cd9b66;
+        }
+        #header nav{
+            width: 80%;
+            background-color: #ecc479;
+        }
+        #slider {
+            height: 100px;
+            background-color: #FFCC80;
+        }
+        #contents {
+            height: 200px;
+            background-color: #FFB74D;
+            display: flex;
+        }
+        #contents .cont1 {
+            width: 33.3333%;
+            background-color: #f0c5c5;
+        }
+        #contents .cont2 {
+            width: 33.3333%;
+            background-color: #f29c9c;
+        }
+        #contents .cont3 {
+            width: 33.3333%;
+            background-color: #f5aaaa;
+        }
+        #footer {
+            height: 100px;
+            background-color: #FFA726;
+            display: flex;
+        }
+        #footer .foot1{
+            width: 20%;
+            background-color: #daa2a2;
+        }
+        #footer .foot2{
+            width: 60%;
+            background-color: #e17979;
+        }
+        #footer .foot3{
+            width: 20%;
+            background-color: #ea6666;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1>로고</h1>
+            <nav>메뉴</nav>
+        </header> 
+        <!-- header -->
+        <article id="slider">
+            이미지 슬라이더
+        </article> 
+        <!-- slider -->
+        <section id="contents">
+            <article class="cont1">공지사항</article>
+            <article class="cont2">배너</article>
+            <article class="cont3">바로가기</article>
+        </section>
+        <!-- contents -->
+        <footer id="footer">
+            <div class="foot1">로고</div>
+            <div class="foot2">COPYRIGHT</div>
+            <div class="foot3">SNS</div>
+        </footer>
+        <!-- footer -->
+    </div>
+</body>
+</html>
