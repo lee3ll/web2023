@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트05</title>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/quiz.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인하기(여러문제) 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li class="active"><a href="quizEffect05.html">5</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="quiz__wrap"> 
+            <!-- <div class="quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title"></h2>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                        <em></em>. <span></span>
+                    </div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                            <div class="true">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__choice">
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" class="select" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" class="select" value="2">
+                            <span></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" class="select" value="3">
+                            <span></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" class="select" value="4">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="quiz__answer">
+
+                        <button class="confirm">정답 확인하기</button>
+                    </div>
+                    <div class="quiz__desc"></div>
+                </div>
+            </div>  -->
+            
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:lee3ll@naver.com">lee3ll@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        //선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        let quizScore = 0;
+
+        //문제 정보
+        const quizInfo = [                          
+            {
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "눈이 부시지 않고 조도가 균일하며, 그림자가 없는 부드러운 침실이나 병실 등 휴식공간에 사용되는 조명방법은?",
+                infoChoice: {
+                    1: "전반확산조명",
+                    2: "간접조명",
+                    3: "직접조명", 
+                    4: "반간접조명",
+                },
+                infoAnswer: "2",
+                infoDesc: "간접조명- 광원에서 나온 빛을 천장이나 벽에 부딪혀 확산된 반사광으로 비추는 조명 방식. 효율은 떨어지지만 그늘짐이나 눈부심이 없고 조도분포가 균일하여 차분한 분위기를 연출할 수 있다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 빛의 혼합에 대한 결과로 맞는 것은?",
+                infoChoice: {
+                    1: "Green + Cyan = Black",
+                    2: "Green + Blue = Magenta",
+                    3: "Red + Green = Yellow", 
+                    4: "Red + Blue = Cyan",
+                },
+                infoAnswer: "3",
+                infoDesc: "1. Black는 감산혼합으로 Cyan, Magenta, Yellow를 모두 혼합한 색입니다.<br>2. Magenta : Red + Blue<br>4. Cyan : Green + Blue"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 형태(form) 중 반드시 수학적 법칙과 함께 생기며, 가장 뚜렷한 질서를 갖는 것은?",
+                infoChoice: {
+                    1: "유기적 형태",
+                    2: "기하학적 형태",
+                    3: "내부적 형태", 
+                    4: "자연적 형태",
+                },
+                infoAnswer: "2",
+                infoDesc: "다음 형태(form) 중 반드시 수학적 법칙과 함께 생기며, 가장 뚜렷한 질서를 갖는 것은 기하학적형태입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "부분과 부분 또는 부분과 전체 사이 안정된 관련성을 지니며, 서로 함께 속해있는 것처럼 보이는 디자인의 원리는?",
+                infoChoice: {
+                    1: " 비례",
+                    2: "조화",
+                    3: "균형", 
+                    4:" 강조",
+                },
+                infoAnswer: "2",
+                infoDesc: "부분과 부분 또는 부분과 전체 사이 안정된 관련성을 지니며, 서로 함께 속해있는 것처럼 보이는 디자인의 원리는?"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 색채에 대한 설명으로 틀린 것은?",
+                infoChoice: {
+                    1: "색채는 물체의 지각을 수반하고, 심리적 성질을 갖는다.",
+                    2: "물체가 발광하지 않고 받아서 반사되는 색이다.",
+                    3: "색채의 분류는 무채색, 유채색, 중성색 3가지가 있다.", 
+                    4: "우리가 일상생활에서 보는 색을 색채라고 한다.",
+                },
+                infoAnswer: "3",
+                infoDesc: "색채의 분류에는무채색,유채색 2가지가 있다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 커뮤니케이션 디자인의 설명으로 틀린 것은?",
+                infoChoice: {
+                    1: "라틴어 ‘Communicare'를 어원으로 한다.",
+                    2: "두 개 이상의 개체가 기호를 매개로 무언가를 공유하는 것이다.",
+                    3: "운동과 시선을 중시하는 디자인이다.", 
+                    4: "사람과 사람 사이에 기호에 의해서 의미를 전달하는 과정이다.",
+                },
+                infoAnswer: "3",
+                infoDesc: "커뮤니케이션에 관한 설명이 아닙니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "먼셀의 색입체에 대한 설명으로 틀린 것은?(오류 신고가 접수된 문제입니다. 반드시 정답과 해설을 확인하시기 바랍니다.)",
+                infoChoice: {
+                    1: "색상, 명도, 채도의 3속성 2차원 좌표에서 색 감각으로 보는데 용이하다.",
+                    2: "CIE의 색표와 연관성이 용이하다.",
+                    3: "실제로 사용하고 있는 모든 물체색이 색입체에 포함되어 있다.", 
+                    4: "모든 색상의 채도 위치가 달라 배색 체계를 응용하기 용이하다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "1.색상,명도,채도의 3속성 [2차원] 좌표에서 색 감각으로 보는데 용이하다- 색입체니까 3차원이다.[오류 신고 내용]3.실제로 사용하고 있는 [모든] 물체색이 색입체에 포함되어 있다.- 5가지 기본 색상 + 중간색상 5 =10가지 * 10등분 = 100색상.. 100색상으로 [모든]이라고 하는건 무리가 있습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 디자인의 의미에 관한 설명으로 틀린 것은?",
+                infoChoice: {
+                    1: "디자인이란 일반적으로 하나의 그림 또는 모형으로써 그것을 전개시키는 계획 및 설계라고 할 수 있다.",
+                    2: "디자인 행위란 인간이 좀 더 사용하기 쉽고, 아름답고 쾌적한 생활환경을 창조하는 조형 행위를 말한다.",
+                    3: "프랑스어의 데생(dessin)과 같은 어원으로 르네상스시대 이후 오랫동안 데생과 같이 가벼운 의미로 사용되었다.", 
+                    4: "1940년대 당시 근대 사상에 입각하여 바우하우스에서 디자인 이념을 세우고 디자인(design)이라는 용어를 처음 사용하였다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "디자인이라는 용어는 1920~1930년대 근대 디자인 운동 이후부터 사용되었습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "바우하우스의 설립자이며, 근대 건축과 디자인 운동의 대표적 지도자는?", 
+                infoChoice: {
+                    1: "모리스(MORRIS, WILLIAM)",
+                    2: "그로피우스(GROPIUS, WALTER)",
+                    3: "로위(ROWEY, RAYMOND)", 
+                    4: "팹스너(PEVSNER, NIKOLAUS)",
+                },
+                infoAnswer: "2",
+                infoDesc: "바우하우스의 설립자이며, 근대 건축과 디자인 운동의 대표적 지도자는 그로피우스입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "시각적으로 안정감을 느끼게 하는 디자인의 원리는?",
+                infoChoice: {
+                    1: "균형",
+                    2: "불규칙",
+                    3: "변화", 
+                    4: "비대칭",
+                },
+                infoAnswer: "1",
+                infoDesc: "시각적으로 안정감을 느끼게 하는 디자인의 원리는 균형입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "디자인의 원리에 대한 설명 중 옳지 않는 것은?",
+                infoChoice: {
+                    1: "통일은 조화로운 형, 색, 질감이 공통된 특징을 갖고 있다.",
+                    2: "대칭은 균형의 전형적인 구성형식이며 좌우대칭, 방사대칭이 있다.",
+                    3: "반복은 동일한 요소나 대상 등을 두 개 이상 나열시켜 율동감을 표현하는 것으로 시각적으로 힘의 강약효과가 있다.", 
+                    4: "점이는 일정한 방향을 유지하나 크기와 형태가 다른 경우를 의미한다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "'점이'란 '차차 자리를 옮아가다'라는 뜻으로 '점진적인 변화'를 뜻하며, 흔히 '그라데이션(Gradation)'이라고 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "디자인을 할 때 목적에 합당한 수단을 썼는지에 대한 디자인의 조건은?",
+                infoChoice: {
+                    1: "합목적성",
+                    2: "독창성",
+                    3: "심미성", 
+                    4: "경제성",
+                },
+                infoAnswer: "1",
+                infoDesc: "디자인을 할 때 목적에 합당한 수단을 썼는지에 대한 디자인의 조건은 합목적성입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "신비함, 우아함, 고귀함, 신성함, 예술, 창조 등이 연상되는 색은?", 
+                infoChoice: {
+                    1: "빨강(赤)",
+                    2: "자(紫)",
+                    3: "청(靑)", 
+                    4: "검정(黑)",
+                },
+                infoAnswer: "2",
+                infoDesc: "신비함, 우아함, 고귀함, 신성함, 예술, 창조 등이 연상되는 색은 자(紫)(자줏빛)색입니다"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "윌리암 모리스를 중심으로 일어난 미술공예운동의 배경으로 옳은 것은?",
+                infoChoice: {
+                    1: "기계화와 대량생산으로 인한 생활용품의 품질저하",
+                    2: "기계화에 의한 장비설치로 생활용품의 가격 폭등",
+                    3: "기계화로 생활용품에 화려하고 복잡한 장식을 사용할 수 없게 됨", 
+                    4: "대량생산으로 생활용품의 가격 폭락",
+                },
+                infoAnswer: "1",
+                infoDesc: "미술공예운동이 일어난 원인은 기계화와 대량생산으로 인한 생활용품의 품질저하로 윌리엄 모리스에 의하여 이런 운동이 창시되었습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "배색에 대한 설명으로 틀린 것은?", 
+                infoChoice: {
+                    1: "사물의 성능이나 기능에 부합되는 배색을 하여 주변과 어울릴 수 있도록 한다.",
+                    2: "사용자 성별, 연령을 고려하여 편안한 느낌을 가질 수 있도록 한다.",
+                    3: "색의 이미지를 통해서 전달하려는 목적이나 기능을 기준으로 배색한다.", 
+                    4: "목적에 관계없이 아름다움을 우선으로 하고 타 제품에 비해 눈에 띄는 색으로 배색하여야 한다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "목적에 부합하며 배색을 해줍니다.(제대로된 해설이 없어요ㅜㅜ)"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 동화현상이 일어날 수 있는 상황으로 맞는 것은?", 
+                infoChoice: {
+                    1: "주위를 둘러싼 면적이 클 때",
+                    2: "좁은 시야에 복잡한 색채 무늬들로 구성되었을 때",
+                    3: "서로 인접한 색의 색상차가 클 때", 
+                    4: "빨강과 보라를 나란히 붙여 놓았을 때",
+                },
+                infoAnswer: "2",
+                infoDesc: "동화현상<br>대비와는 달리 오히려 주변색상에 가깝게 느껴지는 현상<br>다른 색의 영향을 받아 인접되어 있거나 둘러싸여 있는 색상과 비슷하게 보이는 거으로 자극이 지속되는 잔상효과."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "그래픽의 표현 요소 중 회화나 사진을 비롯하여 도형, 도표 등 문자 이외의 시각화된 것을 무엇이라 하는가?", 
+                infoChoice: {
+                    1: "일러스트레이션",
+                    2: "포스터",
+                    3: "신문광고", 
+                    4: "표지",
+                },
+                infoAnswer: "1",
+                infoDesc: "그래픽의 표현 요소 중 회화나 사진을 비롯하여 도형, 도표 등 문자 이외의 시각화된 것은 일러스트레이션입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "디자인의 형식적 요소에 포함되지 않는 것은?", 
+                infoChoice: {
+                    1: "형",
+                    2: "색",
+                    3: "질감", 
+                    4: "용도",
+                },
+                infoAnswer: "4",
+                infoDesc: "디자인의 형식적 요소에 포함되지 않는 것은 용도입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음이 설명하고 있는 색의 혼합은?<br><br><img style='width:450px' src='img/w19.PNG'>", 
+                infoChoice: {
+                    1: "감산 혼합",
+                    2: "가산 혼합",
+                    3: "병치 혼합", 
+                    4: "중간 혼합",
+                },
+                infoAnswer: "2",
+                infoDesc: "혼합된 색의 명도가 혼합 이전의 평균 명도보다 더 높아지는 경우는 중간 혼합이라고 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "배색의 조건에 대한 설명으로 틀린 것은?", 
+                infoChoice: {
+                    1: "사물의 용도나 기능에 부합되는 배색을 해야 한다.",
+                    2: "색이 주는 심리적 효과를 고려해야 한다.",
+                    3: "인간적인 요인으로 계획자의 개인적 특성에 맞추어 배색 한다.", 
+                    4: "환경적 요인을 충분히 고려하여 배색 한다.",
+                },
+                infoAnswer: "3",
+                infoDesc: "해설찾기"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "소스 코드가 HTML 문서 내에 포함되어 사용자의 브라우저에서 직접 번역되어 수행되는 것은?", 
+                infoChoice: {
+                    1: "자바 애플리케이션",
+                    2: "자바 스크립트",
+                    3: "자바 시크리트", 
+                    4: "자바 빈즈",
+                },
+                infoAnswer: "2",
+                infoDesc: "소스 코드가 HTML 문서 내에 포함되어 사용자의 브라우저에서 직접 번역되어 수행되는 것은 자바스크립트입니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "자바스크립트의 Document 객체에 포함되어 있는 객체가 아닌 것은?", 
+                infoChoice: {
+                    1: "Anchor 객체",
+                    2: "Area 객체",
+                    3: "Link 객체", 
+                    4: "Location 객체는 Document객체에 포함되어있는 객체가 아닙니다."
+                },
+                infoAnswer: "4",
+                infoDesc: "Location 객체"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "HTML의 태그(tag)에 관한 설명으로 옳은 것은?", 
+                infoChoice: {
+                    1: "태그는 시작 태그만 필요하다.",
+                    2: "태그의 이름은 대소문자를 구분하지 않는다.",
+                    3: "태그를 중첩하여 사용할 수 없다.", 
+                    4: "여러 개의 공백 문자들은 각기 달리 인식된다.",
+                },
+                infoAnswer: "2",
+                infoDesc: "태그의 이름은 대소문자를 구분하지 않습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 웹브라우저의 기능이 아닌 것은?", 
+                infoChoice: {
+                    1: "웹페이지 저장 및 인쇄",
+                    2: "전자우편 및 뉴스그룹 이용",
+                    3: "텍스트, 이미지 및 멀티미디어 지원 기능", 
+                    4: "인터넷 응용프로그램 제작 기능",
+                },
+                infoAnswer: "4",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "국제기구를 나타내는 최상위 도메인은?", 
+                infoChoice: {
+                    1: "mil",
+                    2: "org",
+                    3: "net", 
+                    4: "int",
+                },
+                infoAnswer: "4",
+                infoDesc: "mil : 미국 연방군사기관 <br>org : 비영리단체 <br>net : 네트워크 관리기관<br>int : un처럼 국제적인특성을 갖는 기구나 연구소"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 LAN이 물리적 통신망 구조가 아닌 것은?", 
+                infoChoice: {
+                    1: "성(star)형",
+                    2: "버스(bus)형",
+                    3: "십자(cross)형", 
+                    4: "링(ring)형",
+                },
+                infoAnswer: "3",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "전자우편 서비스 헤더 중 숨은 참조자를 나타내는 것은?", 
+                infoChoice: {
+                    1: "Rcc",
+                    2: "Bcc",
+                    3: "Bc", 
+                    4: "Cc",
+                },
+                infoAnswer: "2",
+                infoDesc: "Bcc - Blind Carbon Copy 숨은 참조자Cc - Carbon Copy 참조"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "	IP 주소는 숫자로 구성되어 있기 때문에 실제로 사용자가 이용하기에는 불편하다. 이를 대신하여 쉽게 기억할 수 있고, 이용하기 편리하도록 만든 것은?", 
+                infoChoice: {
+                    1: "파일 이름",
+                    2: "도메인 이름",
+                    3: "주소 클래스", 
+                    4: "패킷",
+                },
+                infoAnswer: "2",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "Anonymous FTP 사이트를 대상으로 해서 원하는 파일의 위치를 알려 주는 인터넷 서비스는?", 
+                infoChoice: {
+                    1: "Archie",
+                    2: "Whois",
+                    3: "Finger", 
+                    4: "Veronica",
+                },
+                infoAnswer: "1",
+                infoDesc: "Archie(아치 혹은 아키 서비스); 익명 파일 전송 서버를 대상으로 파일을 검색할 수 있도록 지원해주는 서비스.<br>**Anonymous FTP; FTP서버의 계정이 없어도 아무나 접근하여 파일 전송을 지원받을 수 있는 서비스이다.<br>사용계정명은 anonymous이며, 공개파일들은 일반적으로 'pub'라는 디렉터리내에 저장한다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "검색엔진과 그에 해당된 서비스가 틀리게 연결된 것은?", 
+                infoChoice: {
+                    1: "야후 - 거기",
+                    2: "옥션 - 메일 및 메신저",
+                    3: "네이버 - 지식검색", 
+                    4: "네이트 - 보는 검색 체험하기",
+                },
+                infoAnswer: "2",
+                infoDesc: "SELECT : 검색하시오* : 모든 필드<br>FROM 사원 : 사원테이블로 부터종합해보면 사원테이블로 부터 모든 필드를 검색(가져오시오)하시오."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "해설확인", 
+                infoChoice: {
+                    1: "LAN",
+                    2: "MAN",
+                    3: "WAN", 
+                    4: "VAN",
+                },
+                infoAnswer: "1",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음이 설명하고 있는 웹페이지 검색 엔진은?<br><br><img style='width:450px' src='img/w32.PNG'>", 
+                infoChoice: {
+                    1: "통합형 검색 방식",
+                    2: "웹 디렉터리 방식",
+                    3: "웹 인덱스 방식", 
+                    4: "메타형 검색 방식",
+                },
+                infoAnswer: "4",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "웹 페이지 디자인 시 시각적 요소 중 색상 및 패턴에 관한 설명으로 가장 거리가 먼 것은?", 
+                infoChoice: {
+                    1: "주변 상황과 대비되는 색채를 사용함으로써 특정 정보를 강조한다.",
+                    2: "서로 상이한 정보 간에는 동일한 색상을 사용하여 정보의 성격과 내용에 따라 체계적인 색채 계획을 적용한다.",
+                    3: "명도와 채도를 갖게 함으로써 다른 색상을 사용하더라도 상호 간에 조화를 이룰 수 있어야 한다.", 
+                    4: "공간과 문화를 초월해 공통점을 갖는 색채의 상징성을 이용하여 전달력을 상승시킬 수 있다.",
+                },
+                infoAnswer: "2",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "인터넷상에 산재해 있는 제반 정보를 미리 수집하고 이를 체계적으로 저장한 후, 사용자가 원하는 정보를 수시로 찾을 수 있도록 해주는 일종의 데이터베이스 관리시스템을 무엇이라 하는가?", 
+                infoChoice: {
+                    1: "웹브라우저",
+                    2: "메일링리스트",
+                    3: "무료계정", 
+                    4: "검색엔진",
+                },
+                infoAnswer: "4",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "인터넷상의 WWW(월드와이드웹) 콘텐츠를 작성하도록 해주는 언어는?", 
+                infoChoice: {
+                    1: "IP",
+                    2: "HTTP",
+                    3: "HTML", 
+                    4: "URL",
+                },
+                infoAnswer: "3",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 자바스크립트의 변수에 대한 설명으로 틀린 것은?", 
+                infoChoice: {
+                    1: "데이터의 형을 구분하여 선언하여야 한다.",
+                    2: "변수명의 첫 문자는 영문자 또는 _로 시작한다.",
+                    3: "변수명은 영문자의 대문자와 소문자를 구분한다.", 
+                    4: "예약어는 변수명으로 사용할 수 없다.",
+                },
+                infoAnswer: "1",
+                infoDesc: "데이터의 형을 구분 X,<br>구분없이 선언이 가능하다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "인터넷 익스플로러 6.0 인터넷 옵션의 “내용 관리자”부분에 대한 설명으로 옳지 않은 것은?", 
+                infoChoice: {
+                    1: "인증서 : 범주에 따른 등급을 조정할 수 있으며 그 등급에 해당하는 홈페이지로 이동할 수 있도록 추가 정보를 제공한다.",
+                    2: "승인된 사이트 : 등급 지정에 관계없이 항상 볼 수 있거나 볼 수 없는 사이트를 지정할 수 있다.",
+                    3: "일반 : 사용자 옵션과 감독자 암호를 지정할 수 있는 곳으로, 기본적으로 사용자가 제한된 내용만 보도록 표시되어 있다.", 
+                    4: "고급 : 사용자가 다른 등급 시스템을 적용하려고 할 때 이용된다.",
+                },
+                infoAnswer: "1",
+                infoDesc: "인증서 : 인증서 사용 여부를 선택함으로 웹 사이트 보안과 메일 보안을 설정하는것 <br>내용 관리자가 아닌 인터넷 옵션에서 바로 선택 가능하다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "HTML의 문단 구성과 관련된 Tag와 그 용도에 대한 설명으로 옳지 않은 것은?", 
+                infoChoice: {
+                    1: "<BR> : 줄을 바꿀 때 사용한다.",
+                    2: "<P> : 문단을 바꿀 때 사용한다.",
+                    3: "<MID>...</MID> : 태그 사이에 있는 문단을 가운데로 정렬할 때 사용한다.", 
+                    4: "<DIV>...</DIV> : 문서를 구분하여 문단별로 정렬할 때 사용한다.",
+                },
+                infoAnswer: "3",
+                infoDesc: "문단을 가운데로 정렬하는 태그는 <center>입니다"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "자바스크립트의 장점으로 볼 수 없는 것은?", 
+                infoChoice: {
+                    1: "컴파일 과정을 거치지 않기 때문에 신속한 개발을 할 수 있다.",
+                    2: "웹상에서 인터렉티브한 웹페이지를 만드는데 많이 사용된다.",
+                    3: "어떤 운영체제와 하드웨어에서도 작동하는 이식성이 높은 언어이다.", 
+                    4: "자바스크립트를 이용한 응용 프로그램은 브라우저가 제한하는 기능적 한계를 벗어날 수 있다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "문제확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "웹페이지의 외형을 제어하기 위한 언어인 스타일시트(Style Sheet)에 대한 설명 중 적합하지 않은 것은?", 
+                infoChoice: {
+                    1: "하나의 문서만 수정해도 한꺼번에 여러 페이지의 외형과 형식을 수정할 수 있다.",
+                    2: "스타일시트에서 글꼴, 색상, 크기, 정렬 방식 등을 미리 지정하여 필요한 곳에 적용할 수 있다.",
+                    3: "같은 스타일시트를 사용하는 문서에는 문서들의 일관성을 쉽게 유지할 수 있다.", 
+                    4: "웹페이지의 레이아웃 편집을 강화하여 브라우저나 플랫폼의 종류에 많은 제한이 따른다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "해설확인."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "애니메이션에서 사용되는 정지화면 하나하나를 무엇이라 하는가?", 
+                infoChoice: {
+                    1: "Frame",
+                    2: "Key Frame",
+                    3: "Tweening", 
+                    4: "Onion Skin",
+                },
+                infoAnswer: "1",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "웹(Web)상에서 애니메이션 사용을 저해하는 요소가 아닌 것은?", 
+                infoChoice: {
+                    1: "데이터 스트리밍",
+                    2: "대역폭의 한계",
+                    3: "브라우저가 지원하지 못하는 낮은 사양의 컴퓨터", 
+                    4: "인터넷의 비동기성",
+                },
+                infoAnswer: "1",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "비트맵이미지에서 사용되는 픽셀(Pixel)에 대한 설명으로 옳지 않은 것은?", 
+                infoChoice: {
+                    1: "디지털 이미지의 기본단위이다.",
+                    2: "이미지는 여러 개의 픽셀들로 구성된다.",
+                    3: "픽셀들은 프레임버퍼(frame buffer)에 저장된다.", 
+                    4: "픽셀 하나의 크기는 0.3514mm이다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "Alt + Enter : 전체화면 및 창모드 전환 단축키"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "플래시와 관련된 파일 확장자가 아닌 것은?", 
+                infoChoice: {
+                    1: ".fla",
+                    2: ".swf",
+                    3: ".spa", 
+                    4: ".pdf",
+                },
+                infoAnswer: "4",
+                infoDesc: "쉘(Shell) : 도스의 명령어 해석기인 Command.com과 같은 명령어 해석기의 일종이다.<br>% : C쉘,<br>$ : 콘쉘, 번쉘"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "웹 디자인에 대한 설명 중 옳지 않은 것은?", 
+                infoChoice: {
+                    1: "레이아웃(Lay-Out) 설계가 매우 중요하다.",
+                    2: "사용자 인터페이스(Interface)를 고려해야 한다.",
+                    3: "Text 중심의 디자인이 시각적 효과를 높여 준다.", 
+                    4: "멀티미디어 요소는 정보 전달의 효과를 극대화하기도 한다.",
+                },
+                infoAnswer: "3",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 HTML에 대한 설명으로 옳지 않은 것은?", 
+                infoChoice: {
+                    1: "HTML언어는 W3C를 기반으로 한다.",
+                    2: "HTML은 Hyper Text Marking Language의 약자이다.",
+                    3: "확장자는 html 또는 htm 이다.", 
+                    4: "HTML은 태그(Tag)로 구성되어 있다.",
+                },
+                infoAnswer: "2",
+                infoDesc: "HTML은 Hyper Text Markup Language의 약자이다"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "컴퓨터 그래픽스(Computer Graphics)에 대한 정의로 틀린 것은?", 
+                infoChoice: {
+                    1: "컴퓨터의 하드웨어와 소프트웨어를 이용하여 도형, 그림, 사진 이미지 등의 시각적 이미지를 만들어 내고 디지털화(Digitalize) 시키는 것이다.",
+                    2: "컴퓨터 그래픽스는 크게 2D 그래픽스와 3D 그래픽스로 나눌 수 있다.",
+                    3: "활용 범위가 매우 넓으며, 특히 영화나 영상물 등 의 멀티미디어 분야에서 가장 효과적으로 활용되고 있다.", 
+                    4: "전통적인 회화 방식을 응용하여 결과물을 디지털화 시킨 것은 제외한다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "축소형으로 입체 모델을 만들고 여기에 다른 기법을 병합하여 환상적인 장면을 만드는 애니메이션 특수 효과는?", 
+                infoChoice: {
+                    1: "모핑 효과",
+                    2: "로토스코핑 효과",
+                    3: "미니어처 효과", 
+                    4: "페인팅 효과",
+                },
+                infoAnswer: "3",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "웹의 구조적 측면에서 제작된 웹 사이트의 전형적인 웹 탐색구조 설명이 잘못된 것은?", 
+                infoChoice: {
+                    1: "선형적 구조는 하나의 홈페이지에서 다음 홈페이지로 또 다음 홈페이지로 연결된 구조로 주제별 검색에 많이 사용된다.",
+                    2: "계층적 구조는 하나의 홈페이지가 있고 그 홈페이지의 메인(Main)에 다양한 메뉴가 있어 주제어 검색에 많이 활용 된다.",
+                    3: "복합적 구조는 선형적 구조와 계층적 구조를 혼합한 것으로 단어별 검색에 많이 사용된다.", 
+                    4: "그물형 연결 구조는 단순하고, 개별적인 간결한 구조로 대(큰)주제 검색에 많이 활용된다.",
+                },
+                infoAnswer: "4",
+                infoDesc: "해설확인."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "캠코더에서 얻은 동영상클립을 편집하여 결과물을 얻기에 적합한 소프트웨어가 아닌 것은?", 
+                infoChoice: {
+                    1: "Premiere",
+                    2: "Movie Maker",
+                    3: "Vegas", 
+                    4: "Media Player",
+                },
+                infoAnswer: "4",
+                infoDesc: "해설확인"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 데이터 전송계에 해당되지 않는 것은?", 
+                infoChoice: {
+                    1: "데이터베이스장치",
+                    2: "단말장치",
+                    3: "통신회선", 
+                    4: "통신제어장치",
+                },
+                infoAnswer: "1",
+                infoDesc: "데이터 처리계 : 컴퓨터=자료처리<br>데이터 전송계 : 통신(인터넷)시 필요한 부분<br>데이터의 전송계에는단말장치 (DTE:Data Terminal Equipment)데이터 회선 종단장치 (DCE:Data Circuit-terminating Equipment)통신 제어 장치 (CCU:Communication Control Unit)가 있습니다.<br>참고해 주세요 데이터베이스는 전송계,처리계에 포함되지 않습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "단말기가 12개인 경우 이를 모두 망형으로 네트워크를 형성하고자 할 때 최소로 필요한 회선 수는?", 
+                infoChoice: {
+                    1: "33",
+                    2: "44",
+                    3: "55", 
+                    4: "66",
+                },
+                infoAnswer: "4",
+                infoDesc: "망형 회선수 = n(n-1)/2"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 PCM 변조 절차와 가장 거리가 먼 것은?", 
+                infoChoice: {
+                    1: "표본화(Sampling)",
+                    2: "양자화(Quantization)",
+                    3: "부호화(Encoding)", 
+                    4: "다중화(Multiplexing)",
+                },
+                infoAnswer: "4",
+                infoDesc: "표본화 -> 양자화 -> 부호화 -> 복호화->여과앞머리만 따서(표양부복여)"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 데이터 전송매체로 잡음과 보안에 가장 우수한 것은?", 
+                infoChoice: {
+                    1: "가입전화선",
+                    2: "광섬유케이블",
+                    3: "동축케이블", 
+                    4: "M/W 무선회선",
+                },
+                infoAnswer: "2",
+                infoDesc: "광섬유케이블은 빛을 이용하므로 전,자기장의 영향을 받지 않아 잡음이 없으며 도청 등의 보안에 강합니다..단점으로는 광케이블섬유는 재 연결이 어려우면 가격이 비싸다는 단점이 있습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "인터넷 상에서 메일을 주고받을 수 있는 프로토콜에 해당하는 것은?", 
+                infoChoice: {
+                    1: "HTTP",
+                    2: "SNMP",
+                    3: "SMTP", 
+                    4: "FTP",
+                },
+                infoAnswer: "3",
+                infoDesc: "HTTP : Hypertext Transfer Protocol<br>SNMP : Simple Network Management Protocol <br>SMTP : Simple Mail Transfer Protocol <br>FTP : File Transfer Protocol"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "공중파 TV 방송신호는 일정한 대역폭에 맞추어 음성과 영상신호들을 각 채널 반송파에 할당하여 전송한다. 이러한 방식에 해당되는 것은?", 
+                infoChoice: {
+                    1: "시분할 다중화",
+                    2: "통계적 시분할 다중화",
+                    3: "코드분할 다중화", 
+                    4: "주파수분할 다중화",
+                },
+                infoAnswer: "4",
+                infoDesc: "반송파가 나왔으므로 주파수분할 다중화가 맞는 답이죠"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "회선교환방식에 대한 일반적인 설명으로 틀린 것은?", 
+                infoChoice: {
+                    1: "고정된 대역폭 전송방식이다.",
+                    2: "실시간 전송에 적합하다",
+                    3: "접속에는 짧은 시간이 소요되며 전송지연은 길다.", 
+                    4: "속도나 코드변환이 불가능하다.",
+                },
+                infoAnswer: "3",
+                infoDesc: "접속에는 긴 시간이 소요되며 전송지연은 짧습니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "광섬유케이블에서 정보전송의 기본 현상은?", 
+                infoChoice: {
+                    1: "굴절",
+                    2: "전반사",
+                    3: "흡수", 
+                    4: "산란",
+                },
+                infoAnswer: "2",
+                infoDesc: "전반사 도파 원리를 이용 합니다."
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "개방형 시스템(OSI) 계층 모델에서 네트워크 구조에 대한 계층 순서가 차례대로 옳게 된 것은?", 
+                infoChoice: {
+                    1: "물리계층 - 데이터링크계층 - 네트워크계층 - 트랜스포트계층 - 세션계층 - 프리젠테이션계층 - 응용계층",
+                    2: "물리계층 - 네트워크계층 - 데이터링크계층 - 트랜스포트계층 - 세션계층 - 프리젠테이션계층 - 응용계층",
+                    3: "물리계층 - 네트워크계층 - 트랜스포트계층 - 데이터링크계층 - 세션계층 - 프리젠테이션계층 - 응용계층", 
+                    4: "물리계층 - 네트워크계층 - 데이터링크계층 - 트랜스포트계층 - 프리젠테이션계층 - 세션계층 - 응용계층",
+                },
+                infoAnswer: "1",
+                infoDesc: "물-데-네-전-세-표-응 이라고 앞글자만 따서 외우면 쉽습니다.리듬감도 생기고 더 쉽게 외울수 잇어요"
+            },{
+                infoType: "정보처리 기능사",
+                infoTime: "2009년 27회",
+                infoNumber: "20110927",
+                infoQuestion: "다음 중 멀티미디어 요소로 볼 수 없는 것은?", 
+                infoChoice: {
+                    1: "그래픽",
+                    2: "비디오",
+                    3: "사운드", 
+                    4: "DVD",
+                },
+                infoAnswer: "4",
+                infoDesc: "멀티(다양한) 미디어(매체)그래픽 : 그림, 사진<br>비디오 : 영상<br>사운드 : 소리<br>DVD는 보조기억장치"
+            }
+        ]
+       
+       // 문제 출력
+       const updateQuiz = () => {
+            const exam = [];
+            quizInfo.forEach((question, number) => {
+                exam.push(`
+                    <div class="quiz">
+                        <div class="quiz__header">
+                            <h2 class="quiz__title">${question.infoType} ${question.infoTime}</h2>
+                        </div>
+                        <div class="quiz__main">
+                            <div class="quiz__question"><em>${number+1}</em>. ${question.infoQuestion}</div>
+                            <div class="quiz__view">
+                                <div class="dog__wrap">
+                                    <div class="true">정답입니다!</div>
+                                    <div class="false">틀렸습니다!</div>
+                                    <div class="card-container">
+                                        <div class="dog">
+                                            <div class="head">
+                                                <div class="ears"></div>
+                                                <div class="face"></div>
+                                                <div class="eyes">
+                                                    <div class="teardrop"></div>
+                                                </div>
+                                                <div class="nose"></div>
+                                                <div class="mouth">
+                                                    <div class="tongue"></div>
+                                                </div>
+                                                <div class="chin"></div>
+                                            </div>
+                                            <div class="body">
+                                                <div class="tail"></div>
+                                                <div class="legs"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quiz__choice">
+                                <label for="choice1${number}">
+                                    <input type="radio" id="choice1${number}" name="choice${number}" value="1">
+                                    <span>${question.infoChoice[1]}</span>
+                                </label>
+                                <label for="choice2${number}">
+                                    <input type="radio" id="choice2${number}" name="choice${number}" value="2">
+                                    <span>${question.infoChoice[2]}</span>
+                                </label>
+                                <label for="choice3${number}">
+                                    <input type="radio" id="choice3${number}" name="choice${number}" value="3">
+                                    <span>${question.infoChoice[3]}</span>
+                                </label>
+                                <label for="choice4${number}">
+                                    <input type="radio" id="choice4${number}" name="choice${number}" value="4">
+                                    <span>${question.infoChoice[4]}</span>
+                                </label>
+                            </div>
+                            <div class="quiz__desc">정답은<em>${question.infoAnswer}</em>입니다.<br>${question.infoDesc}</div>
+                        </div>
+                    </div>
+                `);
+            });
+            exam.push(`
+                <div class="quiz__info">??점</div>
+                <div class="quiz__check">정답 확인!</div>
+            `);
+            quizWrap.innerHTML = exam. join("");
+            //설명 숨기기
+            // document.querySelector(".quiz__desc").style.diplay = "none";
+
+            
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
+        }
+        updateQuiz();
+        // 정답 확인
+        const answerQuiz = () => {
+            const quizChoices = document.querySelectorAll(".quiz__choice");
+            //사용자가 체크한 정답 == 문제 정답
+            quizInfo.forEach((question, number) => {
+                const userSelector = `input[name=choice${number}]:checked`;
+                const quizSelectorWrap = quizChoices[number];
+                const userAnswer = (quizSelectorWrap.querySelector(userSelector) || {}).value;
+                const dogWrap = quizWrap.querySelectorAll(".dog__wrap");
+                
+                if(userAnswer == question.infoAnswer){
+                    console.log("정답");
+                    dogWrap[number].classList.add("like");
+                    quizScore++;
+                } else {
+                    console.log("오답");
+                    dogWrap[number].classList.add("dislike");
+                    //
+                }
+            });
+            //설명 보이기
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
+
+            //점수보이기
+            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+        }
+        // 정답 클릭
+        document.querySelector(".quiz__check").addEventListener("click", answerQuiz);            
+            
+
+        // quizTitle.innerHTML = quizInfo[0].infoType + " " + quizInfo[0].infoTime
+        // quizQuestion.innerHTML = "<em>" + quizInfo[0].infoNumber+"." +"</em>"+ " " + quizInfo[0].infoQuestion
+        // console.log(quizInfo[2].infoType.infoQuestion)
+       
+    </script>
+</body>
+</html>
