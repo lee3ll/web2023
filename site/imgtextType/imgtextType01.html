@@ -82,70 +82,118 @@
         /* imgtext__type */
         .imgtext__inner {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        .imgtext__inner .imgtext {
-            width: 373px;
-            height: 500px;
-            margin-left: 20px;
+        .imgtext__inner article {
+            width: 31.333%;
         }
-        .imgtext__inner .text {
-            width: 374px;
-        }
-        .imgtext__small {
-            font-size: 14px;
-            border-radius: 50px;
-            padding: 1px 23px;
+        .imgText__inner .text span {
             background-color: #D78D8D;
+            font-size: 14px;
             color: #fff;
+            padding: 1px 23px;
+            border-radius: 50px;
+            margin-bottom: 15px;
             text-transform: uppercase;
             display: inline-block;
-            margin-bottom: 16px;
         }
-        .imgtext__h2 {
+        .imgText__inner .text h3 {
             font-size: 50px;
-            margin-bottom: 25px;
+            margin-bottom: 17px;
         }
-        .imgtext__text {
-            margin-bottom: 15px;
-            line-height: 150%;
+        .imgText__inner .text p {
+            margin-bottom: 16px;
+            line-height: 1.5;
             color: #666666;
+            margin-bottom: 12px;
+        }   
+        .imgText__inner .text li {
+            position: relative;
+            padding-left: 14px;
+        }        
+        .imgText__inner .text li::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 8px;
         }
-        .imgtext ul li {
-            margin-left: 15px;
-            line-height: 150%;
-            color: #666666;
+        .imgText__inner .text li a {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
         }
-        .image__img {
-            padding: 10px;
+
+        .imgText__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .imgText__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgText__inner .img.i1 {
+            background-image: url(../asset/img/imgtext\ Type01_01.jpg);
+        }
+        .imgText__inner .img.i2 {
+            background-image: url(../asset/img/imgtext\ Type01_02.jpg);
+        }
+        .imgText__inner .img.i1 a {
+            background-color: #37150A;
+        }
+        .imgText__inner .img.i2 a {
+            background-color: #112C32;
         }
     </style>
 </head>
 <body>
     <section class="text__wrap section nexon">
+        <h2 class="blind">오사카 먹거리의 종류</h2>
         <div class="container">
             <div class="imgtext__inner">
-                <article class="imgtext text">
-                    <span class="imgtext__small">notice</span>
-                    <h2 class="imgtext__h2">오사카 먹거리의 종류</h2>
-                    <p class="imgtext__text">오사카에는 타코야키, 가츠동, 오꼬노미야키, 교자, 라멘 등등 여러가지 먹거리가 있습니다.</p>
+                <article class="text">
+                    <span class=>notice</span>
+                    <h3>오사카 먹거리의 종류</h3>
+                    <p>오사카에는 타코야키, 가츠동, 오꼬노미야키, 교자, 라멘 등등 여러가지 먹거리가 있습니다.</p>
                     <ul>
-                        <li>타코야키(Takoyaki)</li>
-                        <li>가츠동(カツ丼)</li>
-                        <li>오꼬노미야키(Okonomiyakki)</li>
-                        <li>교자(交子)</li>
-                        <li>라멘(Ramen)</li>
-                        <li>유카쿠(Yakitori)</li>
-                        <li>꼬치야키(Kushikatsu)</li>
+                        <li><a href="#">타코야키(Takoyaki)</a>></li>
+                        <li><a href="#">가츠동(カツ丼)</a>></li>
+                        <li><a href="#">오꼬노미야키(Okonomiyakki)</a>></li>
+                        <li><a href="#">교자(交子)</a>></li>
+                        <li><a href="#">라멘(Ramen)</a>></li>
+                        <li><a href="#">유카쿠(Yakitori)</a>></li>
+                        <li><a href="#">꼬치야키(Kushikatsu)</a>></li>
                     </ul>
                 </article>
+                <article class="img i1">
+                    <a href="#">타코야키</a>
+                </article>
+                <article class="img i2">
+                    <a href="#">가츠동</a>
+                </article>
+
                 <article class="imagetext image">
-                    <figure class="image__img">
-                        <img src="../asset/img/imgtext Type01_01.jpg" alt="타코야키 이미지">
+                    <figure class="img i1">
+                        <a href="#">타코야키</a>
+                        <!-- <img src="../asset/img/imgtext Type01_01.jpg" alt="타코야키 이미지"> -->
                     </figure>
                 </article>
                 <article class="imagetext image">
-                    <figure class="image__img">
-                        <img src="../asset/img/imgtext Type01_02.jpg" alt="가츠동이미지">
+                    <figure class="img i2">
+                        <a href="#">타코야키</a>
+                        <!-- <img src="../asset/img/imgtext Type01_02.jpg" alt="가츠동이미지"> -->
                     </figure>  
                 </article>      
             </div>
