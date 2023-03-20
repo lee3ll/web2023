@@ -35,6 +35,8 @@
         .mouse__cursor.s1{
             background-color: rgba(203, 134, 160, 0.4);
             border-color: #ce7082;
+            transform: rotate(360deg);
+            border: 5px dotted #f6d2f1;
         }
         .mouse__cursor.s2{
             background-color: rgba(114, 207, 219, 0.4);
@@ -44,7 +46,7 @@
         .mouse__cursor.s3{
             background-color: rgba(177, 219, 166, 0.4);
             border-color: #ce7082;
-            transform: scale(1.5) rotateY(545deg);
+            transform: scale(1.5) rotateX(545deg);
         }
         .mouse__cursor.s4{
             background-color: rgba(177, 219, 166, 0.4);
@@ -55,8 +57,8 @@
         .mouse__cursor.s5{
             background-color: rgba(119, 128, 188, 0.4);
             border-color: #ce7082;
-            transform: scale(5) skew(140deg) rotate(200deg);
-            border-width: 0;
+            transform: scale(3) skew(150deg);
+            /* border-width: 0; */
             /* border-radius: 10px; */
         }
         .mouse__cursor.s6{
@@ -208,7 +210,7 @@
         //     });
         // }
 
-        //forEach()
+        // forEach()
         // document.querySelectorAll(".mouse__text span").forEach(function(span, num){
         //     span.addEventListener("mouseover", function(){
         //         cursor.classList.add("s"+(num+1));

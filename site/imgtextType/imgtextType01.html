@@ -21,6 +21,14 @@
             vertical-align: top;
             width: 100%;   
         }
+        .blind {
+            position:absolute;
+            clip:rect(0 0 0 0);
+            width:1px;
+            height:1px;
+            margin:-1px;
+            overflow:hidden
+        }
         .mt0 {margin-top: 0px !important;}
         .mt10 {margin-top: 10px !important;}
         .mt20 {margin-top: 20px !important;}
@@ -88,7 +96,7 @@
         .imgtext__inner article {
             width: 31.333%;
         }
-        .imgText__inner .text span {
+        .imgtext__inner .text span {
             background-color: #D78D8D;
             font-size: 14px;
             color: #fff;
@@ -98,21 +106,21 @@
             text-transform: uppercase;
             display: inline-block;
         }
-        .imgText__inner .text h3 {
+        .imgtext__inner .text h3 {
             font-size: 50px;
             margin-bottom: 17px;
         }
-        .imgText__inner .text p {
+        .imgtext__inner .text p {
             margin-bottom: 16px;
             line-height: 1.5;
             color: #666666;
             margin-bottom: 12px;
         }   
-        .imgText__inner .text li {
+        .imgtext__inner .text li {
             position: relative;
             padding-left: 14px;
         }        
-        .imgText__inner .text li::before {
+        .imgtext__inner .text li::before {
             content: "";
             width: 4px;
             height: 4px;
@@ -122,20 +130,20 @@
             left: 0;
             top: 8px;
         }
-        .imgText__inner .text li a {
+        .imgtext__inner .text li a {
             color: #666;
             line-height: 1.6;
             font-size: 16px;
         }
 
-        .imgText__inner .img {
+        .imgtext__inner .img {
             background-repeat: no-repeat;
             background-size: cover;
             height: 500px;
             border-radius: 10px;
             position: relative;
         }
-        .imgText__inner .img a {
+        .imgtext__inner .img a {
             position: absolute;
             left: 20px;
             bottom: 20px;
@@ -144,16 +152,16 @@
             padding: 10px 20px;
             border-radius: 40px;
         }
-        .imgText__inner .img.i1 {
-            background-image: url(../asset/img/imgtext\ Type01_01.jpg);
+        .imgtext__inner .img.i1 {
+            background-image: url(../asset/img/imgtextType01_01.jpg);
         }
-        .imgText__inner .img.i2 {
-            background-image: url(../asset/img/imgtext\ Type01_02.jpg);
+        .imgtext__inner .img.i2 {
+            background-image: url(../asset/img/imgtextType01_02.jpg);
         }
-        .imgText__inner .img.i1 a {
+        .imgtext__inner .img.i1 a {
             background-color: #37150A;
         }
-        .imgText__inner .img.i2 a {
+        .imgtext__inner .img.i2 a {
             background-color: #112C32;
         }
     </style>
@@ -183,19 +191,6 @@
                 <article class="img i2">
                     <a href="#">가츠동</a>
                 </article>
-
-                <article class="imagetext image">
-                    <figure class="img i1">
-                        <a href="#">타코야키</a>
-                        <!-- <img src="../asset/img/imgtext Type01_01.jpg" alt="타코야키 이미지"> -->
-                    </figure>
-                </article>
-                <article class="imagetext image">
-                    <figure class="img i2">
-                        <a href="#">타코야키</a>
-                        <!-- <img src="../asset/img/imgtext Type01_02.jpg" alt="가츠동이미지"> -->
-                    </figure>  
-                </article>      
             </div>
         </div>
     </section>

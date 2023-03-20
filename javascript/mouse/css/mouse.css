@@ -48,31 +48,31 @@ body.bg01::after {
     background-color: rgba(101, 113, 126, 0.77)
 }
 body.bg02::after {
-    background-color: rgba(66, 69, 32, 0.87)
+    background-color: rgba(60, 76, 83, 0.77)
 }
 body.bg03::after {
-    background-color: rgba(75, 61, 85, 0.87)
+    background-color: rgba(110, 101, 89, 0.77)
 }
 body.bg04::after {
-    background-color: rgba(107, 71, 71, 0.87)
+    background-color: rgba(73, 59, 59, 0.77)
 }
 body.bg05::after {
-    background-color: rgba(5, 36, 70, 0.87)
+    background-color: rgba(5, 36, 70, 0.77)
 }
 body.bg06::after {
-    background-color: rgba(5, 36, 70, 0.87)
+    background-color: rgba(38, 44, 51, 0.77)
 }
 body.bg07::after {
-    background-color: rgba(5, 36, 70, 0.87)
+    background-color: rgba(5, 36, 70, 0.77)
 }
 body.bg08::after {
-    background-color: rgba(34, 64, 71, 0.87)
+    background-color: rgba(34, 64, 71, 0.77)
 }
 body.bg09::after {
-    background-color: rgba(10, 32, 56, 0.87)
+    background-color: rgba(10, 32, 56, 0.77)
 }
 body.bg10::after {
-    background-color: rgba(66, 36, 70, 0.87)
+    background-color: rgba(66, 36, 70, 0.77)
 }
 /* header */
 #header {
