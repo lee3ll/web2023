@@ -3,7 +3,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #262626;
+    background-color: #000;
     color: #fff;
     padding: 10px;
     width: 100%;
@@ -99,7 +99,7 @@
     margin: 10px;
 }
 .quiz__title {
-    background-color: #fefbb6;
+    background-color: #fff892;
     border: 3px ridge #CACACA;
     border-bottom-width: 6px;
     padding: 5px;
@@ -227,7 +227,7 @@
     border-radius: 50%;
     z-index: 1000;
     text-align: center;
-    background-color: #000000;
+    background-color: #F5534F;
     color: #fff;
     font-family: 'PyeongChang';
     cursor: pointer;
@@ -649,7 +649,7 @@
     animation: movetail 0.1s linear infinite alternate forwards;
 }
 .dislike {
-    background: #cc99ff;
+    background: #3a4598;
 }
 .dislike .ears::before {
     transform: rotate(-50deg) translate(-7px, 2px);
