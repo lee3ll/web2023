@@ -143,7 +143,6 @@
 .search__box {
     text-align: center;
     padding: 3vw 2vw;
-    border-bottom: 0.3vw dashed #000;
     
 }
 .search__box label {
@@ -164,7 +163,6 @@
 .search__info {
     text-align: right;
     padding: 0.3vw 2vw;
-    border-top: 0.3vw dashed #000;
     border-bottom: 0.3vw dashed #000;
 }
 .search__list ul {
