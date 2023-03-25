@@ -7,6 +7,7 @@
     <title>javascript : 문자열 객체</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -19,10 +20,10 @@
                 <li><a href="javascript01.html">데이터저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li><a href="javascript04.html">데이터 저장하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
             <ul>
-                <li class="active"><a href="javascript04.html">문자열객체</a></li>
+                <li class="active"><a href="javascript05.html">문자열객체</a></li>
                 <li><a href="javascript06.html">배열 객체</a></li>
                 <li><a href="javascript07.html">수학 개체</a></li>
                 <li><a href="javascript08.html">숫자 개체</a></li>
@@ -81,32 +82,47 @@
                     <li><a href="#sample34"><strong> 33. string.prototype.valueOf()</strong>           메서드는 객체의 원시값을 반환합니다.</a></li>
                 </ul>
             </div>
-            <div class="main__sample">
-                <h3>06. includes()</h3>
-                <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
-                <ul>
-                    <li>문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</li>
-                    <li>대소문자를 구별합니다.</li>
-                </ul>
-<pre><code>
-        "javascript reference".includes("javascript")   //true
-        "javascript reference".includes("j")            //true
-        "javascript reference".includes("J")            //false
-        "javascript reference".includes("a")            //true
-        "javascript reference".includes("reference")     //true
-        "javascript reference".includes("reference", 11)     //true
-        "javascript reference".includes("reference", 12)     //false
-</code></pre>
         </div>
+        <div class="main__sample">
+            <div id="sample06" class="sample">
+                <h3>06. includes()</h3>
+                <p>"문자열".includes(검색값)<br>
+                    "문자열".includes(검색값, 위치값)</p>
+                <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
+    "javascript reference".includes("javascript")   //true
+    "javascript reference".includes("j")            //true
+    "javascript reference".includes("J")            //false
+    "javascript reference".includes("a")            //true
+    "javascript reference".includes("reference")     //true
+    "javascript reference".includes("reference", 11)     //true
+    "javascript reference".includes("reference", 12)     //false
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h3></h3>
+                    <ul>
+                        <li>문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</li>
+                        <li>대소문자를 구별합니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //sample01 -->
             <div class="main__sample">
-                <h3>07. indexOf()</h3>
-                <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
-                <p>
-                    문자열을 검색하여, 주어진 값과 일치하는 첫 번쨰 위치값(index)을 반환합니다.
-                    문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.
-                    대소문자를 구별합니다.
-                </p>
-<pre><code>
+                <div id="sample07" class="sample">
+                    <h3>07. indexOf()</h3>
+                    <p>"문자열".indexOf(검색값, [위치값])</p>
+                    <div class="script">   
+    <pre class="line-numbers"><code class="language-js">{
         "jabascript reference".indexOf("jabascript")    //0
         "jabascript reference".indexOf("jabascripts")   //-1
         "jabascript reference".indexOf("j")             //0
@@ -127,10 +143,30 @@
         "jabascript reference".indexOf("r, 12")          //15
 
         console.log("jabascript reference".indexOf("ja")); //0
-</code></pre>
-        </div>
-        
-        <div class="main__sample">
+    }
+    </pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h3></h3>
+                        <ul>
+                            <li>문자열을 검색하여, 주어진 값과 일치하는 첫 번쨰 위치값(index)을 반환합니다.</li>
+                            <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                            <li>대소문자를 구별합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
+            
+                
             <h3>08. search()</h3>
             <div class="notice">"문자열".indexOf(검색값)<br>"문자열".search(정규식표현)</div>
             <ul>
@@ -153,7 +189,7 @@
         console.log("javascript reference".search(/[a-z])g)
 </code></pre>
     </div>
-    <div class="main__sample">
+ 
         <h3>08. lastIndexOf()</h3>
         <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
         <ul>
@@ -184,7 +220,7 @@
 console.log("jabascript reference".indexOf("ja")); //0
 </code></pre>
 </div>
-    <div class="main__sample">
+  
             <h3>10. match()</h3>
             <div class="notice">"문자열".indexOf(검색값)<br>"문자열".search(정규식표현)</div>
             <ul>
@@ -207,7 +243,8 @@ console.log("jabascript reference".indexOf("ja")); //0
 
         console.log("javascript reference".search(/[a-z])g)
 </code></pre>
-    </div>
+            </div>
+        </div>
     </main>
    <!-- //main -->
    
@@ -216,65 +253,67 @@ console.log("jabascript reference".indexOf("ja")); //0
         <a href="mailto:lee3ll@naver.com">lee3ll@naver.com</a>
     </footer>
    <!-- //footer -->
+    <script src="assets/js/prism.js"></script>
     <script>
-        "jabascript reference".indexOf("jabascript")    //0
-        "jabascript reference".indexOf("jabascripts")   //-1
-        "jabascript reference".indexOf("j")             //0
-        "jabascript reference".indexOf("J")             //-1
-        "jabascript reference".indexOf("a")             //1
-        "jabascript reference".indexOf("ja")            //0
-        "jabascript reference".indexOf("jv")            //-1
-        "jabascript reference".indexOf("reference")     //11
-        "jabascript reference".indexOf("r")             //6
-        "jabascript reference".indexOf("re")            //11
-        "jabascript reference".indexOf("")              //11
-        "jabascript reference".indexOf("javascript, 0") //0
-        "jabascript reference".indexOf("javascript, 1") //-1
-        "jabascript reference".indexOf("reference, 0") //11
-        "jabascript reference".indexOf("reference, 11") //11
-        "jabascript reference".indexOf("reference, 12") //-1
-        "jabascript reference".indexOf("r, 7")          //11
-        "jabascript reference".indexOf("r, 12")          //15
 
-        console.log("jabascript reference".indexOf("ja")); //0
+        // "jabascript reference".indexOf("jabascript")    //0
+        // "jabascript reference".indexOf("jabascripts")   //-1
+        // "jabascript reference".indexOf("j")             //0
+        // "jabascript reference".indexOf("J")             //-1
+        // "jabascript reference".indexOf("a")             //1
+        // "jabascript reference".indexOf("ja")            //0
+        // "jabascript reference".indexOf("jv")            //-1
+        // "jabascript reference".indexOf("reference")     //11
+        // "jabascript reference".indexOf("r")             //6
+        // "jabascript reference".indexOf("re")            //11
+        // "jabascript reference".indexOf("")              //11
+        // "jabascript reference".indexOf("javascript, 0") //0
+        // "jabascript reference".indexOf("javascript, 1") //-1
+        // "jabascript reference".indexOf("reference, 0") //11
+        // "jabascript reference".indexOf("reference, 11") //11
+        // "jabascript reference".indexOf("reference, 12") //-1
+        // "jabascript reference".indexOf("r, 7")          //11
+        // "jabascript reference".indexOf("r, 12")          //15
 
-        "javascript reference".includes("javascript")   //true
-        "javascript reference".includes("j")            //true
-        "javascript reference".includes("J")            //false
-        "javascript reference".includes("a")            //true
-        "javascript reference".includes("reference")     //true
-        "javascript reference".includes("reference", 11)     //true
-        "javascript reference".includes("reference", 12)     //false
+        // console.log("jabascript reference".indexOf("ja")); //0
 
-
-        "javascript reference".search("javascript");    //0
-        "javascript reference".search("reference");     //11
-        "javascript reference".search("r");             //6
-        "javascript reference".search("a");             //1
-        "javascript reference".search("jv");            //-1
-        "javascript reference".search("J");             //-1
-        "javascript reference".search(/reference/);     //11
-        "javascript reference".search(/Reference/);     //-1
-        "javascript reference".search(/Reference/i);    //11
-        "javascript reference".search(/[a-z]/i);        //0
-
-        console.log("javascript reference".search(/[a-z])g)
+        // "javascript reference".includes("javascript")   //true
+        // "javascript reference".includes("j")            //true
+        // "javascript reference".includes("J")            //false
+        // "javascript reference".includes("a")            //true
+        // "javascript reference".includes("reference")     //true
+        // "javascript reference".includes("reference", 11)     //true
+        // "javascript reference".includes("reference", 12)     //false
 
 
-        "javascript reference".search("javascript");    //javascript
-        "javascript reference".search("reference");    //reference
-        "javascript reference".search("r");             //r
-        "javascript reference".search("R");             //null
-        "javascript reference".search("/reference/");   //reference
-        "javascript reference".search("/Reference/");   //null
-        "javascript reference".search(/Reference/i);   //reference
-        "javascript reference".search(/Reference/g);   //reference
-        "javascript reference".search(/r/);   //r
-        "javascript reference".search(/r/g);   //r r r
-        "javascript reference".search(/w/g);   //null
-        "javascript reference".search(/R/ig);   //r R r
+        // "javascript reference".search("javascript");    //0
+        // "javascript reference".search("reference");     //11
+        // "javascript reference".search("r");             //6
+        // "javascript reference".search("a");             //1
+        // "javascript reference".search("jv");            //-1
+        // "javascript reference".search("J");             //-1
+        // "javascript reference".search(/reference/);     //11
+        // "javascript reference".search(/Reference/);     //-1
+        // "javascript reference".search(/Reference/i);    //11
+        // "javascript reference".search(/[a-z]/i);        //0
 
-        console.log("javascript reference".match("ja"))
+        // console.log("javascript reference".search(/[a-z])g)
+
+
+        // "javascript reference".search("javascript");    //javascript
+        // "javascript reference".search("reference");    //reference
+        // "javascript reference".search("r");             //r
+        // "javascript reference".search("R");             //null
+        // "javascript reference".search("/reference/");   //reference
+        // "javascript reference".search("/Reference/");   //null
+        // "javascript reference".search(/Reference/i);   //reference
+        // "javascript reference".search(/Reference/g);   //reference
+        // "javascript reference".search(/r/);   //r
+        // "javascript reference".search(/r/g);   //r r r
+        // "javascript reference".search(/w/g);   //null
+        // "javascript reference".search(/R/ig);   //r R r
+
+        // console.log("javascript reference".match("ja"))
 
 
         "javascript reference".lastindexOf("javascript");    //0
