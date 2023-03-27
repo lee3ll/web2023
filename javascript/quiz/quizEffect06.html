@@ -201,24 +201,24 @@
 
                 let choiceTag = `
                     <label for="choice1">
-                            <input type="radio" id="choice1" name="choice" class="select" value="1">
-                            <span>${quizInfo[index].infoChoice[0]}</span>
-                        </label>
-                        <label for="choice2">
-                            <input type="radio" id="choice2" name="choice" class="select" value="2">
-                            <span>${quizInfo[index].infoChoice[1]}</span>
-                        </label>
-                        <label for="choice3">
-                            <input type="radio" id="choice3" name="choice" class="select" value="3">
-                            <span>${quizInfo[index].infoChoice[2]}</span>
-                        </label>
-                        <label for="choice4">
-                            <input type="radio" id="choice4" name="choice" class="select" value="4">
-                            <span>${quizInfo[index].infoChoice[3]}</span>
+                        <input type="radio" id="choice1" name="choice" class="select" value="1">
+                        <span>${quizInfo[index].infoChoice[0]}</span>
+                    </label>
+                    <label for="choice2">
+                        <input type="radio" id="choice2" name="choice" class="select" value="2">
+                        <span>${quizInfo[index].infoChoice[1]}</span>
+                    </label>
+                    <label for="choice3">
+                        <input type="radio" id="choice3" name="choice" class="select" value="3">
+                        <span>${quizInfo[index].infoChoice[2]}</span>
+                    </label>
+                    <label for="choice4">
+                        <input type="radio" id="choice4" name="choice" class="select" value="4">
+                        <span>${quizInfo[index].infoChoice[3]}</span>
                     </label>`
                 let descTag = `
                     정답은 ${quizInfo[index].infoAnswer}입니다.<br>
-                    ${quizInfo[index].quizDesc}
+                    ${quizInfo[index].infoDesc}
                 `;
                 let lengthTag = `
                     ${quizInfo.length-index} 문제 남았습니다.
@@ -240,7 +240,7 @@
                 // });
                 for(let i=0; i<quizChoiceSpan.length; i++){
                     quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
-                    quizChoiceInput[i].disabled = "true";
+                    // quizChoiceInput[i].disabled = "true";
                 };
                 //다음 버튼, 해설 숨기기
                 quizAnswer.style.display = "none"

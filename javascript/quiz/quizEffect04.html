@@ -77,7 +77,6 @@
                         </label>
                     </div>
                     <div class="quiz__answer">
-
                         <button class="confirm">정답 확인하기</button>
                     </div>
                     <div class="quiz__desc"></div>
@@ -197,7 +196,7 @@
             }
             // 해설 숨기기
             quizDesc.style.display = "none";
-        }
+        };
         // 정답 확인
         function answerQuiz(){
             // 사용자가 선택한 인풋박스(checked) == 문제 정답(quizInfo[0].infoAnswer)
@@ -216,7 +215,7 @@
             quizDesc.style.display = "block";
             //정답 숨기기
             quizAnswer.style.display = "none";
-        }
+        };
         // 정답 클릭
         quizConfirm.addEventListener("click", answerQuiz);
         //문제 출력

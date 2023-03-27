@@ -877,7 +877,7 @@
                 infoAnswer: "4",
                 infoDesc: "멀티(다양한) 미디어(매체)그래픽 : 그림, 사진<br>비디오 : 영상<br>사운드 : 소리<br>DVD는 보조기억장치"
             }
-        ]
+        ];
        
        // 문제 출력
        const updateQuiz = () => {
@@ -943,13 +943,12 @@
                 <div class="quiz__info">??점</div>
                 <div class="quiz__check">정답 확인!</div>
             `);
-            quizWrap.innerHTML = exam. join("");
+            quizWrap.innerHTML = exam.join("");
             //설명 숨기기
             // document.querySelector(".quiz__desc").style.diplay = "none";
 
-            
             document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
-        }
+        };
         updateQuiz();
         // 정답 확인
         const answerQuiz = () => {
@@ -976,7 +975,7 @@
 
             //점수보이기
             document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
-        }
+        };
         // 정답 클릭
         document.querySelector(".quiz__check").addEventListener("click", answerQuiz);            
             
