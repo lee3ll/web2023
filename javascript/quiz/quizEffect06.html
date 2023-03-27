@@ -81,7 +81,9 @@
                     <div class="quiz__answer">
                         <button class="next">다음 문제</button>
                     </div>
-                    <div class="quiz__desc"></div>                    
+                    <div class="quiz__desc"></div> 
+                    <div class="quiz__info">??점</div>                   
+                    <div class="quiz__check"><span>?</span>개</div>                   
                 </div>
             </div> 
             
@@ -177,8 +179,10 @@
         const dogWrap = quizWrap.querySelector(".dog__wrap");
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
-        const quizDesc = quizWrap.querySelector(".quiz__desc")
-        const quizLength = quizWrap.querySelector(".search__info span")
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizLength = quizWrap.querySelector(".search__info span");
+        const quizCheck = quizWrap.querySelector(".quiz__check span");
+        
 
         let quizCount = 0;
         let quizScore = 0;
@@ -257,16 +261,16 @@
                 } else {
                     console.log("오답입니다.")
                     dogWrap.classList.add("dislike");
-                };
-
-                if(quizInfo.length - quizCount == 1){
-                    alert(quizScore + "개 맞았습니다. 점수는" + Math.ceil((quizScore/quizInfo.length)*100) + "점 입니다.")
-                }
-                
+                };                               
 
                 //다음 버튼, 해설 나타나기
                 quizAnswer.style.display = "block"
                 quizDesc.style.display = "block"
+
+                if(quizInfo.length - quizCount == 1){
+                    document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+                    quizCheck.innerHTML = quizScore;
+                }
             };
                        
             //정답 확인
