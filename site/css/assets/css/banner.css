@@ -1,0 +1,38 @@
+.banner__wrap {
+    background-color: #333335;
+    background: url(../img/Frame\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner__inner {
+    color: #fff;
+}
+.banner__inner h3 {
+    font-size: 50px;
+    margin-bottom: 45px;
+}
+.banner__inner p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 90px;
+}
+.banner__inner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 960px){
+    .banner__inner h3 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    .banner__inner h3 {
+        font-size: 30px;
+    }
+    .banner__inner p {
+        margin-bottom: 50px;
+    }
+}

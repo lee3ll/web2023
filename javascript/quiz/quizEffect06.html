@@ -18,6 +18,7 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
+            <li><a href="quizEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -38,6 +39,7 @@
                             </div>
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
+                            <div class="infocount"></div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -182,8 +184,9 @@
         const quizDesc = quizWrap.querySelector(".quiz__desc");
         const quizLength = quizWrap.querySelector(".search__info span");
         const quizCheck = quizWrap.querySelector(".quiz__check span");
-        
 
+        // const dogWrapCount = quizAnswer.querySelector(".dog__wrap .infocount");
+        
         let quizCount = 0;
         let quizScore = 0;
 
@@ -230,6 +233,9 @@
                 quizDesc.innerHTML = descTag;
                 quizLength.innerHTML = lengthTag;
 
+                // let quizLength = quisInfo.length - quizCount
+                // dogWrapCount.innerHTML = "총" + quizLength + (quizLength-1) + "문제 중에 3문제 남았습니다."
+
 
                 //보기 선택자
                 const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -261,7 +267,26 @@
                 } else {
                     console.log("오답입니다.")
                     dogWrap.classList.add("dislike");
-                };                               
+                };  
+
+                // let counLast = ((quiz/quizInfo.length)*100);
+                // if(contLast > 60) {
+                //     console.log("합격입니다.")
+                // } else {
+                //     console.log("불합격입니다.")
+                // }
+                // //아래는 if문 대신 쓸 수 있는것(둘중하나만)
+                // let countResult = (contLast > 60) ? "합격입니다." : "불합격입니다."
+                
+                //마지막 문제일 때 
+                if(quizCount == quizInfo.length - 1){
+                    quizAnswer.style.display = "none";
+                    // quizLength.innerHTML = "문제를 다 풀었습니다. 축하합니다.";
+                    // quizLength.innerHTML = "총" + quizScore + "문제를 맞추었습니다. 점수"+ countLast +"는 100점입니다. 합격입니다.";
+                }
+                //마지막 문제를 인식하는지 콘솔로그로 확인해보기
+                // console.log("quizCount : " + quizCount)
+                // console.log("quizInfo.length : " + quizInfo.length)
 
                 //다음 버튼, 해설 나타나기
                 quizAnswer.style.display = "block"
