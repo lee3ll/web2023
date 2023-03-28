@@ -65,7 +65,7 @@
 .slider__arrow a{
     position: absolute;
     top: 50%;
-    background-image: url(../asset/img/icon_main.svg);
+    background-image: url(../img/icon_main.svg);
     background-size: 500px;
     width: 30px;
     height: 56px;
@@ -90,7 +90,7 @@
     width: 16px;
     height: 16px;
     display: inline-block;
-    background-image: url(../asset/img/icon_main.svg);
+    background-image: url(../img/icon_main.svg);
     background-size: 500px;
     margin: 0 3px;
 }
@@ -115,7 +115,7 @@
     only screen and (min-device-pixel-ratio: 2),
     only screen and (min-resolution: 2dppx) {
             .slider__inner .slider {
-                background-image: url(../asset/img/sliderType01_01@2x.jpg); 
+                background-image: url(../img/sliderType01_01@2x.jpg); 
             }
         }
 
