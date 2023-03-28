@@ -1,6 +1,4 @@
-.card__wrap {
-    height: 900px;
-}
+
 .card__inner {
     display: flex;
     justify-content: space-between;
