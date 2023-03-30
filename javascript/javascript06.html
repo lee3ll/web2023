@@ -208,55 +208,7 @@ console.log(text4)
                     </details>
                 </div>
             </div>
-            <!-- //sample21 -->
-
-            <div id="sample22" class="sample">
-                <h3>22.split()</h3>
-                <div class="notice">"배열".split(구분자, [제한])</div>
-                <ul>
-                    <li>구분자를 이용하여, 여러개의 문자열(문자열을 배열로)을 반환합니다.</li>
-                </ul>
-                <div class="script">   
-<pre class="line-numbers"><code class="language-js">{
-    "javascript".split("");                 //['j','a','v','a','s','c','r','i','p','t']
-    "java script".split("");                //['java','script']
-    "java scr ipt".split("");               //['java','scr','ipt']
-
-    "javascript".split("", 1);              //['j']
-    "javascript".split("", 2);              //['j','a']
-    "javascript".split("", 3);              //['j','a','v']
-
-    "java script".split(" ", 1);            //['java']
-    "java script".split(" ", 2);            //['java','script']
-
-    "javascript".split("j");                //['','avascript']
-    "javascript".split("a");                //['j','v''script']
-    "javascript".split("e");                //['javascript']
-
-    "java/scr/ipt".split("/");               //['java','scr','ipt']
-    "java&scr!ipt".split("&");               //['java','scr!ipt']
-    "java&scr!ipt".split("!");               //['java&scr','ipt']
-    "java&scr!ipt".split(/&|∖!/);            //['java','scr','ipt']
-
-    "javascript".split("").join();                 //j,a,v,a,s,c,r,i,p,t
-    "javascript".split("").join("*");              //j*a*v*a*s*c*r*i*p*t
-    "javascript".split("").reverse().join();       //t,p,i,r,c,s,a,v,a,j   //reverse는 배열에서는 안되고 문자열에서만 된다.(그래서 이 식에서는 가운데에서만 실행?)
-    "javascript".split("").reverse().join("/");    //t/p/i/r/c/s/a/v/a/j 
-
-    console.log("javascript".split(""));
-}
-</pre></code>
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            실행되었습니다.
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample22 -->      
+            <!-- //sample21 -->                  
             
             <div id="sample30" class="sample">
                 <h3>30. splice()</h3>
