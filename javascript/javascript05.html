@@ -86,8 +86,9 @@
         <div class="main__sample">
             <div id="sample06" class="sample">
                 <h3>06. includes()</h3>
-                <p>"문자열".includes(검색값)<br>
-                    "문자열".includes(검색값, 위치값)</p>
+                <div class="notice">"문자열".includes(검색값)<br>
+                    "문자열".includes(검색값, 위치값)</div>
+                <p></p>
                 <div class="script">   
 <pre class="line-numbers"><code class="language-js">{
     "javascript reference".includes("javascript")   //true
@@ -108,22 +109,16 @@
                         </div>
                     </details>
                 </div>
-                <div class="notice">
-                    <h3></h3>
-                    <ul>
-                        <li>문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</li>
-                        <li>대소문자를 구별합니다.</li>
-                    </ul>
-                </div>
             </div>
-            <!-- //sample01 -->
-            <div class="main__sample">
-                <div id="sample07" class="sample">
-                    <h3>07. indexOf()</h3>
-                    <p>"문자열".indexOf(검색값, [위치값])</p>
-                    <div class="script">   
-    <pre class="line-numbers"><code class="language-js">{
-        "jabascript reference".indexOf("jabascript")    //0
+            <!-- //sample06 -->
+
+            <div id="sample07" class="sample">
+                <h3>07. indexOf()</h3>
+                <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
+                <p></p>
+                <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
+    "jabascript reference".indexOf("jabascript")    //0
         "jabascript reference".indexOf("jabascripts")   //-1
         "jabascript reference".indexOf("j")             //0
         "jabascript reference".indexOf("J")             //-1
@@ -143,39 +138,113 @@
         "jabascript reference".indexOf("r, 12")          //15
 
         console.log("jabascript reference".indexOf("ja")); //0
-    }
-    </pre></code>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                실행되었습니다.
-                            </div>
-                        </details>
-                    </div>
-                    <div class="notice">
-                        <h3></h3>
-                        <ul>
-                            <li>문자열을 검색하여, 주어진 값과 일치하는 첫 번쨰 위치값(index)을 반환합니다.</li>
-                            <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
-                            <li>대소문자를 구별합니다.</li>
-                        </ul>
-                    </div>
+}
+</pre></code>
                 </div>
-                <!-- //sample01 -->
-
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample07 -->
             
-                
-            <h3>08. search()</h3>
-            <div class="notice">"문자열".indexOf(검색값)<br>"문자열".search(정규식표현)</div>
-            <ul>
-                <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
-                <li>문자열검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
-                <li>대소문자를 구별합니다.</li>
-            </ul>
-<pre><code>
+            <div id="sample08" class="sample">
+                <h3>08. lastIndexOf()</h3>
+                <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
+                <ul>
+                    <li>문자열을 검색하여, 주어진 값과 일치하는 첫 번쨰 위치값(index)을 반환합니다.</li>
+                    <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                    <li>대소문자를 구별합니다.</li>
+                </ul>
+                <p></p>
+                <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
+    "jabascript reference".indexOf("jabascript")    //0
+    "jabascript reference".indexOf("jabascripts")   //-1
+    "jabascript reference".indexOf("j")             //0
+    "jabascript reference".indexOf("J")             //-1
+    "jabascript reference".indexOf("a")             //1
+    "jabascript reference".indexOf("ja")            //0
+    "jabascript reference".indexOf("jv")            //-1
+    "jabascript reference".indexOf("reference")     //11
+    "jabascript reference".indexOf("r")             //6
+    "jabascript reference".indexOf("re")            //11
+    "jabascript reference".indexOf("")              //11
+    "jabascript reference".indexOf("javascript, 0") //0
+    "jabascript reference".indexOf("javascript, 1") //-1
+    "jabascript reference".indexOf("reference, 0") //11
+    "jabascript reference".indexOf("reference, 11") //11
+    "jabascript reference".indexOf("reference, 12") //-1
+    "jabascript reference".indexOf("r, 7")          //11
+    "jabascript reference".indexOf("r, 12")          //15
+    
+    console.log("jabascript reference".indexOf("ja")); //0
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample08 -->
+
+            <div id="sample10" class="sample">
+                <h3>10. match()</h3>
+                <div class="notice">
+                    <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
+                    <li>문자열검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                    <li>대소문자를 구별합니다.</li>
+                    <li>match()메서드는 문자값(배열)을 반환하고, search()메서드는 위치값(숫자)를 반환하는 것이 다릅니다.</li>
+                </div>
+                <p></p>
+                <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
     "javascript reference".search("javascript");    //0
+    "javascript reference".search("reference");     //11
+    "javascript reference".search("r");             //6
+    "javascript reference".search("a");             //1
+    "javascript reference".search("jv");            //-1
+    "javascript reference".search("J");             //-1
+    "javascript reference".search(/reference/);     //11
+    "javascript reference".search(/Reference/);     //-1
+    "javascript reference".search(/Reference/i);    //11
+    "javascript reference".search(/[a-z]/i);        //0
+    console.log("javascript reference".search(/[a-z])g)
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample10 -->
+            
+            <div id="sample18" class="sample">
+                <h3>18. search()</h3>
+                <div class="notice">"문자열".search(검색값)<br>"문자열".search(정규식표현)</div>
+                <ul>
+                    <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
+                    <li>문자열검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                    <li>대소문자를 구별합니다.</li>
+                </ul>
+                <p></p>
+                <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
+    "javascript reference".search("javascript");        //0
         "javascript reference".search("reference");     //11
         "javascript reference".search("r");             //6
         "javascript reference".search("a");             //1
@@ -187,64 +256,120 @@
         "javascript reference".search(/[a-z]/i);        //0
 
         console.log("javascript reference".search(/[a-z])g)
-</code></pre>
-    </div>
- 
-        <h3>08. lastIndexOf()</h3>
-        <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
-        <ul>
-            <li>문자열을 검색하여, 주어진 값과 일치하는 첫 번쨰 위치값(index)을 반환합니다.</li>
-            <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
-            <li>대소문자를 구별합니다.</li>
-        </ul>
-<pre><code>
-"jabascript reference".indexOf("jabascript")    //0
-"jabascript reference".indexOf("jabascripts")   //-1
-"jabascript reference".indexOf("j")             //0
-"jabascript reference".indexOf("J")             //-1
-"jabascript reference".indexOf("a")             //1
-"jabascript reference".indexOf("ja")            //0
-"jabascript reference".indexOf("jv")            //-1
-"jabascript reference".indexOf("reference")     //11
-"jabascript reference".indexOf("r")             //6
-"jabascript reference".indexOf("re")            //11
-"jabascript reference".indexOf("")              //11
-"jabascript reference".indexOf("javascript, 0") //0
-"jabascript reference".indexOf("javascript, 1") //-1
-"jabascript reference".indexOf("reference, 0") //11
-"jabascript reference".indexOf("reference, 11") //11
-"jabascript reference".indexOf("reference, 12") //-1
-"jabascript reference".indexOf("r, 7")          //11
-"jabascript reference".indexOf("r, 12")          //15
-
-console.log("jabascript reference".indexOf("ja")); //0
-</code></pre>
-</div>
-  
-            <h3>10. match()</h3>
-            <div class="notice">"문자열".indexOf(검색값)<br>"문자열".search(정규식표현)</div>
+}
+</pre></code>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample18 -->   
+            
+        <div id="sample19" class="sample">
+            <h3>19. slice()</h3>
+            <div class="notice">"문자열".slice(시작 위치, [끝나는 위치])</div>
             <ul>
-                <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
-                <li>문자열검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
-                <li>대소문자를 구별합니다.</li>
-                <li>match()메서드는 문자값(배열)을 반환하고, search()메서드는 위치값(숫자)를 반환하는 것이 다릅니다.</li>
+                <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</li>
             </ul>
-<pre><code>
-    "javascript reference".search("javascript");    //0
-        "javascript reference".search("reference");     //11
-        "javascript reference".search("r");             //6
-        "javascript reference".search("a");             //1
-        "javascript reference".search("jv");            //-1
-        "javascript reference".search("J");             //-1
-        "javascript reference".search(/reference/);     //11
-        "javascript reference".search(/Reference/);     //-1
-        "javascript reference".search(/Reference/i);    //11
-        "javascript reference".search(/[a-z]/i);        //0
+            <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
+    "javascript".slice(0)    //javascript
+        "javascript".slice(1)    //avascript
+        "javascript".slice(2)    //vascript
+        "javascript".slice(0, 1)    //j
+        "javascript".slice(1, 2)    //a
+        "javascript".slice(0, 2)    //ja
+        "javascript".slice(0, 3)    //jav
+        "javascript".slice(5, 10)    //cript
+        "javascript".slice(5, -1)    //crip
+        "javascript".slice(5, -2)    //cri
+        "javascript".slice(-1)    //t
+        "javascript".slice(-2)    //pt
+        "javascript".slice(-3)    //ipt
+        "javascript".slice(-3, -1)    //ip
+        "javascript".slice(-3, -2)    //i
 
-        console.log("javascript reference".search(/[a-z])g)
-</code></pre>
+
+        console.log("javascript".slice(0));
+}
+</pre></code>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        실행되었습니다.
+                    </div>
+                </details>
             </div>
         </div>
+        <!-- //sample19 -->
+
+        <div id="sample30" class="sample">
+            <h3>.trim()</h3>
+            <div class="notice"></div>
+            <p></p>
+            <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
+}
+</pre></code>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        실행되었습니다.
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample30 -->
+
+        <div id="sample31" class="sample">
+            <h3>.trimEnd()</h3>
+            <div class="notice"></div>
+            <p></p>
+            <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
+}
+</pre></code>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        실행되었습니다.
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample31 -->
+
+        <div id="sample32" class="sample">
+            <h3>.trimStart()</h3>
+            <div class="notice"></div>
+            <p></p>
+            <div class="script">   
+<pre class="line-numbers"><code class="language-js">{
+}
+</pre></code>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        실행되었습니다.
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample32 -->
+
     </main>
    <!-- //main -->
    
@@ -255,81 +380,13 @@ console.log("jabascript reference".indexOf("ja")); //0
    <!-- //footer -->
     <script src="assets/js/prism.js"></script>
     <script>
+        "javascript".trim("");      //javascript        
+        "javascript ".trim("");      //javascript        
+        " javascript ".trim("");      //javascript        
+        " java script ".trim("");      //java script   
 
-        // "jabascript reference".indexOf("jabascript")    //0
-        // "jabascript reference".indexOf("jabascripts")   //-1
-        // "jabascript reference".indexOf("j")             //0
-        // "jabascript reference".indexOf("J")             //-1
-        // "jabascript reference".indexOf("a")             //1
-        // "jabascript reference".indexOf("ja")            //0
-        // "jabascript reference".indexOf("jv")            //-1
-        // "jabascript reference".indexOf("reference")     //11
-        // "jabascript reference".indexOf("r")             //6
-        // "jabascript reference".indexOf("re")            //11
-        // "jabascript reference".indexOf("")              //11
-        // "jabascript reference".indexOf("javascript, 0") //0
-        // "jabascript reference".indexOf("javascript, 1") //-1
-        // "jabascript reference".indexOf("reference, 0") //11
-        // "jabascript reference".indexOf("reference, 11") //11
-        // "jabascript reference".indexOf("reference, 12") //-1
-        // "jabascript reference".indexOf("r, 7")          //11
-        // "jabascript reference".indexOf("r, 12")          //15
-
-        // console.log("jabascript reference".indexOf("ja")); //0
-
-        // "javascript reference".includes("javascript")   //true
-        // "javascript reference".includes("j")            //true
-        // "javascript reference".includes("J")            //false
-        // "javascript reference".includes("a")            //true
-        // "javascript reference".includes("reference")     //true
-        // "javascript reference".includes("reference", 11)     //true
-        // "javascript reference".includes("reference", 12)     //false
-
-
-        // "javascript reference".search("javascript");    //0
-        // "javascript reference".search("reference");     //11
-        // "javascript reference".search("r");             //6
-        // "javascript reference".search("a");             //1
-        // "javascript reference".search("jv");            //-1
-        // "javascript reference".search("J");             //-1
-        // "javascript reference".search(/reference/);     //11
-        // "javascript reference".search(/Reference/);     //-1
-        // "javascript reference".search(/Reference/i);    //11
-        // "javascript reference".search(/[a-z]/i);        //0
-
-        // console.log("javascript reference".search(/[a-z])g)
-
-
-        // "javascript reference".search("javascript");    //javascript
-        // "javascript reference".search("reference");    //reference
-        // "javascript reference".search("r");             //r
-        // "javascript reference".search("R");             //null
-        // "javascript reference".search("/reference/");   //reference
-        // "javascript reference".search("/Reference/");   //null
-        // "javascript reference".search(/Reference/i);   //reference
-        // "javascript reference".search(/Reference/g);   //reference
-        // "javascript reference".search(/r/);   //r
-        // "javascript reference".search(/r/g);   //r r r
-        // "javascript reference".search(/w/g);   //null
-        // "javascript reference".search(/R/ig);   //r R r
-
-        // console.log("javascript reference".match("ja"))
-
-
-        "javascript reference".lastindexOf("javascript");    //0
-        "javascript reference".lastindexOf("javascript");    //-1
-        "javascript reference".lastindexOf("j");            //0
-        "javascript reference".lastindexOf("a");            //3
-        "javascript reference".lastindexOf("jv");           //-1
-        "javascript reference".lastindexOf("reference");    //11
-        "javascript reference".lastindexOf("r");            //15
-        "javascript reference".lastindexOf("javascript", 0);  //0
-        "javascript reference".lastindexOf("javascript", 1);  //0
-        "javascript reference".lastindexOf("reference", 0);  //-1
-        "javascript reference".lastindexOf("reference", 1);  //-1
-        "javascript reference".lastindexOf("reference", 11);  //11
-        "javascript reference".lastindexOf("reference", 12);  //11
-
+        " javascript ".trimStart("");      //java script        
+        " javascript ".trimEnd("");      //javascript        
     </script>
 
 

@@ -226,6 +226,18 @@ mysql> show databases;
 ) charset=utf8;
 </code></pre>
 
+    <h4 id="intro5-1" class="page-header">테이블 만들기</h4>
+    <div class="bs-callout bs-callout-info">create table reviews</div>
+<pre><code class="language-js">create table reviews(
+    reviewID int(10) unsigned auto_increment,
+    memberID int(10) unsigned,
+    youText tinytext NOT NULL,
+    regTime int(30) NOT NULL,
+    PRIMARY KEY(reviewID)
+) charset=utf8;
+</code></pre>
+
+
                     <h4 id="intro5-2" class="page-header">테이블 전체보기</h4>
                     <div class="bs-callout bs-callout-info">show tables;</div>
 <pre><code class="language-js">mysql> show tables;
@@ -280,9 +292,8 @@ Query OK, 0 rows affected (0.00 sec)
                 <div class="bs-docs-section">
                     <h3 id="intro6" class="page-header">✨테이블 데이터</h3>
                     <h4 id="intro6-1" class="page-header">데이터 입력하기</h4>
-                    <div class="bs-callout bs-callout-info"><code>INTO</code> 테이블명(필드명) <code>VALUES</code></div>
+                    <div class="bs-callout bs-callout-info"><code>INSERT</code><code>INTO</code> 테이블명(필드명) <code>VALUES</code></div>
 <pre><code class="language-js">
-    
     INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("webstoryboy@naver.com","황상연","1234","19990304","26","03140316");
     INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dlscks0930@naver.com","황인찬","1234","19980930","26","03140316");
     INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("gp2617@naver.com","천설희","1234","19950313","29","03140316");
@@ -311,8 +322,18 @@ Query OK, 0 rows affected (0.00 sec)
     INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dripidea77@gmail.com","김시연","1234","19930313","31","03140316");
     INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("itshena01@gmail.com","조한미","1234","19930211","31","03140316");
     INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("aimee00418@gmail.com","권현정","1234","19830211","39","03140316");
-
-
+</code></pre>
+                <div class="bs-callout bs-callout-info"><code>INSERT</code> <code>INTO</code> 테이블명(필드명) <code>VALUES</code></div>
+<pre><code class="language-js">INSERT INTO reviews(memberID, youText, regTime) VALUES("4","감사합니다. 잘 봤어요","1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("5","고맙습니다. 잘 봤어요","234235");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("9","귀엽네요. 잘 봤어요","123152");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("8","안녕하세요. 잘 보고가요","1251235");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("3","반갑습니다. 잘 부탁해요","1242314");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("25","즐거웠습니다. 또 봐요","63456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1","잘 먹었습니다. 감사합니다","754674");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("12","안녕하세요. 담에 봬요","324535");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("3","안녕히 주무세요. 전 갈게요","8678");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("11","고생하셨습니다. 푹 쉬세요","45645");
 </code></pre>
                 
                     <h4 id="intro6-2" class="page-header">데이터 불러오기</h4>
