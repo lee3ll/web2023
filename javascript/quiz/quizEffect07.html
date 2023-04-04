@@ -91,7 +91,7 @@
                     </div> -->
                 </div>
             </div>            
-            <div class="cbt__start">
+            <!-- <div class="cbt__start">
                 <div class="cbt__modal1">
                     <h2>기능사 시험 도전하기</h2>
                     <div class="cbt__choice">
@@ -151,7 +151,7 @@
                         <button class="minimal">시작하기</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
     <!-- //main -->
@@ -174,19 +174,19 @@
         let questionRest = questionLength; //남은 문제수 //100개대신 변수를 넣어줌
 
        
-       // 모달 창1 없애기
-       const cbtBtn = document.querySelector(".cbt__modal1 .minimal");
-        const cbtStart = document.querySelector(".cbt__start");
+    //    // 모달 창1 없애기
+    //    const cbtBtn = document.querySelector(".cbt__modal1 .minimal");
+    //     const cbtStart = document.querySelector(".cbt__start");
 
-        cbtBtn.addEventListener("click", () => {
-            cbtStart.style.display = "none";
-            const timer = setInterval(countdown, 1000);
-            const cbtName = document.querySelector(".cbt__name");
-            const myInfo = document.getElementById("myinfo");
-            const myInfoValue = myInfo.value;
+    //     cbtBtn.addEventListener("click", () => {
+    //         cbtStart.style.display = "none";
+    //         const timer = setInterval(countdown, 1000);
+    //         const cbtName = document.querySelector(".cbt__name");
+    //         const myInfo = document.getElementById("myinfo");
+    //         const myInfoValue = myInfo.value;
 
-            cbtName.innerHTML = myInfoValue;
-        });
+    //         cbtName.innerHTML = myInfoValue;
+    //     });
        
        
         //데이터 가져오기
