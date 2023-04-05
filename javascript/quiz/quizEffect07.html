@@ -178,7 +178,10 @@
         const cbtStartBtn = document.querySelector(".cbt__start__btn");
         const cbtStart = document.querySelector(".cbt__start");
         const cbtTime = document.querySelector(".cbt__time");
-    
+
+
+        const youName = document.querySelector(".cbt__view .name");
+        // cbtName.innerHTML = youName;
 
 
         let questionAll = [];  //모든 퀴즈 정보
@@ -190,6 +193,7 @@
         //시작하기
         const startQuiz = () => {
             cbtStart.classList.add("hide");     //모달창 제거
+            cbtyouName.innerHTML = `${youName.value}`
 
             //시간 설정
             questionTime = setInterval(reduceTime, 1000);
@@ -432,6 +436,8 @@
         cbtStartBtn.addEventListener("click",startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);
         // dataQuestion();
+
+        
 
         
         </script>
