@@ -87,6 +87,9 @@
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);    // 첫 번째 이미지 복사
 
         let sliderInterval = 2000; 
+    </script>   
+
+    <script> 
         // 복사한 첫 번째 이미지 마지막에 붙여넣기
         sliderInner.appendChild(sliderClone);
 
@@ -108,6 +111,46 @@
 
         setInterval(sliderEffect, sliderInterval);
     </script>
+    <!-- // GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        function sliderEffect(){
+            currentIndex++;
+            gsap.to(sliderInner, {
+                y : -sliderWidth * currentIndex,
+                duration : 0.5,
+                ease : "power.out"
+            });
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    gsap.to(sliderInner, {
+                        y : 0,
+                        duration : 0,
+                        ease : "power.out"
+                    });
+                }, 700);
+                currentIndex = 0;
+            };
+        };
+        setInterval(sliderEffect, sliderInterval);
+    </script> -->
+        
+    <!-- //jQuery -->
+     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        function sliderEffect(){
+            currentIndex++;
+            $(".slider__inner").css("position", "relative");
+            $(".slider__inner").animate({top : -sliderHeight * currentIndex}, 500);
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    $(".slider__inner").animate({top : 0}, 0);
+                }, 700);
+                currentIndex = 0;
+            };
+        };
+        setInterval(sliderEffect, sliderInterval);
     </script>
 
 </body>
