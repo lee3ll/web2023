@@ -484,7 +484,7 @@
         "desc": "Alt + Enter : 전체화면 및 창모드 전환 단축키"
     },{
         "subject": "정보처리 기능사",
-        "question": "'윈도 98'에서 도스를 실행시켰더니 전체화면 형태로 도구들이 보이지 않아 불편하였다. 도스의 창 형태로 전환하려면 어떤 키를 눌러야 하는가?", 
+        "question": "UNIX시스템은 'Shell' 이라는 명령어 해석기를 사용하는데 다음 중 Shell의 종류로 옳지 않은 것은?", 
         "correct_answer": "System Shell",
         "incorrect_answers": [
             "C Shell",
