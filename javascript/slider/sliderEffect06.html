@@ -163,12 +163,29 @@
             sliderInner.style.transform = "translateX("+ -sliderWidth * num + "px)";
             currentIndex = num;
 
-            //닷 메뉴 활성화 하기
-            let dotActive = document.querySelectorAll(".slider__dot .dot"); //위함수를 읽고오기때문에 이선택자는 이 위치)
+            // 닷 메뉴 선택가능하게하기
+            let dotActive = document.querySelectorAll(".slider__dot .dot");
             dotActive.forEach((active) => active.classList.remove("active"));
-            // console.log("dotActive[num] " + dotActive[num])
             dotActive[num].classList.add("active");
         };
+
+        function btnClick(){
+            let dotActive = document.querySelectorAll(".slider__dot .dot");
+            dotActive.forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                    gotoSlider(index);
+                });
+            });
+        };
+        btnClick();
+
+
+        //     //닷 메뉴 활성화 하기
+        //     let dotActive = document.querySelectorAll(".slider__dot .dot"); //위함수를 읽고오기때문에 이선택자는 이 위치)
+        //     dotActive.forEach((active) => active.classList.remove("active"));
+        //     // console.log("dotActive[num] " + dotActive[num])
+        //     dotActive[num].classList.add("active");
+        // };
 
         //버튼을 클릭했을 때 (다중이라 forEach)
         sliderBtn.forEach((btn, index) => {
