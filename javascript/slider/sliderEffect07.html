@@ -146,19 +146,29 @@
             thumnailNodes[currentIndex].classList.add("active");
 
             //썸네일 이미지 클릭하기
-            for(let i=0; i<thumnailNodes.length; i++){
-                thumnailNodes[i].addEventListener("click", function(){
-                    slider.thumnails.querySelector("img.active").classList.remove("active");
-                    thumnailNodes[i].classList.add("active");
+            // for(let i=0; i<thumnailNodes.length; i++){
+            //     thumnailNodes[i].addEventListener("click", function(){
+            //         slider.thumnails.querySelector("img.active").classList.remove("active");
+            //         thumnailNodes[i].classList.add("active");
 
-                    imageNodes[currentIndex].classList.remove("active");
-                    currentIndex = i;
-                    imageNodes[currentIndex].classList.add("active");
-                });
+            //         imageNodes[currentIndex].classList.remove("active");
+            //         currentIndex = i;
+            //         imageNodes[currentIndex].classList.add("active");
+            //     });               
+            // }
 
-                //forEach로 바꾸기
+            //forEach로 바꾸기
+            thumnailNodes.forEach((e, i) => {
+                e.addEventListener("click", () => {
+                slider.thumnails.querySelector("img.active").classList.remove("active");
+                thumnailNodes[i].classList.add("active");
                 
-            }
+                imageNodes[currentIndex].classList.remove("active");
+                currentIndex = i;
+                imageNodes[currentIndex].classList.add("active");
+              });
+            });
+
 
             //왼쪽 버튼 클릭하기
             slider.prevBtn.addEventListener("click",function(){

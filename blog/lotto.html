@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마무리문제2-로또 번호 생성하기</title>
+    <style>
+        #cont {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffecd6;
+        }
+        h1 {
+            color: #ff8239;
+            font-size: 30px;
+            padding-top: 50px;
+        }
+        button {
+            width: 400px;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: #ffc0ab;
+        }
+        #result {
+            padding: 20px;
+            font-size: 30px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <h1>로또 번호뽑기</h1>   
+        <button>뽑기</button> 
+        <div id="result"></div>
+    </div>
+</body>
+<script>
+    let button = document.querySelector("button");
+    let result = document.querySelector("#result");
+
+    function lottoNumber(){
+        let randomLotto = new Set();
+
+        for(let i=1; i<=6; i++){
+            randomLotto.add(Math.floor(Math.random() * 45) + 1);
+        }
+        result.innerText = [...randomLotto];
+    }
+    button.addEventListener("click", lottoNumber);
+    </script>
+</html>
