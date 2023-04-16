@@ -55,12 +55,12 @@ body{
     let aa = 0
 const dataQuestion = () => {
     const random = Math.floor( Math.random()*30)
-    aa = random 
+    wise = random 
     fetch("json/dummy01.json")
     .then(res => res.json())
     .then(items => {
-        document.querySelector(".result .quote").innerHTML=items.quotes[aa].quote
-        document.querySelector(".result .author").innerHTML=items.quotes[aa].author
+        document.querySelector(".result .quote").innerHTML=items.quotes[wise].quote
+        document.querySelector(".result .author").innerHTML=items.quotes[wise].author
     });
 };
 dataQuestion()
