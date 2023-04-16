@@ -4,36 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../homeworkcss/2023.04.15.css">
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
+        * {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(img/oo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrap {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    
+}
+.result {
+    margin: 0, auto;
+    width: 1000px;
+    height: 400px;
+    border: none;
+    text-align: center;
+}
+.quote {
+    display: inline-block;
+    font-size: 40px;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+.author {
+    font-size: 25px;
+}
     </style>
 </head>
 <body>
-    <div id="result">
-        <div class="quote"></div>
-        <div class="author"></div>
+    <div class="wrap">
+        <div class="result">
+            <p class="quote"></p>
+            <p class="author"></p>
+        </div>
     </div>
 </body>
 <script>
-    const Result = document.querySelector("#result");
-    const Quote = result.querySelector(".quote");
-    const Author = result.querySelector(".author");
-
-    const dataresult = () => {
-        fetch("json/blog.json")
-        .then(res => res.json())
-        .then(items => {
-            const randomIndex = Math.floor(Math.random() * items.length);
-            Quote.textContent = items[randomIndex].quote;
-            Author.textContent = "- " + items[randomIndex].author;
-        })
-        .catch((err) => console.log(err));
-    }
-    dataresult();
-    setInterval(dataresult, 10000);
+    let aa = 0
+const dataQuestion = () => {
+    const random = Math.floor( Math.random()*30)
+    aa = random 
+    fetch("json/dummy01.json")
+    .then(res => res.json())
+    .then(items => {
+        document.querySelector(".result .quote").innerHTML=items.quotes[aa].quote
+        document.querySelector(".result .author").innerHTML=items.quotes[aa].author
+    });
+};
+dataQuestion()
+setInterval(dataQuestion,5000)
 </script>
+
 </html>
