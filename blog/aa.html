@@ -52,10 +52,11 @@ body{
     </div>
 </body>
 <script>
-    let aa = 0
+    let wise = 0
 const dataQuestion = () => {
     const random = Math.floor( Math.random()*30)
     wise = random 
+
     fetch("json/dummy01.json")
     .then(res => res.json())
     .then(items => {
