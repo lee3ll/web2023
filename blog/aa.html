@@ -62,10 +62,19 @@ body{
     .then(items => {
         document.querySelector(".result .quote").innerHTML=items.quotes[wise].quote
         document.querySelector(".result .author").innerHTML=items.quotes[wise].author
-    });
+    });   
 };
-dataQuestion()
-setInterval(dataQuestion,5000)
+
+    const BgImage = () => {
+            const backgroundImageUrl = `https://source.unsplash.com/random/?sky&t=${new Date().getTime()}`;
+            document.body.style.backgroundImage = `url(${backgroundImageUrl})`;
+        }
+
+
+        dataQuestion()
+        BgImage();
+    setInterval(dataQuestion,5000)
+    setInterval(BgImage, 5000);
 </script>
 
 </html>
