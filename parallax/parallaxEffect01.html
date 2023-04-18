@@ -142,14 +142,14 @@
         <div class="info">
             <ul>
                 <li>#section1 offset() : <span class="offset1">0</span>px</li>
-                <li>#secrion1 offset() : <span class="offset2">0</span>px</li>
-                <li>#secrion2 offset() : <span class="offset3">0</span>px</li>
-                <li>#secrion3 offset() : <span class="offset4">0</span>px</li>
-                <li>#secrion4 offset() : <span class="offset5">0</span>px</li>
-                <li>#secrion5 offset() : <span class="offset6">0</span>px</li>
-                <li>#secrion6 offset() : <span class="offset7">0</span>px</li>
-                <li>#secrion7 offset() : <span class="offset8">0</span>px</li>
-                <li>#secrion8 offset() : <span class="offset9">0</span>px</li>
+                <li>#secrion2 offset() : <span class="offset2">0</span>px</li>
+                <li>#secrion3 offset() : <span class="offset3">0</span>px</li>
+                <li>#secrion4 offset() : <span class="offset4">0</span>px</li>
+                <li>#secrion5 offset() : <span class="offset5">0</span>px</li>
+                <li>#secrion6 offset() : <span class="offset6">0</span>px</li>
+                <li>#secrion7 offset() : <span class="offset7">0</span>px</li>
+                <li>#secrion8 offset() : <span class="offset8">0</span>px</li>
+                <li>#secrion9 offset() : <span class="offset9">0</span>px</li>
             </ul>
         </div>
     </aside>
@@ -159,9 +159,11 @@
 
             document.querySelectorAll(".parallax__item").forEach((item, index) => {
                 if(scrollTop >= item.offsetTop -2){
+                    // 메뉴바에서 모든 active 제거
                     document.querySelectorAll(".parallax__nav li").forEach((li) => {
                         li.classList.remove("active");
                     });
+                    // active 활성화
                     document.querySelector(".parallax__nav li:nth-child("+(index+1)+")").classList.add("active");
                 }
             });
@@ -176,7 +178,7 @@
             });
             
             //info
-            const scroll = document.querySelector(".scroll span")
+            const scroll = document.querySelector(".scroll span");
 
             scroll.innerHTML = Math.floor(scrollTop); //Math.floor() // parseInt() 소수점 안보이게
 
@@ -191,18 +193,38 @@
             // document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop;
         });
 
+        const spans = document.querySelectorAll(".info span");
+
         // for(let i=1; i<10; i++){
         //     document.querySelector(`.info .offset${i}`).innerText = document.getElementById(`section${i}`).offsetTop;
         // };
 
-        //forEach
-        document.querySelectorAll(".info li span").forEach((e, i) => {
-            e.innerHTML = document.getElementById(`section${i+1}`).offsetTop;
+        // for문
+        // for(let i=0; i<=8; i++){
+        //     spans[i].innerHTML = document.getElementById("section" + (i+1) ).offsetTop;
+        // }
+
+        // forEach 문
+        spans.forEach((el, i) => {
+            el.innerHTML = document.getElementById(`section${i+1}`).offsetTop;
         });
-        //for in
-        //for of
-        
-     
+
+        // for in 문
+        // for(let index in spans){
+        //     if(index.match(/[a-z]/) == null){
+        //         spans[parseInt(index)].innerHTML = document.getElementById(`section${parseInt(index)+1}`).offsetTop;
+        //     }
+        // }
+
+        // for of 문
+        // {
+        //     let index = 0;
+        //     for(let span of spans){
+        //         span.innerHTML = document.getElementById(`section${index+1}`).offsetTop;
+        //         index++;
+        //     }
+        // }
+
     </script>
 </body>
 </html>
