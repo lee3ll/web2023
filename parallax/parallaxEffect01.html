@@ -191,15 +191,14 @@
             // document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop;
         });
 
-        for(let i=1; i<10; i++){
-            document.querySelector(`.info .offset${i}`).innerText = document.getElementById(`section${i}`).offsetTop;
-        };
-
-        // document.querySelectorAll(".parallax__wrap section").forEach((e,i) => {
-        //     document.querySelector(`.info .offset${i}`).innerText = e.offsetTop
-        // });
+        // for(let i=1; i<10; i++){
+        //     document.querySelector(`.info .offset${i}`).innerText = document.getElementById(`section${i}`).offsetTop;
+        // };
 
         //forEach
+        document.querySelectorAll(".info li span").forEach((e, i) => {
+            e.innerHTML = document.getElementById(`section${i+1}`).offsetTop;
+        });
         //for in
         //for of
         
