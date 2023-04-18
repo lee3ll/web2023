@@ -1,0 +1,81 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/PyeongChang/PyeongChang.css');
+@import url('https://webfontworld.github.io/yangjin/YangJin.css');
+@import url('https://webfontworld.github.io/goodchoice/Jalnan.css');
+@import url('https://webfontworld.github.io/BMJua/BMJua.css');
+@import url('https://webfontworld.github.io/tway/TwaySky.css');
+@import url('https://webfontworld.github.io/eland/ElandNice.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #222;
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.font01{
+    font-family: NexonLv1Gothic;
+    font-weight: 300;
+}
+.font02{
+    font-family: PyeongChang;
+    font-weight: 300;
+}
+.font03{
+    font-family: yangjin;
+    font-weight: 300;
+}
+.font04{
+    font-family: goodchoice;
+    font-weight: 300;
+}
+.font05{
+    font-family: BMJua;
+    font-weight: 300;
+}
+.font06{
+    font-family: tway;
+    font-weight: 300;
+}
+.font07{
+    font-family: eland;
+    font-weight: 300;
+}
+.font08{
+    font-family: NexonLv1Gothic;
+    font-weight: 300;
+}
+.font09{
+    font-family: NexonLv1Gothic;
+    font-weight: 300;
+}
+.font10{
+    font-family: NexonLv1Gothic;
+    font-weight: 300;
+}
+
+body {
+   background-color: #222;
+}

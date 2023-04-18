@@ -9,7 +9,67 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
 </head>
-<body class="img04 bg04 font04">
+    <style>
+        #header {
+            z-index: 100;
+        }
+        .mouse__wrap {
+            
+        }
+        .mouse__img {
+            width: 100%;
+            height: 100vh;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .mouse__img figure {
+            width: 50vh;
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            background: red;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            transition: transform 500ms ease;
+            cursor: none;
+        }
+        .mouse__img figure:hover{
+            transform: scale(1.025);
+        }
+        .mouse__img figure img {
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            filter: sepia(60%) saturate(200%)
+        }
+        .mouse__img figure figcaption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .mouse__cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+<body class="img03 bg03 font03">
     <header id="header">
         <h1>Javascript Mouse Effect01</h1>
         <p>마우스 이펙트 - 마우스 따라다니기</p>
@@ -25,7 +85,18 @@
     <!--header  -->
 
     <main id="main">
-
+        <div class="mouse__wrap">
+            <div class="mouse__cursor"></div>
+            <div class="mouse__img">
+                <figure>
+                    <img src="img/mouseEffect03-min.jpg" alt="이미지">
+                    <figcaption>
+                        <p>In youth we learn, in age we understand.</p>
+                        <p>우리는 젊을 때에 배우고 나이가 들어서 이해한다.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
     </main>
     <!-- main -->
 
@@ -33,5 +104,37 @@
         <a href="mailto:lee3ll@naver.com">lee3ll@naver.com</a>
     </footer>
     <!--footer  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+       document.querySelector(".mouse__img figure").addEventListener("mousemove", e =>{
+            gsap.to(".mouse__cursor", {
+                duration: .2,
+                left: e.pageX,
+                top: e.pageY
+            })
+
+            //마우스 좌표 값
+            let mousePageX = e.pageX;
+            let mousePageY = e.pageY;
+
+            //전체화면 가로 값
+            window.innerWidth //1920브라우저 크기
+            window.outerWidth //1920브라우저 크기(스크롤 바 포함)
+            window.screen.width//1920화면 크기
+
+            //마우스 좌표값 기준점 가운데로 설정
+            let centerPageX = window.innerWidth/2 - mousePageX;
+            let centerPageY = window.innerWidth/2 - mousePageY;
+
+            //이미지 움직이기
+            // const imgMove = document.querySelector(".mouse__img figure img");          
+            // imgMove.style.transform = "translate("+centerPageX/20+"px, "+centerPageY/20+"px)";
+
+            gsap.to (".mouse__img figure img", {
+                x:centerPageX/20,
+                y:centerPageY/20
+            }) 
+       });
+    </script>
 </body>
 </html>
