@@ -13,7 +13,6 @@ body {
     top: 0;
     z-index: 1000;
     pointer-events: none;
-    user-select: none;
     cursor: none;
 }
 #header {
@@ -46,6 +45,7 @@ body {
     width: 50px;
     margin-bottom: 20px;
     text-align: center;
+    user-select: none;
 }
 .icon__box > div img {
     margin-bottom: 10px;
