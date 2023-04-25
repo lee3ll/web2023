@@ -93,18 +93,46 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="js/music.js"></script>
     <script>
+
+        let clock = document.querySelector(".time");        
+
+        setInterval(function () {
+            clock.innerHTML = new Date().toLocaleString();
+        }, 1000);
+
+        let os = navigator.userAgent.toLowerCase();
+        let sw = screen.width;
+        let sh = screen.height;
+        let info = document.querySelector(".info");
+
+        if (os.indexOf("windows") >= 0) {
+          info.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+        } else if (os.indexOf("macintosh") >= 0) {
+          info.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+        } else if (os.indexOf("iphone") >= 0) {
+          info.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+        } else if (os.indexOf("android") >= 0) {
+          info.innerHTML = "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+        }
+
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
-      start: function() {
-          $(".cursor img").attr("src","img/game_mouse01.png")
-        },
-    });
+            start: function() {
+                $(".cursor img").attr("src","img/game_mouse01.png")
+            },
+            drag: function () {
+                $("#header").attr("style", "background:#eb3c3c","")
+            }
+        });
 
     $(".icon2").draggable({
             containment: ".icon__box", scroll: false,
       start: function() {
         $(".cursor img").attr("src","img/game_mouse02.png")
       },
+      drag: function () {
+            $("#header").attr("style", "background:#334de0")
+        }
     });
 
     $(".icon3").draggable({
@@ -112,6 +140,9 @@
       start: function() {
         $(".cursor img").attr("src","img/game_mouse03.png")
       },
+      drag: function () {
+            $("#header").attr("style", "background:lightgreen")
+        }
     });
 
     $(".icon4").draggable({
@@ -119,6 +150,9 @@
       start: function() {
         $(".cursor img").attr("src","img/game_mouse04.png")
       },
+      drag: function () {
+            $("#header").attr("style", "background:#ffef5a")
+        }
     });
 
     window.onload = function(){
@@ -143,8 +177,12 @@
                 left: e.pageX -5,
                 top: e.pageY -10
             })
+
+            // printAgent() 
+            // printTime() 
         });
 
+<<<<<<< HEAD
         // function printTime() {
         //     const clock = document.querySelector("#header .time");
         //     let now = new Date();
@@ -161,6 +199,9 @@
         function printAgent(){
 
         }
+=======
+        
+>>>>>>> 0cb3dee0709ec674b0535710e47799cb491d62ed
     </script>
 </body>
 </html>
