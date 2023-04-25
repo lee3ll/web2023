@@ -89,7 +89,7 @@ body {
 .main__menu li strong {
     position:  relative;
 }
-.main__menu li strong ::before {
+.main__menu li strong::before {
     content: '';
     background: #0242f141;
     position: absolute;
@@ -99,6 +99,9 @@ body {
     z-index: -1;
     border-radius: 20px;
     transition: all 0.3s;
+}
+.main__menu li:hover strong::before {
+    height: 100%;
 }
 .main__menu{
     padding-bottom: 40px;
