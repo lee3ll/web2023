@@ -4,6 +4,12 @@
     +music__contents
     +music__footer
 */
+body {
+    background-image: url(../img/background01.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .music__inner {
     width: 350px;
     background: rgba(0,0,0,0.5);
@@ -70,7 +76,7 @@
     border-radius: 3px;
 }
 .music__control .progress .bar {
-    width: 80%;
+    width: 0%;
     height: 5px;
     background-color: #5e0505;
     border-radius: 3px;
@@ -99,35 +105,52 @@
     width: 40px;
     height: 40px;
 }
+.music__control .control span:active {
+    background-color: #eaeaea;
+    background-repeat: 50%;
+}
 .music__control .control span i {
-    margin: 8px;
-    width: 24px;
-    height: 24px;
+    /* margin: 8px; */
+    width: 40px;
+    height: 40px;
     display: block;
     background-image: url(../img/music_icon.svg);
+    background-size: 500px;
 }
 .music__control .control span i.repeat {
     background-position: 0 0;
 }
 .music__control .control span i.prev {
-    background-position: -24px 0;
+    background-position: -120px 0;
 }
 .music__control .control span i.play {
-    background-position: -22px -24px;
+    background-position: -160px 0;
 }
 .music__control .control span:nth-child(3) {
-    background-color: #fa3636;
+    background-image: linear-gradient(90deg , #5E0505, #DC7373);
     border-radius: 50%;
+    box-shadow: 0 0 50px #dc7373;
+    transition: all 0.3s;
 }
-.music__control .control span i.play 
+.music__control .control span:nth-child(3):hover {
+    background-image: linear-gradient(90deg , #5E0505, #5e0505);
+    box-shadow: 0 0 50px #dc73736e;
+}
 .music__control .control span i.next {
-    background-position: -48px 0;
+    background-position: -240px 0;
 }
 .music__control .control span i.list {
-    background-position: -72px 0;
+    background-position: -280px 0;
 }
-.music__control .control span i.repeat_one {}
-.music__control .control span i.repeat_shuffle {}
-.music__control .control span i.repeat_stop {}
+.music__control .control span i.stop {
+    background-position: -200px -0px;
+}
+.music__control .control span i.repeat_one {
+    background-position: -40px -0px;
+}
+.music__control .control span i.repeat_shuffle {
+    background-position: -80px -0px;
+}
+
 
 .music__footer {}
