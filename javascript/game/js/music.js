@@ -59,7 +59,7 @@ const musicAudio = musicWrap.querySelector("#main_audio");
 const musicPlay= musicWrap.querySelector("#control-play");
 // const musicPlay = 
 
-let musicIndex = 1; //현재 음악 인덱스
+let musicIndex = 10; //현재 음악 인덱스
 
 
 // 음악 재생
