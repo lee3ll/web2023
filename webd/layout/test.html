@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃1</title>
+    <style>
+        *{
+
+        }
+        .wrap {
+            width: 1200px;
+            height: 800px;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: #ffbebe;
+            display: flex;
+        }
+        .head1{
+            width: 30%;
+            background-color: #f38e8e;
+        }
+        .head2{
+            width: 70%;
+            background-color: #f87c7c;
+        }
+        .main {
+            height: 600px;
+        }
+        .top{
+            height: 300px;
+            background-color: #ee5c5c;
+        }
+        .container {
+            display: flex;
+        }
+        .cont1{
+            width: 33.333%;
+            height: 300px;
+            background-color: #ce6363;
+        }
+        .cont2{
+            width: 33.333%;
+            height: 300px;
+            background-color: #b17777;
+        }
+        .cont3{
+            width: 33.333%;
+            height: 300px;
+            background-color: #943232;
+        }
+        .footer {
+            width: 100%;
+            height: 100px;
+            background-color: #ff3f3f;
+            display: flex;
+        }
+        .foot1{
+            width: 15%;
+            background-color: #c55454;
+        }
+        .foot2{
+            width: 70%;
+            background-color: #bd2a2a;
+        }
+        .foot3{
+            width: 15%;
+            background-color: #7a2929;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="head1">로고</div>
+            <div class="head2">메뉴</div>
+        </div>
+        <div class="main">
+            <div class="top">이미지 슬라이드</div>
+            <div class="container">
+                <div class="cont1">공지사항</div>
+                <div class="cont2">배너</div>
+                <div class="cont3">바로가기</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foot1">로고</div>
+            <div class="foot2">COPYRIGHT</div>
+            <div class="foot3">SNS</div>
+        </div>
+    </div>
+</body>
+</html>
