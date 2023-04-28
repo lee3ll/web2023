@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 650px;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 150px;
+            background-color: #ffaaaa;
+        }
+        #aside nav {
+            width: 100%;
+            height: 500px;
+            background-color: #ffc2c2;
+        }
+        #main {
+            width: calc(100% - 200px);
+            height: 650px;
+            background-color: #f06868;
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #ad5a5a;
+        }
+        #slider .s1 {
+            display: flex;
+        }
+        #slider .article{
+            width: calc(100% - 230px);
+            height: 400px;
+            background-color: #f05c5c;
+        }
+        #slider .banner{
+            width: 230px;
+            height: 400px;
+            background-color: #c55555;
+        }
+        #slider .s2 {
+            height: 250px;
+            background-color: #a77474;
+        }
+        #footer {
+            display: flex;
+            width: 100%;
+        }
+        .foot1 {
+            width: 200px;
+            height: 100px;
+            background-color: #cc2c2c;
+        } 
+        .foot2 {
+            width: calc(100% - 200px);
+            height: 100px;
+            background-color: #634040;
+            display: flex;
+            
+        }
+        .foot2-1 {
+            width: calc(100% - 230px);
+            height: 100px;
+            background-color: #8b0d0d;
+        }
+        .foot2-2 {
+            width: 230px;
+            height: 100px;
+            background-color: #3b1f1f;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <main id="main">
+            <div id="slider">
+                <div class="s1">
+                    <div class="article"></div>
+                    <div class="banner"></div>
+                </div>
+                <div class="s2"></div>
+            </div>
+        </main>
+        <div id="footer">
+            <div class="foot1"></div>
+            <div class="foot2">
+                <div class="foot2-1"></div>
+                <div class="foot2-2"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
