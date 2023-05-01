@@ -172,7 +172,7 @@ musicPrevBtn.addEventListener("click", () => {
 });
 
 //다음곡 버튼 클릭
-musicNextBtn.addEventListener("click", () => {
+musicNextBtn.addEventListener("click", () => { 
     nextMusic();
 });
 

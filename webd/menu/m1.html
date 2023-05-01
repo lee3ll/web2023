@@ -4,121 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A1</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        #wrap {
-            width: 1200px;
-            margin: 0 auto;
-        }
-        #header {
-            height: 100px;
-            display: flex;
-        }
-        #header h1{
-            width: 20%;
-            height: inherit;
-            background-color: #ffbcbc;
-        }
-        #header h2{
-            width: 80%;
-            height: inherit;
-            background-color: #ffc4c4;
-        }
-        #nav {
-            width: 100%;
-            height: 300px;
-            background-color: #ffb5b5;
-        }
-        #main {
-            width: 100%;
-            height: 200px;
-            background-color: #be9a9a;
-            display: flex;
-        }
-        .m1 {
-            width: 33.333%;
-            background-color: #dd8888;
-        }
-        .m2 {
-            width: 33.333%;
-            background-color: #eb8888;
-        }
-        .m3 {
-            width: 33.333%;
-            background-color: #f36d6d;
-        }
-        #footer {
-            width: 100%;
-            height: 100px;
-            background-color: #FFB0B0;
-            display: flex;
-        }
-        #footer .f1 {
-            width: 20%;
-            background-color: #ff7a7a;
-        }
-        #footer .f2 {
-            width: 80%;
-            background-color: #e44f4f;
-        }
-        #footer .f3 {
-            width: 20%;
-            background-color: #bb5959;
-        }
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-        li {
-            list-style: none;
-        }
-        .nav {
-            width: 80%;
-            background-color: #ff9e9e;
-            padding: 30px 40px;
-        }
-        .nav > ul {
-            display: flex;
-            justify-content: right;
-        }
-        .nav > ul > li {
-            position: relative;
-        }
-        .nav > ul > li > a {
-            background-color: #F3D5D5;
-            display: block;
-            padding: 10px 40px;
-        }
-        .nav > ul > li > a:hover {
-            background-color: #A36060;
-        }
-        .nav > ul > li > ul {
-            position: absolute;
-            left: 0;
-            top: 40;
-            background-color: #ccc;
-            width: 100%;
-            display: none;
-        }
-        .nav > ul > li > ul > li {}
-        .nav > ul > li > ul > li > a {
-            padding: 0;
-            display: block;
-        }
-        .nav > ul > li > ul > li > a:hover {
-            background-color: #ddd;
-        }
-    </style>
+    <title>Document</title>
 </head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    li {
+        list-style: none;
+    }
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #header {
+        height: 100px;
+        display: flex;
+    }
+    #header .left {
+        width: 30%;
+        background-color: #ffbcbc;
+    }
+    #main {
+        height: 500px;
+    }
+    #main .top {
+        height: 300px;
+        background-color: #ffc4c4;
+    }
+    #main .bottom {
+        height: 200px;
+        display: flex;
+    }
+    #main .bottom .notice {
+        width: 33.33%;
+        background-color: #ffb5b5;
+    }
+    #main .bottom .banner {
+        width: 33.33%;
+        background-color: #e98f8f;
+    }
+    #main .bottom .link {
+        width: 33.33%;
+        background-color: #dd8888;
+    }
+    #footer {
+        height: 100px;
+        display: flex;
+    }
+    #footer .logo {
+        width: 20%;
+        background-color: #eb8888;
+    }
+    #footer .copyright {
+        width: 60%;
+        background-color: #f36d6d;
+    }
+    #footer .sns {
+        width: 20%;
+        background-color: #FFB0B0;
+    }
+    .nav {
+        width: 70%;
+        background-color: #ff7a7a;
+        padding: 30px 40px;
+    }
+    .nav > ul {
+        display: flex;
+        justify-content: right;
+    }
+    .nav > ul > li {
+        position: relative;
+    }
+    .nav > ul > li > a {
+        background-color: #bb5959;
+        display: block;
+        padding: 10px 40px;
+        transition: all 0.2s;
+    }
+    .nav > ul > li > a:hover {
+        background-color: #ff9e9e;
+    }
+    .nav > ul > li > ul {
+        position: absolute;
+        left: 0;
+        top: 42px;
+        background-color: #ccc;
+        width: 100%;
+        display: none;
+    }
+    .nav > ul > li > ul > li > a {
+        padding: 10px;
+        display: block;
+        transition: all 0.2s;
+    }
+    .nav > ul > li > ul > li > a:hover {
+        background-color: #dba6ff;
+    }
+</style>
 <body>
     <div id="wrap">
         <header id="header">
-            <h1></h1>
-            <nav class="nav">
+            <div class="left"></div>
+            <div class="right nav">
                 <ul>
                     <li>
                         <a href="#">메뉴1</a>
@@ -157,38 +150,55 @@
                         </ul>
                     </li>
                 </ul>
-            </nav>
+            </div>
         </header>
-        <nav id="nav"></nav>
         <main id="main">
-            <div class="m1"></div>
-            <div class="m2"></div>
-            <div class="m3"></div>
+            <div class="top"></div>
+            <div class="bottom">
+                <div class="notice"></div>
+                <div class="banner"></div>
+                <div class="link"></div>
+            </div>
         </main>
         <footer id="footer">
-            <div class="f1"></div>
-            <div class="f2"></div>
-            <div class="f3"></div>
+            <div class="logo"></div>
+            <div class="copyright"></div>
+            <div class="sns"></div>
         </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(".nav > ul > li").mouseover(function(){
-            $(".nav > ul > li").find(".submenu").stop().slideDown();
-            // $(this).find(".submenu").stop().slideDown();
-        });
-        $(".nav > ul > li").mouseout(function(){
-            $(".nav > ul > li").find(".submenu").stop().slideUp();
-            // $(this).find(".submenu").stop().slideUp();
-        });
+        // 선택자
+        const submenuList = document.querySelectorAll(".nav > ul > li");
+        const subMenu = document.querySelectorAll(".submenu");
 
-        document.querySelectorAll(".nav> ul > li").forEach(li => {
+        // 각각 서브메뉴 나오게 작업
+        submenuList.forEach(li => {
+            // 각각의 li에 mouseover 이벤트 주기
             li.addEventListener("mouseover", () => {
+                // 각각의 li 안의 ul태그에 forEach 사용
+                li.querySelectorAll("ul").forEach((el) => {
+                    // 각 el(요소)에 display : block 속성
+                    el.style.display = "block";
+                })
+            });
+            // 똑같이 mouseout 이벤트로 display : none
+            li.addEventListener("mouseout", () => {
+                li.querySelectorAll("ul").forEach((el) => {
+                    el.style.display = "none";
+                })
             });
         });
-        document.querySelectorAll(".nav > ul")
-    </script>
 
+        // jQuery
+        // 각각 하나씩
+        // $(".nav > ul > li").mouseover(function(){
+        //     $(this).find(".submenu").stop().slideDown();
+        // });
+        // $(".nav > ul > li").mouseout(function(){
+        //     $(this).find(".submenu").stop().slideUp();
+        // });
+    </script>
 </body>
 </html>

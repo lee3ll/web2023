@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 E유형 1번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #main {
+            width: 100%;
+            height: calc(100vh - 120px);
+            display: flex;
+            background-color: #fff9d8;
+        }
+        #aside {
+            width: 200px;
+            height: inherit;
+            background-color: #e2e195;
+        }
+        #aside .aside1 {
+            height: 10%;
+            background-color: #f8f3b0;
+        }
+        #aside .aside2 {
+            height: 90%;
+            background-color: #fdfb9a;
+        }
+        #article {
+            width: 400px;
+            height: inherit;
+        }
+        #article .article1 {
+            height: 15%;
+            background-color: #b1b05c;
+        }
+        #article .article2 {
+            height: 35%;
+            background-color: #dddb69;
+        }
+        #article .article3 {
+            height: 35%;
+            background-color: #a7a043;
+        }
+        #article .article4 {
+            height: 15%;
+            background-color: #e2df50;
+        }
+        #section {
+            width: calc(100% - 600px);
+            height: inherit;
+            background-color: #fdf470;
+        }
+        #footer {
+            width: 100%;
+            height: 120px;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 200px;
+            height: inherit;
+            background-color: #feffbc;
+        }
+        #footer .footer2 {
+            width: calc(85% - 200px);
+            height: inherit;
+        }
+        #footer .footer2 .footer2-1 {
+            height: 50%;
+            background-color: #ebecb3;
+        }
+        #footer .footer2 .footer2-2 {
+            height: 50%;
+            background-color: #e9e88c;
+        }
+        #footer .footer3 {
+            width: 15%;
+            height: inherit;
+            background-color: #c0b843;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <aside id="aside">
+                <div class="aside1"></div>
+                <div class="aside2"></div>
+            </aside>
+            <article id="article">
+                <div class="article1"></div>
+                <div class="article2"></div>
+                <div class="article3"></div>
+                <div class="article4"></div>
+            </article>
+            <section id="section"></section>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2">
+                <div class="footer2-1"></div>
+                <div class="footer2-2"></div>
+            </div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 슬라이더 2</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    img {
+        display: block;
+    }
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #header {
+        height: 100px;
+        display: flex;
+    }
+    #header .header1 {
+        width: 30%;
+        background-color: #814de2;
+    }
+    #header .header2 {
+        width: 70%;
+        background-color: #996bee;
+    }
+    #main {
+        height: 500px;
+    }
+    #main .slider__wrap {
+        height: 300px;
+        overflow: hidden;
+    }
+  
+    #main .slider__wrap .slider__inner {
+        display: flex;
+    }
+    #main .main1 {
+        height: 200px;
+        display: flex;
+    }
+    #main .main1 .main1-1 {
+        width: 33.33%;
+        background-color: #9b6eee;
+    }
+    #main .main1 .main1-2 {
+        width: 33.33%;
+        background-color: #8150db;
+    }
+    #main .main1 .main1-3 {
+        width: 33.33%;
+        background-color: #9669e9;
+    }
+    #footer {
+        height: 100px;
+        display: flex;
+    }
+    #footer .footer1 {
+        width: 20%;
+        background-color: #9c75e4;
+    }
+    #footer .footer2 {
+        width: 60%;
+        background-color: #9F71D0;
+    }
+    #footer .footer3 {
+        width: 20%;
+        background-color: #7a47da;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header1"></div>
+            <div class="header2"></div>
+        </header>
+        <main id="main">
+            <div class="slider__wrap">
+                <div class="slider__inner">
+                    <div class="slider"><img src="img/slider01.jpg" alt="이미지1"></div>
+                    <div class="slider"><img src="img/slider02.jpg" alt="이미지2"></div>
+                    <div class="slider"><img src="img/slider03.jpg" alt="이미지3"></div>
+                </div>
+            </div>
+            <div class="main1">
+                <div class="main1-1"></div>
+                <div class="main1-2"></div>
+                <div class="main1-3"></div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+
+    <script>
+        // 선택자
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderInner = sliderWrap.querySelector(".slider__inner")
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        // 이미지 개수
+        const count = slider.length;
+
+        // 순서
+        let currentIndex = 0;
+
+        // // 이미지 슬라이드
+        // setInterval(() => {
+        //     currentIndex = (currentIndex + 1) % count;
+
+        //     sliderInner.style.transform = `translateX(-${1200*currentIndex}px)`;
+        // }, 3000);
+
+        // 이미지 슬라이드 (연속)
+        const sliderClone = sliderInner.firstElementChild.cloneNode(true);
+        sliderInner.appendChild(sliderClone);
+
+        setInterval(() => {
+            currentIndex++;
+            sliderInner.style.transition = "all 0.3s"
+            sliderInner.style.transform = `translateX(-${1200*currentIndex}px)`;
+
+            if(currentIndex == slider.length){
+                setTimeout(() => {
+                    sliderInner.style.transition = "all 0s"
+                    sliderInner.style.transform = "translateX(0px)";
+                    currentIndex = 0;
+                },1000);
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

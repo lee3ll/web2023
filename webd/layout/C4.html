@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 타입(c-1)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1000px;
+            height: 650px;
+            display: flex;
+            margin: 0 auto;
+        }
+        #aside {
+            width: 20%;
+        }
+        #aside .aside1 {
+            height: 20%;
+            background-color: #e3fff8;
+        }
+        #aside .aside2 {
+            height: 80%;
+            background-color: #b8f1ff;
+        }
+        .container {
+            width: 80%;
+        }
+        #main .main1 {
+            height: 350px;
+            background-color: #a8e5fd;
+        }
+        #main .main2 {
+            height: 200px;
+            display: flex;
+        }
+        #main .main2 .main2-1 {
+            width: 33.33%;
+            height: inherit;
+            background-color: #87edff;
+        }
+        #main .main2 .main2-2 {
+            width: 33.33%;
+            height: inherit;
+            background-color: #95cff1;
+        }
+        #main .main2 .main2-3 {
+            width: 33.33%;
+            height: inherit;
+            background-color: #98c1e7;
+        }
+        #footer {
+            height: 100px;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            height: inherit;
+            background-color: #afcff3;
+        }
+        #footer .footer2 {
+            width: 60%;
+            height: inherit;
+            background-color: #74dcfc;
+        }
+        #footer .footer3 {
+            width: 20%;
+            height: inherit;
+            background-color: #91f8ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <div class="aside1"></div>
+            <div class="aside2"></div>
+        </aside>
+        <div class="container">
+            <main id="main">
+                <div class="main1"></div>
+                <div class="main2">
+                    <div class="main2-1"></div>
+                    <div class="main2-2"></div>
+                    <div class="main2-3"></div>
+                </div>
+            </main>
+            <footer id="footer">
+                <div class="footer1"></div>
+                <div class="footer2"></div>
+                <div class="footer3"></div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
