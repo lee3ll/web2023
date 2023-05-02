@@ -21,8 +21,11 @@
     <link rel="stylesheet" href="../css/assets/css/fonts.css">
     <link rel="stylesheet" href="../css/assets/css/reset.css">
     <link rel="stylesheet" href="../css/assets/css/common.css">
+    <link rel="stylesheet" href="../css/assets/css/swiper.css">
     <link rel="stylesheet" href="../css/assets/css/style.css">
 
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->
+    
 </head>
 <body>     
     <div id="skip">
@@ -40,20 +43,79 @@
     <header id="headerType"></header>
     <main id="mainType">
         <section id="sliderType" class="nexon">
-            <h2>슬라이드 영역</h2>
+            <h2 class="ir">슬라이드 영역</h2>
             <div class="slider__inner">
                 <div class="slider__inner">
-                    <div class="slider">
-                        <div class="slider__info container">
-                            <span class="small">EVENT</span>
-                            <h3 class="title">오사카 여행</h3>
-                            <p class="desc"> 휴식과 낭만 그리고 즐거움을 찾으러 오사카로 떠나는 이들을 위한 여행가이드 페이지
-                                관광지, 맛집, 카페등 오사카여행지와 관련된 정보를 공유합니다. </p>
-                            <div class="btn">
-                                <a href="#">자세히보기</a>
-                                <a href="#">상담신청</a>
+
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slider img1">
+                                    <div class="slider__info container">
+                                        <span class="small">EVENT</span>
+                                        <h3 class="title">오사카 여행</h3>
+                                        <p class="desc"> 휴식과 낭만 그리고 즐거움을 찾으러 오사카로 떠나는 이들을 위한 여행가이드 페이지
+                                            관광지, 맛집, 카페등 오사카여행지와 관련된 정보를 공유합니다. </p>
+                                        <div class="btn">
+                                            <a href="#">자세히보기</a>
+                                            <a href="#">상담신청</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="swiper-slide">
+                                <div class="slider img2">
+                                    <div class="slider__info container">
+                                        <span class="small">EVENT</span>
+                                        <h3 class="title">오사카 여행</h3>
+                                        <p class="desc"> 휴식과 낭만 그리고 즐거움을 찾으러 오사카로 떠나는 이들을 위한 여행가이드 페이지
+                                            관광지, 맛집, 카페등 오사카여행지와 관련된 정보를 공유합니다. </p>
+                                        <div class="btn">
+                                            <a href="#">자세히보기</a>
+                                            <a href="#">상담신청</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="slider img3">
+                                    <div class="slider__info container">
+                                        <span class="small">EVENT</span>
+                                        <h3 class="title">오사카 여행</h3>
+                                        <p class="desc"> 휴식과 낭만 그리고 즐거움을 찾으러 오사카로 떠나는 이들을 위한 여행가이드 페이지
+                                            관광지, 맛집, 카페등 오사카여행지와 관련된 정보를 공유합니다. </p>
+                                        <div class="btn">
+                                            <a href="#">자세히보기</a>
+                                            <a href="#">상담신청</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            ...
                         </div>
+
+                        <div class="swiper-pagination"></div> 
+                        <div class="swiper-button">                           
+                                <div class="swiper-button-play"><span class="ir">play</span></div>    <!-- ir : 이미지 대신에 글씨를 읽어줌 -->
+                                <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                        </div>                   
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>                
+                    </div>
+
+                        <!-- <div class="slider">
+                            <div class="slider__info container">
+                                <span class="small">EVENT</span>
+                                    <h3 class="title">오사카 여행</h3>
+                                    <p class="desc"> 휴식과 낭만 그리고 즐거움을 찾으러 오사카로 떠나는 이들을 위한 여행가이드 페이지
+                                     관광지, 맛집, 카페등 오사카여행지와 관련된 정보를 공유합니다. </p>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <a href="#">상담신청</a>
+                                </div>
+                            </div>
                         <div class="slider__arrow">
                             <a href="#"><span class="blind">이전 이미지</span></a>
                             <a href="#"><span class="blind">다음 이미지</span></a>
@@ -65,7 +127,7 @@
                             <a href="#" class="play"><span class="blind">플레이</span></a>
                             <a href="#" class="stop"><span class="blind">정지</span></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>                
             </div>
         </section>
@@ -304,6 +366,43 @@
             </div>
         </section>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+        
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },        
+        });
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+
+        btnStart.style.display = "none";
+
+        btnStop.addEventListener("click", ()=>{
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
+        btnStart.addEventListener("click", ()=>{
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        });
+    </script>
 </body>
 </html>
 
