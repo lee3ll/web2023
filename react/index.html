@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="lee3ll">
+    <meta name="author" content="webstoryboy">
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
-    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, lee3ll, publisher, css3, html, markup, design">
-    <title>lee3ll | 이은지 | MYSQL</title>
+    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>웹쓰 | Webstoryboy | Class</title>
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/docs.min.css" rel="stylesheet">
@@ -33,17 +32,17 @@
     <meta name="theme-color" content="#FFFFFF">
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="이은지" />
-    <meta property="og:url" content="https://lee3ll.github.io/web2023/" />
-    <meta property="og:image" content="https://lee3ll.github.io/web2023/assets/ico/icon01.jpg" />
-    <meta property="og:site_name" content="이은지" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub9.dothome.co.kr/assets/ico/icon.jpg" />
+    <meta property="og:site_name" content="웹스토리보이" />
     <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
     <!-- twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lee3ll" />
-    <meta name="twitter:title" content="lee3ll" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
     <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
-    <meta property="twitter:image" content="https://lee3ll.github.io/web2023/assets/ico/icon01.jpg" />
+    <meta property="twitter:image" content="http://richclub9.dothome.co.kr/assets/ico/icon.jpg" />
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
@@ -67,180 +66,195 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../index.html" class="navbar-brand">eunji's &lt;/doc&gt;</a>
+                <a href="../index.html" class="navbar-brand">WEB'S &lt;/doc&gt;</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
                 <ul class="nav navbar-nav">
-                    <li><a href="https://lee3ll.tistory.com/">Blog</a></li>
-                    <li><a href="https://github.com/lee3ll/web2023">Github</a></li>
+                    <li><a href="https://inforlicense.tistory.com/">Blog</a></li>
+                    <li><a href="https://github.com/webstoryboy/web2023">Github</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="bs-header bgs1" id="content">
         <div class="container">
-            <h1>MYSQL v1.0 &lt;/doc&gt;</h1>
-            <p><a href="https://lee3ll.tistory.com/" target="_blank">https://lee3ll.tistory.com/</a></p>
+            <h1>React v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://webstoryboy.co.kr" target="_blank">webstoryboy.co.kr</a></p>
         </div>
     </div>
-
     <div class="container bs-docs-container">
         <div class="row">
             <div class="col-md-9">
                 <h2 class="page-header">REACT</h2>
-
                 <div class="bs-docs-section">
                     <h3 id="intro1" class="page-header">REACT</h3>
-                    <p class="lead">React는 Facebook에서 개발한 자바스크립트 라이브러리로, 사용자 인터페이스를 만들기 위해 사용됩니다. </p>
-                    <p>React는 화면을 여러 개의 컴포넌트로 분할하고, 이러한 컴포넌트들을 조합하여 복잡한 UI를 만들 수 있도록 도와줍니다.
-
-                        React는 Virtual DOM을 사용하여 화면을 관리하며, 이를 통해 빠르고 효율적인 UI 업데이트를 가능하게 합니다. 또한 React는 JSX라는 문법을 제공하여 HTML과 유사한 구문으로 UI를 작성할 수 있게 해줍니다.</p>                                
+                    <p class="lead">React는 페이스북에서 개발한 자바스크립트 라이브러리로, 사용자 인터페이스를 만들기 위해 사용됩니다. </p>
+                    <p>
+                        React는 컴포넌트 기반 아키텍처를 사용하며, 각 컴포넌트는 자체적으로 동작하며 다른 컴포넌트와 결합하여 전체 애플리케이션을 구성합니다.
+                        React는 가상 DOM (Virtual DOM)을 사용하여 성능을 최적화합니다. 이는 변경된 부분만 실제 DOM에 반영하여 전체 페이지를 다시 렌더링하는 것보다 더 빠르게 업데이트할 수 있도록 합니다. React는 또한 JSX라는 자체 문법을 사용하여 자바스크립트 코드 안에 HTML과 유사한 구문을 작성할 수 있도록 합니다.
+                    </p>
                 </div>
-                <!-- intro1 -->
-
+                <!-- //intro1 -->
                 <div class="bs-docs-section">
                     <h3 id="intro2" class="page-header">REACT 설치</h3>
                     <div class="bs-callout bs-callout-info">
                         Node.js 설치<br>
-                        <a href="https://nodejs.org/en" target="_blank">https://nodejs.org/en</a>
+                        <a href="https://nodejs.org/ko" target="_blank">https://nodejs.org/ko</a>
                     </div>
-                    <p class="lead">React는 Facebook에서 개발한 자바스크립트 라이브러리로, 사용자 인터페이스를 만들기 위해 사용됩니다. </p>
-                    <p>React를 사용하기 위해서는 Node.js가 먼저 설치되어 있어야 합니다. Node.js는 https://nodejs.org/ 에서 다운로드할 수 있습니다.</p>                                
-
+                    <p>
+                        React 애플리케이션을 개발하려면 먼저 Node.js를 설치해야 합니다. Node.js는 서버 측 자바스크립트 실행 환경입니다. Node.js를 설치하면 npm(Node Package Manager)도 함께 설치됩니다. npm은 React를 비롯한 다양한 자바스크립트 패키지를 관리하는 도구입니다.
+                    </p>
                     <div class="bs-callout bs-callout-info">
                         npx create-react-app react1
                     </div>
-                </div>
-                <!-- intro2 -->
-
-                <div class="bs-docs-section">
-                    <h3 id="intro2-1" class="page-header">REACT 기본개념 익히기</h3>
-                    <h4>const root = ReactDOM.createRoot(document.getElementById('root'));</h4>
-                    <pre><code class="language-js">
-                        import React from "react";
-                        import ReactDOM from "react-dom/client";                        
-                       
-                        const root = ReactDOM.createRoot(document.getElementById('root'));
-                        root.render(&lt;h1&lt;HELLO WORLD&lt;/h1&lt;);
-
-                        //hello world
+<pre><code class="language-js">Compiled successfully!
+You can now view react1 in the browser.
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.72:3000
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+webpack compiled successfully
                     </code></pre>
-                    <p class="lead">React는 Facebook에서 개발한 자바스크립트 라이브러리로, 사용자 인터페이스를 만들기 위해 사용됩니다. </p>
-                    <p>React를 사용하기 위해서는 Node.js가 먼저 설치되어 있어야 합니다. Node.js는 https://nodejs.org/ 에서 다운로드할 수 있습니다.</p>                                
-
-                    <div class="bs-callout bs-callout-info">
-                        npx create-react-app react1
-                    </div>
                 </div>
-                <!-- intro2-1 -->
-
+                <!-- //intro2 -->
                 <div class="bs-docs-section">
-                    <h3 id="intro3" class="page-header">REACT 기본개념 익히기</h3>
-                    <h4>const root = ReactDOM.createRoot(document.getElementById('root'));</h4>
-<pre><code class="language-js">
-import React from "react";
+                    <h3 id="intro3" class="page-header">REACT 기본 개념 익히기</h3>
+                    <h4 id="intro3-1" class="page-header">1. hello world 출력하기</h4>
+<pre><code class="language-js">import React from "react";
 import ReactDOM from "react-dom/client";
-
-const name = "lee3ll";
-const hello = <h1>hello{name}</h1>
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(&lt;h1&gt;HELLO WORLD&lt;/h1&gt;);
+//hello world
+</code></pre>
+                    <h4 id="intro3-2" class="page-header">2. JSX</h4>
+                    <p>JSX는 JavaScript XML의 약어로, React에서 UI를 구성하기 위한 문법입니다. JSX는 JavaScript의 확장 문법으로, XML과 유사한 문법을 사용하여 JavaScript 코드 안에 HTML 요소를 삽입할 수 있게 해줍니다.</p>
+<pre><code class="language-js">const name = "webstoryboy";
+const hello = &lt;h1&gt;hello {name}&lt;/h1&gt;;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(hello);
+//hello webstoryboy
 </code></pre>
-                    <p class="lead">React는 Facebook에서 개발한 자바스크립트 라이브러리로, 사용자 인터페이스를 만들기 위해 사용됩니다. </p>
-                    <p>React를 사용하기 위해서는 Node.js가 먼저 설치되어 있어야 합니다. Node.js는 https://nodejs.org/ 에서 다운로드할 수 있습니다.</p>                                
-
-                    <div class="bs-callout bs-callout-info">
-                        npx create-react-app react1
-                    </div>
-                </div>
-                <!-- intro3 -->
-
-                <div class="bs-docs-section">
-                    <h3 id="intro4" class="page-header">REACT 기본개념 익히기</h3>
-                    <h4>const root = ReactDOM.createRoot(document.getElementById('root'));</h4>
-<pre><code class="language-js">
-function helloName(){
+                    <p>객체와 함수를 같이 사용한 경우</p>
+<pre><code class="language-js">function helloName(){
     return name.nick;
-  }
-                          
-const name = {
-    nick : "lee3ll"
 }
-                          
-const hello = <h1>Hello, {helloName()}</h1>;
-                          
+const name = {
+    nick : "webstoryboy",
+}
+const hello = &lt;h1&gt;Hello, {helloName()}&lt;/h1&gt;;
+</code></pre>
+                    <h4 id="intro3-3" class="page-header">3. 렌더링</h4>
+<pre><code class="language-js">// function clock(){
+//   let clock = document.getElementById("clock");
+//   setInterval(function(){
+//     clock.innerHTML = new Date().toLocaleDateString();
+//   }, 1000);
+// }
+// clock();
+function clock(){
+    const element = (
+    &lt;div&gt;
+        &lt;div&gt;hello, webstoryboy&lt;/div&gt;
+        &lt;h2&gt;지금은 {new Date().toLocaleDateString()}입니다. &lt;/h2&gt;
+    &lt;/div&gt;
+    );
+    ReactDOM.render(element, document.getElementById('root'));
+}
+export default clock;
+</code></pre>
+                    <h4 id="intro3-4" class="page-header">4. 컴퍼넌트</h4>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+function Hello(){
+    return &lt;h1>Hello, webstoryboy&lt;/h1>
+}
+const element = &lt;Hello />;
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(hello);
+root.render(element);
 </code></pre>
-                    <p class="lead">React는 Facebook에서 개발한 자바스크립트 라이브러리로, 사용자 인터페이스를 만들기 위해 사용됩니다. </p>
-                    <p>React를 사용하기 위해서는 Node.js가 먼저 설치되어 있어야 합니다. Node.js는 https://nodejs.org/ 에서 다운로드할 수 있습니다.</p>                                
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+function Welcome(props){
+    return &lt;h1>Hello, {props.name}&lt;/h1>
+}
+function App(){
+    return (
+    &lt;div>
+        &lt;Welcome name = "webs" />
+        &lt;Welcome name = "webstoryboy" />
+        &lt;Welcome name = "webss" />
+    &lt;/div>
+    )
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(&lt;App />);
+</code></pre>
+                    <h4 id="intro3-5" class="page-header">5. props</h4>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+function Hello(props){
+    return &lt;h1>Hello, {props.name}&lt;/h1>
+}
+const element = &lt;Hello name = "webstoryboy" />;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);
+</code></pre>
 
-                    <div class="bs-callout bs-callout-info">
-                        npx create-react-app react1
-                    </div>
-                </div>
-                <!-- intro4 -->
-
-                <div class="bs-docs-section">
-                    <h3 id="intro4" class="page-header">REACT 기본개념 익히기</h3>
-                    <h4>const root = ReactDOM.createRoot(document.getElementById('root'));</h4>
-<pre><code class="language-js">
-// function clock(){
-    //   let clock = document.getElementById("clock");
+<h4 id="intro3-5" class="page-header">5. props</h4>
+<pre><code class="language-js">import React from 'react'   //imr
+    import ReactDOM from 'react-dom'    //imrd
     
-    //   setInterval(function(){
-    //     clock.innerHTML = new Date().toLocaleDateString();
-    //   }, 1000);
-    // }
-    // clock();
-    
-    function clock(){
-      const element = (
-        <div>
-          <div>hello, webstoryboy</div>
-          <h2>지금은 {new Date().toLocaleDateString()}입니다. </h2>
-        </div>
-      );
-    
-      ReactDOM.render(element, document.getElementById('root'));
+    function Hello(props){
+        return (
+            <div>
+                <div>{props.title1}</div>
+                <div>{props.title2}</div>
+                <div>{props.title3}</div>
+                <div>{props.title4}</div>
+            </div>
+        );
     }
+    
+    const name = {
+        name : "webstoryboy",
+        text : "hello",
+        author : {
+            name : "baby",
+            ulr : "naver.com"
+        }
+    }
+    
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Hello title1={name.name} title2={name.text} title3={name.author.name} title4={name.author.ulr}/>);
 </code></pre>
-                    <p class="lead">React는 Facebook에서 개발한 자바스크립트 라이브러리로, 사용자 인터페이스를 만들기 위해 사용됩니다. </p>
-                    <p>React를 사용하기 위해서는 Node.js가 먼저 설치되어 있어야 합니다. Node.js는 https://nodejs.org/ 에서 다운로드할 수 있습니다.</p>                                
-
-                    <div class="bs-callout bs-callout-info">
-                        npx create-react-app react1
-                    </div>
                 </div>
-                <!-- intro4 -->
-            
-                   
+                <!-- //intro3 -->
             </div>
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print affix-top" role="complementary">
                     <ul class="nav bs-sidenav">
                         <li class="active"><a href="#intro1">REACT 개념</a></li>
-                        <li><a href="#intro2">REACT 설치</a></li>                                          
+                        <li><a href="#intro2">REACT 설치</a></li>
                         <li><a href="#intro3">REACT 기본</a>
                             <ul class="nav">
                                 <li><a href="#intro3-1">출력하기</a></li>
                                 <li><a href="#intro3-2">JSX</a></li>
                                 <li><a href="#intro3-3">렌더링</a></li>
+                                <li><a href="#intro3-4">컴퍼넌트</a></li>
                             </ul>
-                        </li>                       
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
-    <!-- //row -->
+        <!-- //row -->
     </div>
     <!-- //container -->
     <!-- Footer -->
     <footer class="bs-footer" role="contentinfo">
         <div class="container">
             <ul class="footer-links muted">
-                <li><a href="https://lee3ll.github.io/web2023/">lee3ll</a></li>
+                <li><a href="http://webstoryboy.co.kr">webstoryboy</a></li>
             </ul>
         </div>
     </footer>
@@ -250,6 +264,5 @@ root.render(hello);
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
-
 </body>
 </html>
