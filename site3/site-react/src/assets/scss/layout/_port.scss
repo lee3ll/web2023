@@ -1,0 +1,84 @@
+.port__wrap{}
+.port__inner{    
+    .port__btn {
+        ul {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            li{
+                margin-right: 20px;
+                a{
+                    padding: 10px 40px;
+                    border-radius: 50px;
+                    border: 1px solid #ff8585;
+                    font-weight: 300;
+                    background-color: #fd6c6c;
+                    font-size: 18px;
+                    color: #fff
+                }
+                
+            }
+        }
+    }
+    .port__cont {
+        @include flex-between;
+        flex-wrap: wrap;
+        
+        .port {
+            width: 32.2222%;
+            margin-bottom: 30px;
+            .port__header {
+        
+            }
+            .port__body {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+
+                .pic {                    
+                    margin-right: 10px;                    
+                    border-radius: 50px;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }               
+
+                .title {
+                    h4 {
+                        font-size: 20px;
+                        color: var(--color_body);
+                    }
+                    span {
+                        font-size: 16px;
+                        color: #2C3A4B;
+                    }
+                }
+            }
+            img {
+                border-radius: 10px;
+                width: 100%;
+            }
+            &:nth-child(1) .port__body .pic {
+                background-color: #ffb6b6;
+            }
+            &:nth-child(2) .port__body .pic {
+                background-color: #ffe4ab;
+            }
+            &:nth-child(3) .port__body .pic {
+                background-color: #d7f8ac;
+            }
+            &:nth-child(4) .port__body .pic {
+                background-color: #acf3f8;
+            }
+            &:nth-child(5) .port__body .pic {
+                background-color: #acbaf8;
+            }
+            &:nth-child(6) .port__body .pic {
+                background-color: #daacf8;
+            }
+            
+        }    
+    } 
+}
