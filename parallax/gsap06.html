@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
     <style>
+       
         #header {
             position: fixed;
             z-index: 10000;
         }
         .parallaxs__item {
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             position: relative;
             display: flex;
@@ -77,19 +78,34 @@
         .parallaxs__item:nth-child(9) .parallaxs__item__img{
             background-image: url(img/sliderEffect09-min.jpg);
         }   
+
+        /* option */
+        #main {
+            /* overflow: auto; */
+        }
+        body {
+            overscroll-behavior: none;
+            height: 100vh;
+        }
+        .parallaxs__wrap{
+            width: 900%;
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
     </style>
 </head>
 <body class="img01 bg01 font01">
     <header id="header">
-        <h1>GSAP Parallax Effect01</h1>
-        <p>GSAP 패럴랙스 이펙트 : 애니메이션</p>
+        <h1>GSAP Parallax Effect06</h1>
+        <p>GSAP 패럴랙스 이펙트 : 가로모드</p>
         <ul>
-            <li class="active"><a href="gsap01.html">1</a></li>
+            <li><a href="gsap01.html">1</a></li>
             <li><a href="gsap02.html">2</a></li>
             <li><a href="gsap03.html">3</a></li>
             <li><a href="gsap04.html">4</a></li>
             <li><a href="gsap05.html">5</a></li>
-            <li><a href="gsap06.html">6</a></li>
+            <li class="active"><a href="gsap06.html">6</a></li>
             <li><a href="gsap07.html">7</a></li>
             <li><a href="gsap08.html">8</a></li>
             <li><a href="gsap09.html">9</a></li>
@@ -144,11 +160,6 @@
                 <div class="parallaxs__item__img"></div>
             </section>
             <!-- //section9 -->
-            <section id="section10" class="parallaxs__item">
-                <span class="parallaxs__item__num">10</span>
-                <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- //section10 -->
         </div>
     </main>
     <!-- //main -->
@@ -163,124 +174,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script>
-        const box1 = document.querySelector("#section1 .parallaxs__item__img");
-        const box2 = document.querySelector("#section2 .parallaxs__item__img");
-        const box3 = document.querySelector("#section3 .parallaxs__item__img");
-        const box4 = document.querySelector("#section4 .parallaxs__item__img");
-        const box5 = document.querySelector("#section5 .parallaxs__item__img");
-        const box6 = document.querySelector("#section6 .parallaxs__item__img");
-        const box7 = document.querySelector("#section7 .parallaxs__item__img");
-        const box8 = document.querySelector("#section8 .parallaxs__item__img");
-        const box9 = document.querySelector("#section9 .parallaxs__item__img");
-        // 01.
-        gsap.to(box1, {
-            duration: 2,
-            x: 500,
-            rotation: 360,
-        })
-        // 02. : trigger
-        gsap.to(box2, {
-            duration: 2,
-            x: 500,
-            rotation: 360,
+        let sections = gsap.utils.toArray(".parallaxs__item");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length -1),
+            ease: "none",
             scrollTrigger: {
-                trigger: box2,
-            }
-        })
-        // 03. toggleActions 'onEnter, onLeave, onEnterBack, onLeaveBack'
-        gsap.to(box3, {
-            duration: 2,
-            x: 500,
-            rotation: 360,
-            scrollTrigger: {
-                trigger: box3,
-                toggleActions: 'play none none none',
-                // play, pause, resume, reset, restart, complete, reverse, none 사용가능
-            }
-        })
-        // 04. toggleActions
-        gsap.to(box4, {
-            duration: 4,
-            x: 500,
-            rotation: 360,
-            scrollTrigger: {
-                trigger: box4,
-                toggleActions: 'play pause reverse none',
-            }
-        })
-        // 05. start, end
-        gsap.to(box5, {
-            duration: 2,
-            x: 500,
-            rotation: 360,
-            scrollTrigger: {
-                trigger: box5,
-                start: 'top 50%',
-                // end: 'bottom 20%',   없으면 기본값으로 설정됨
-                markers: false,
-            }
-        })
-        // 06.
-        gsap.to(box6, {
-            duration: 2,
-            x: 500,
-            rotation: 360,
-            scrollTrigger: {
-                trigger: box6,
-                start: 'top 50%',
-                end: 'bottom 20%',
-                scrub: 1,    // true, 1, 2, ... 사용가능 (속도조절 easing효과)
-                markers: false,
-            }
-        })
-        // 07. pin
-        gsap.to(box7, {
-            duration: 2,
-            x: 500,
-            rotation: 360,
-            scrollTrigger: {
-                trigger: box7,
-                start: 'top 50%',
-                end: 'bottom 100px',
+                trigger: ".parallaxs__wrap",
                 pin: true,
-                scrub: 1,
-                markers: false,
+                scrub:1,
+                snap: 1 / (sections.length -1),
+                end: document.querySelector(".parallaxs__wrap").offsetWidth,
+                // end: "+-5000"
+
             }
-        })
-        // 08. callback
-        gsap.to(box8, {
-            duration: 2,
-            x: 500,
-            rotation: 360,
-            scrollTrigger: {
-                trigger: box8,
-                start: 'top center',
-                end: 'bottom 30%',
-                scrub: 1,
-                markers: false,
-                // onEnter: () => {console.log('onEnter')},
-                // onLeave: () => {console.log('onLeave')},
-                // onEnterBack: () => {console.log('onEnterBack')},
-                // onLeaveBack: () => {console.log('onLeaveBack')},
-                // onUpdate: (self) => {console.log('onUpdate', self.progress.toFixed(3))},
-                onToggle: (self) => {console.log('onToggle', self.isActive)},
-            }
-        })
-        // 09. toggleClass
-        gsap.to(box9, {
-            duration: 2,
-            x: 500,
-            rotation: 360,
-            scrollTrigger: {
-                trigger: box9,
-                start: 'top center',
-                end: 'bottom 30%',
-                scrub: 1,
-                markers: true,
-                toggleClass: 'active',
-                id: 'box9',
-            }
-        })
+        });
     </script>
 </body>
 </html>
