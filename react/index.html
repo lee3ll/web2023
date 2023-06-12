@@ -143,243 +143,239 @@
   </head>
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
-    <header
-      class="navbar navbar-inverse navbar-static-top bs-docs-nav"
-      role="banner"
-    >
-      <div class="container">
-        <div class="navbar-header">
-          <button
-            class="navbar-toggle"
-            type="button"
-            data-toggle="collapse"
-            data-target=".bs-navbar-collapse"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="../index.html" class="navbar-brand">WEB'S &lt;/doc&gt;</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">Hoong's &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://hoong-co.tistory.com/">Blog</a></li>
+                    <li><a href="https://github.com/dlgnsrb227/web2023">Github</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav
-          class="collapse navbar-collapse bs-navbar-collapse pull-right"
-          role="navigation"
-        >
-          <ul class="nav navbar-nav">
-            <li><a href="https://inforlicense.tistory.com/">Blog</a></li>
-            <li><a href="https://github.com/webstoryboy/web2023">Github</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
     <div class="bs-header bgs1" id="content">
-      <div class="container">
-        <h1>React v1.0 &lt;/doc&gt;</h1>
-        <p>
-          <a href="https://webstoryboy.co.kr" target="_blank"
-            >webstoryboy.co.kr</a
-          >
-        </p>
-      </div>
+        <div class="container">
+            <h1>React v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://hoong-co.tistory.com/" target="_blank">hoong-co.tistory.com</a></p>
+        </div>
     </div>
+
     <div class="container bs-docs-container">
-      <div class="row">
-        <div class="col-md-9">
-          <h2 class="page-header">REACT</h2>
-          <div class="bs-docs-section">
-            <h3 id="intro1" class="page-header">REACT</h3>
-            <p class="lead">
-              React는 페이스북에서 개발한 자바스크립트 라이브러리로, 사용자
-              인터페이스를 만들기 위해 사용됩니다.
-            </p>
-            <p>
-              React는 컴포넌트 기반 아키텍처를 사용하며, 각 컴포넌트는
-              자체적으로 동작하며 다른 컴포넌트와 결합하여 전체 애플리케이션을
-              구성합니다. React는 가상 DOM (Virtual DOM)을 사용하여 성능을
-              최적화합니다. 이는 변경된 부분만 실제 DOM에 반영하여 전체 페이지를
-              다시 렌더링하는 것보다 더 빠르게 업데이트할 수 있도록 합니다.
-              React는 또한 JSX라는 자체 문법을 사용하여 자바스크립트 코드 안에
-              HTML과 유사한 구문을 작성할 수 있도록 합니다.
-            </p>
-          </div>
-          <!-- //intro1 -->
-          <div class="bs-docs-section">
-            <h3 id="intro2" class="page-header">REACT 설치</h3>
-            <div class="bs-callout bs-callout-info">
-              Node.js 설치<br />
-              <a href="https://nodejs.org/ko" target="_blank"
-                >https://nodejs.org/ko</a
-              >
-            </div>
-            <p>
-              React 애플리케이션을 개발하려면 먼저 Node.js를 설치해야 합니다.
-              Node.js는 서버 측 자바스크립트 실행 환경입니다. Node.js를 설치하면
-              npm(Node Package Manager)도 함께 설치됩니다. npm은 React를 비롯한
-              다양한 자바스크립트 패키지를 관리하는 도구입니다.
-            </p>
-            <div class="bs-callout bs-callout-info">
-              npx create-react-app react1
-            </div>
-            <pre><code class="language-js">Compiled successfully!
+        <div class="row">
+            <div class="col-md-9">
+                <h2 class="page-header">REACT</h2>
+
+                <div class="bs-docs-section">
+                    <h3 id="intro1" class="page-header">REACT 개념</h3>
+                    <p class="lead">React는 Facebook에서 개발한 오픈소스 자바스크립트 라이브러리로, 사용자 인터페이스를 만들기 위해 사용됩니다.</p>
+                    <p>React는 기존의 HTML, CSS 및 JavaScript 기술과 함께 사용됩니다. React는 빠르고 효율적인 UI 개발을 가능하게 하며, 동적인 웹 애플리케이션을 쉽게 작성할 수 있도록 해줍니다.</p>
+                    <p>React는 컴포넌트 기반 아키텍처를 사용하며, 재사용 가능한 UI 요소를 만들어낼 수 있습니다. 또한, React는 Virtual DOM이라는 기술을 사용하여 UI 업데이트를 빠르고 효율적으로 처리할 수 있습니다.</p>
+                    <!-- <span class="label label-default">Default</span>
+                    <span class="label label-primary">Primary</span>
+                    <span class="label label-success">Success</span>
+                    <span class="label label-info">Info</span>
+                    <span class="label label-warning">Warning</span>
+                    <span class="label label-danger">Danger</span>
+
+                    <div class="alert alert-success" role="alert">...</div>
+                    <div class="alert alert-info" role="alert">...</div>
+                    <div class="alert alert-warning" role="alert">...</div>
+                    <div class="alert alert-danger" role="alert">...</div> -->
+                </div>
+                <!-- intro1 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro2" class="page-header">REACT 설치</h3>
+                    <div class="bs-callout bs-callout-info">
+                        Node.js 설치<br>
+                        <a href="https://nodejs.org/ko">https://nodejs.org/ko</a>
+                    </div>
+                    <p>React를 사용하려면 먼저 Node.js와 npm이 설치되어 있어야 합니다. Node.js는 자바스크립트 런타임입니다. npm은 Node.js 패키지 매니저로, 다양한 패키지를 다운로드하고 설치할 수 있습니다.</p>
+                    <div class="bs-callout bs-callout-info">
+                        npx create-react-app react1
+                    </div>
+<pre><code class="language-js">Compiled successfully!
+
 You can now view react1 in the browser.
+
   Local:            http://localhost:3000
-  On Your Network:  http://192.168.1.72:3000
+  On Your Network:  http://192.168.0.98:3000
+
 Note that the development build is not optimized.
 To create a production build, use npm run build.
+
 webpack compiled successfully
-                    </code></pre>
-          </div>
+</code></pre>
 
-          <h3>scss 설치</h3>
-          <div class="bs-docs-section">n[p</div>
-
-          <!-- //intro2 -->
-          <div class="bs-docs-section">
-            <h3 id="intro3" class="page-header">REACT 기본 개념 익히기</h3>
-            <h4 id="intro3-1" class="page-header">1. hello world 출력하기</h4>
-            <pre><code class="language-js">import React from "react";
+                    <h3>React sass설치</h3>
+                    <div class="bs-callout bs-callout-info">
+                        npm install sass <br>
+                        npm install node-sass
+                    </div>
+                    <h3>React Router설치</h3>
+                    <div class="bs-callout bs-callout-info">
+                        npm install react-router-dom
+                    </div>
+                    <h3>React axios설치</h3>
+                    <div class="bs-callout bs-callout-info">
+                        npm install axios
+                    </div>
+                    <h3>React prop-types설치</h3>
+                    <div class="bs-callout bs-callout-info">
+                        npm install prop-types
+                    </div>
+                    <h3>React gsap설치</h3>
+                    <div class="bs-callout bs-callout-info">
+                        npm install gsap
+                    </div>
+                </div>
+                <!-- intro2 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro3" class="page-header">REACT 기본 개념 익히기</h3>
+                    <h4 id="intro3-1" class="page-header">1. 화면에 출력하기</h4>
+<pre><code class="language-js">import React from "react";
 import ReactDOM from "react-dom/client";
+
+// const root = ReactDOM.(document.getElementById('root'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(&lt;h1&gt;HELLO WORLD&lt;/h1&gt;);
-//hello world
+root.render(&lt;h1>Hello Hoong&lt;/h1>);
 </code></pre>
-            <h4 id="intro3-2" class="page-header">2. JSX</h4>
-            <p>
-              JSX는 JavaScript XML의 약어로, React에서 UI를 구성하기 위한
-              문법입니다. JSX는 JavaScript의 확장 문법으로, XML과 유사한 문법을
-              사용하여 JavaScript 코드 안에 HTML 요소를 삽입할 수 있게 해줍니다.
-            </p>
-            <pre><code class="language-js">const name = "webstoryboy";
-const hello = &lt;h1&gt;hello {name}&lt;/h1&gt;;
-const root = ReactDOM.createRoot(document.getElementById('root'));
+                    <h4 id="intro3-2" class="page-header">2. JSX</h4>
+                    <p>JSX는 JavaScript XML의 약자로, React에서 사용하는 자바스크립트의 확장 문법입니다. JSX는 XML과 유사한 구문으로 작성된 코드를 JavaScript 코드로 변환하여 실행합니다. React에서 UI를 작성할 때 JSX를 사용하여 작성하며, JSX를 사용하면 UI 요소를 더 직관적이고 쉽게 작성할 수 있습니다.</p>
+<pre><code class="language-js">const name = "Hooong";
+const hello = &lt;h1>Hello {name}&lt;/h1>;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(hello);
-//hello webstoryboy
 </code></pre>
-            <p>객체와 함수를 같이 사용한 경우</p>
-            <pre><code class="language-js">function helloName(){
+                    <p>객체와 함수를 동시에 사용하는 경우</p>
+<pre><code class="language-js">function helloName(){
     return name.nick;
-}
+};
+
 const name = {
-    nick : "webstoryboy",
-}
-const hello = &lt;h1&gt;Hello, {helloName()}&lt;/h1&gt;;
+    nick : "Hoong",
+};
+
+const hello = &lt;h1>Hello, {helloName()}&lt;/h1>
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(hello);
 </code></pre>
-            <h4 id="intro3-3" class="page-header">3. 렌더링</h4>
-            <pre><code class="language-js">// function clock(){
-//   let clock = document.getElementById("clock");
-//   setInterval(function(){
-//     clock.innerHTML = new Date().toLocaleDateString();
-//   }, 1000);
-// }
-// clock();
-function clock(){
+                    <h4 id="intro3-1" class="page-header">3. 렌더링</h4>
+<pre><code class="language-js">function clock(){
     const element = (
-    &lt;div&gt;
-        &lt;div&gt;hello, webstoryboy&lt;/div&gt;
-        &lt;h2&gt;지금은 {new Date().toLocaleDateString()}입니다. &lt;/h2&gt;
-    &lt;/div&gt;
+        &lt;div>
+            &lt;div>Hello, Hoong&lt;/div>
+            &lt;h2>지금은 {new Date().toLocaleString()} 입니다.&lt;/h2>
+        &lt;/div>
     );
-    ReactDOM.render(element, document.getElementById('root'));
-}
+    ReactDOM.render(element, document.getElementById("root"));
+};
+
 export default clock;
 </code></pre>
-            <h4 id="intro3-4" class="page-header">4. 컴퍼넌트</h4>
-            <pre><code class="language-js">import React from "react";
-import ReactDOM from "react-dom/client";
-function Hello(){
-    return &lt;h1>Hello, webstoryboy&lt;/h1>
-}
-const element = &lt;Hello />;
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(element);
-</code></pre>
-            <pre><code class="language-js">import React from "react";
-import ReactDOM from "react-dom/client";
-function Welcome(props){
-    return &lt;h1>Hello, {props.name}&lt;/h1>
-}
-function App(){
+                    <h4 id="intro3-1" class="page-header">4. 컴퍼넌트</h4>
+<pre><code class="language-js">function Hello() {
     return (
-    &lt;div>
-        &lt;Welcome name = "webs" />
-        &lt;Welcome name = "webstoryboy" />
-        &lt;Welcome name = "webss" />
-    &lt;/div>
+        &lt;h1>Hello, Hooong&lt;/h1>
     )
 }
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(&lt;App />);
+const element = &lt;Hello />
+
+ReactDOM.render(element, document.getElementById("root"));
+
+export default Hello
 </code></pre>
-            <h4 id="intro3-5" class="page-header">5. props</h4>
-            <pre><code class="language-js">import React from "react";
-import ReactDOM from "react-dom/client";
-function Hello(props){
+<pre><code class="language-js">function Welcome(props){
     return &lt;h1>Hello, {props.name}&lt;/h1>
 }
-const element = &lt;Hello name = "webstoryboy" />;
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function App(){
+    return (
+        &lt;div>
+        &lt;Welcome name = "hoong" />
+        &lt;Welcome name = "hooong" />
+        &lt;Welcome name = "hoooong" />
+        &lt;/div>
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(&lt;App />);
+</code></pre>
+<pre><code class="language-js">
+</code></pre>
+                    <h4 id="intro3-1" class="page-header">5. props</h4>
+<pre><code class="language-js">function Hello(props){
+    return &lt;h1>Hello, {props.name}&lt;/h1>
+}
+const element = &lt;Hello name="hoooong" />
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(element);
 </code></pre>
+<pre><code class="language-js">function formatDate(date){
+    return date.toLocaleString();
+};
 
-            <h4 id="intro3-5" class="page-header">5. props</h4>
-            <pre><code class="language-js">import React from 'react'   //imr
-    import ReactDOM from 'react-dom'    //imrd
-    
-    function Hello(props){
-        return (
-            <div>
-                <div>{props.title1}</div>
-                <div>{props.title2}</div>
-                <div>{props.title3}</div>
-                <div>{props.title4}</div>
-            </div>
-        );
-    }
-    
-    const name = {
-        name : "webstoryboy",
-        text : "hello",
-        author : {
-            name : "baby",
-            ulr : "naver.com"
-        }
-    }
-    
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<Hello title1={name.name} title2={name.text} title3={name.author.name} title4={name.author.ulr}/>);
+function Comment(props){
+    return (
+        &lt;div>
+            &lt;div>{formatDate(props.date)}&lt;/div>
+            &lt;div>{props.text}&lt;/div>
+            &lt;div>3&lt;/div>
+            &lt;div>4&lt;/div>
+        &lt;/div>
+    )
+}
+
+const comment = {
+    date : new Date(),
+    text : "이해했습니다.",
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(&lt;Comment date={comment.date} text={comment.text} />);
 </code></pre>
-          </div>
-          <!-- //intro3 -->
+                </div>
+                <!-- intro3 -->
+            </div>
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li class="active"><a href="#intro1">REACT 개념</a></li>
+                        <li><a href="#intro2">REACT 설치</a></li>
+                        <li><a href="#intro3">REACT 기본</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro3-1">출력하기</a></li>
+                                <li><a href="#intro3-2">JSX</a></li>
+                                <li><a href="#intro3-3">렌더링</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3">
-          <div class="bs-sidebar hidden-print affix-top" role="complementary">
-            <ul class="nav bs-sidenav">
-              <li class="active"><a href="#intro1">REACT 개념</a></li>
-              <li><a href="#intro2">REACT 설치</a></li>
-              <li>
-                <a href="#intro3">REACT 기본</a>
-                <ul class="nav">
-                  <li><a href="#intro3-1">출력하기</a></li>
-                  <li><a href="#intro3-2">JSX</a></li>
-                  <li><a href="#intro3-3">렌더링</a></li>
-                  <li><a href="#intro3-4">컴퍼넌트</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- //row -->
+    <!-- //row -->
     </div>
     <!-- //container -->
     <!-- Footer -->
     <footer class="bs-footer" role="contentinfo">
-      <div class="container">
-        <ul class="footer-links muted">
-          <li><a href="http://webstoryboy.co.kr">webstoryboy</a></li>
-        </ul>
-      </div>
+        <div class="container">
+            <ul class="footer-links muted">
+                <li><a href="http://lee3ll.dothome.co.kr/">lee3ll</a></li>
+            </ul>
+        </div>
     </footer>
     <!-- //Footer -->
     <!-- Bootstrap core JavaScript -->
@@ -387,5 +383,5 @@ root.render(element);
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
-  </body>
+</body>
 </html>
